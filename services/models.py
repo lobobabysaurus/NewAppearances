@@ -13,8 +13,8 @@ class Service(models.Model):
     #Name of service, Primary key
     service_name = models.CharField(max_length=100, primary_key=True)
     #Minimum and maximum costs
-    minimum_cost = models.IntegerField()
-    maximum_cost = models.IntegerField()
+    minimum_cost = models.IntegerField(blank=True, null=True)
+    maximum_cost = models.IntegerField(blank=True, null=True)
     #Set up service catories
     category_choices = (
         (HAIRCUTS, 'Haircuts'),
