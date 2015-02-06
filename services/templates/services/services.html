@@ -1,0 +1,14 @@
+<html>
+    {% load staticfiles %}
+    <link rel ="stylesheet" type="text/css" href="{% static "services/style.css" %}" />
+    <head>
+        <h1> New Appearances Service Test Template</h1>
+    </head>
+    <body>
+        <ul>
+        {% for service in service_list %}
+            <li><p>{{ service.service_name }}</p></li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
