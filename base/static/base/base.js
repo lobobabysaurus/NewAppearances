@@ -19,7 +19,7 @@ function getCurrentTime() {
     var hours = time.getHours();
     //Add padding 0s to minutes and seconds if they are less than ten for formatting reasons
     var minutes = (time.getMinutes() < 10 ? "0" : "" ) + time.getMinutes();
-    var seconds = (time.getSeconds() < 0 ? "0" : "" ) + time.getSeconds();
+    var seconds = (time.getSeconds() < 10 ? "0" : "" ) + time.getSeconds();
     document.getElementById("time").innerText = hours + ":" + minutes + ":" +seconds+" "+year;
 }
 /**

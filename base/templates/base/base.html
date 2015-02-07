@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>New Appearances Salon Django Test Server</title>
+        <title>
+            New Appearances Salon Django Test Server
+        </title>
 
         {% load staticfiles %}
 
@@ -15,13 +17,25 @@
         {% endblock %}
     </head>
     <body onload="baseOnLoad();">
+
         <div class = "header">
-            <h1>New Appearances Service Test Template</h1>
+            <h1 id="headerText">
+                New Appearances Hair Salon
+            </h1>
+        </div>
+        <div class = "navBar">
+            <button id="home">Home</button>
+            <button id="services">Services</button>
+            <button id="products">Products</button>
+            <button id="hours">Hours and Location</button>
+            <button id="contact">Contact</button>
         </div>
         {%  block body %}
         {%  endblock %}
         <div class = "footer">
-            <p id="time">Test</p>
+            <p id="time">
+                Test
+            </p>
         </div>
     </body>
 </html>
