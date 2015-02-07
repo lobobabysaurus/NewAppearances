@@ -8,6 +8,7 @@ from services.models import Service
 def index(request):
     all_services = Service.objects.order_by('order')
     template = loader.get_template('services/services.html')
+
     context = RequestContext(request, {
         'service_list': all_services,
     })
