@@ -1,0 +1,28 @@
+/**
+ * Define all of the CSS styling for the base template
+ *
+ * @creator PRS
+ * @created 1/23/2015
+ * @last_modified_by PRS
+ * @last_modified_date 2/7/2015
+ */
+body {
+    width: 75%;
+    background-color: #FFFDD0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.header {
+    background-color: aqua;
+}
+
+.footer {
+    background-color: seagreen;
+}
