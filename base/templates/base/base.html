@@ -1,11 +1,41 @@
+<!doctype html>
 <html>
-    {% load staticfiles %}
-    <link rel ="stylesheet" type="text/css" href="{% static "base/style.css" %}" />
     <head>
-        <h1> New Appearances Service Test Template</h1>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            New Appearances Salon Django Test Server
+        </title>
+
+        {% load staticfiles %}
+
+        <link rel ="stylesheet" type="text/css" href="{% static "base/base.css" %}" />
+        {% block servicesStylesheet %}
+        {% endblock %}
+
+        <script src="{% static "base/base.js" %}"></script>
+        {% block servicesJavascript %}
+        {% endblock %}
     </head>
-    <body>
+    <body onload="baseOnLoad();">
+
+        <div class = "header">
+            <h1 id="headerText">
+                New Appearances Hair Salon
+            </h1>
+        </div>
+        <div class = "navBar">
+            <button id="home">Home</button>
+            <button id="services">Services</button>
+            <button id="products">Products</button>
+            <button id="hours">Hours and Location</button>
+            <button id="contact">Contact</button>
+        </div>
         {%  block body %}
         {%  endblock %}
+        <div class = "footer">
+            <p id="time">
+                Test
+            </p>
+        </div>
     </body>
 </html>

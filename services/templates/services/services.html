@@ -1,5 +1,15 @@
 {% extends "base/base.html" %}
 
+{% load staticfiles %}
+
+{% block servicesStylesheet %}
+    <link rel ="stylesheet" type="text/css" href="{% static "services/services.css" %}" />
+{% endblock %}
+
+{% block servicesJavascript %}
+    <script src="{% static "services/services.js" %}"></script>
+{% endblock %}
+
 {% block body %}
     <ul>
         {% for service in service_list %}
