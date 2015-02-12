@@ -16,23 +16,25 @@
         {% block servicesJavascript %}
         {% endblock %}
     </head>
-    <body onload="baseOnLoad();">
+    <body onload="baseOnLoad();" onresize="setContentHeight();">
 
-        <div class = "header">
+        <div class = "header" id="templateHeader">
             <h1 id="headerText">
                 New Appearances Hair Salon
             </h1>
         </div>
-        <div class = "navBar">
+        <div class = "navBar" id="navBarContainer">
             <button id="home">Home</button>
             <button id="services">Services</button>
             <button id="products">Products</button>
             <button id="hours">Hours and Location</button>
             <button id="contact">Contact</button>
         </div>
-        {%  block body %}
-        {%  endblock %}
-        <div class = "footer">
+        <div class = "content" id="templateContent">
+            {%  block body %}
+            {%  endblock %}
+        </div>
+        <div class = "footer" id="templateFooter">
             <p id="time">
                 Test
             </p>

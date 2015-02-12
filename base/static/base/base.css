@@ -4,17 +4,16 @@
  * @creator PRS
  * @created 1/23/2015
  * @last_modified_by PRS
- * @last_modified_date 2/7/2015
+ * @last_modified_date 2/12/2015
  */
+
 body {
     width: 75%;
     background-color: #FFFDD0;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    height: 100%;
 }
-
 .navBar {
     font-size: 0;
     padding: 0;
@@ -22,41 +21,40 @@ body {
 }
 .navBar button {
     width: 20%;
-    height: 40px;
-    font-size: 25px;
+    height: 55px;
+    font-size: 20px;
 
 }
-.navBar #home {
-    background-color: magenta;
+.navBar button:hover  {
+    background-color: lightseagreen;
 }
-.navBar #services {
-    background-color: coral;
-}
-.navBar #products {
-    background-color: indianred;
-}
-.navBar #hours {
-    background-color: darkturquoise;
-}
-.navBar #contact {
-    background-color: teal;
+.navBar button {
+    background-color: paleturquoise;
 }
 .header {
     background-color: aqua;
+    border: 1px solid black;
 }
 .header h1 {
     vertical-align: middle;
     text-align: center;
     margin-top: 0;
-    font-size: 80px;
+    font-size: 50px;
     margin-bottom: 0;
     padding-top: 4px;
     padding-bottom: 12px;
 }
+.content {
+    background-color: mediumpurple;
+    border: 1px solid black;
+    overflow: auto;
+}
 .footer {
     text-align: center;
+    width: inherit;
     background-color: seagreen;
     bottom: 0;
     position: absolute;
-    width: 75%;
+    height: 50px;
+    border: 1px solid black;
 }
