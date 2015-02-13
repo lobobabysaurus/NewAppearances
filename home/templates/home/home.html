@@ -2,6 +2,12 @@
 
 {% load staticfiles %}
 
+{% block appStylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static "home/home.css" %}" />
+{% endblock %}
+
 {% block body %}
-    <p>{{ homePageText}}</p>
+    <div class = "homePageText">
+        <p>{{ homePageText}}</p>
+    </div>
 {% endblock %}
