@@ -2,12 +2,11 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 
 from services.models import Service
-# Create your views here.
 
 """
 Get all services and supply this list to the services/services.html template
 """
-def index(request):
+def services(request):
     all_services = Service.objects.order_by('order')
     template = loader.get_template('services/services.html')
 
