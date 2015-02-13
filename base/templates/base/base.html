@@ -12,12 +12,13 @@
         {% block servicesStylesheet %}
         {% endblock %}
 
+        <script src="{% static "base/jquery-2.1.3.min.js"%}"></script>
+        <script src="{% static "base/moment.js" %}"></script>
         <script src="{% static "base/base.js" %}"></script>
         {% block servicesJavascript %}
         {% endblock %}
     </head>
-    <body onload="baseOnLoad();" onresize="setContentHeight();">
-
+    <body>
         <div class = "header" id="templateHeader">
             <h1 id="headerText">
                 New Appearances Hair Salon
