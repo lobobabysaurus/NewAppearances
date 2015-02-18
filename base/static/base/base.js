@@ -5,38 +5,64 @@
  * @creator PRS
  * @created 2/7/2015
  * @last_modified_by PRS
- * @last_modified_date 2/7/2015
+ * @last_modified_date 2/12/2015
  */
 
 /**
- * Find out the current time
- *
- * @returns Time string formatted as "hh:mm:ss :yyyy"
- */
-function getCurrentTime() {
-    var time = new Date();
-    var year = time.getFullYear();
-    var hours = time.getHours();
-    //Add padding 0s to minutes and seconds if they are less than ten for formatting reasons
-    var minutes = (time.getMinutes() < 10 ? "0" : "" ) + time.getMinutes();
-    var seconds = (time.getSeconds() < 10 ? "0" : "" ) + time.getSeconds();
-    document.getElementById("time").innerText = hours + ":" + minutes + ":" +seconds+" "+year;
-}
-/**
- * Update the time every second to simulate a clock
+ * Jquery to call all functions that need to be executed when the page loads
  *
  * @returns null
  */
-function runClock(){
-    getCurrentTime();
-    setInterval(function() {getCurrentTime();},1000);
+$(document).ready( function () {
+    //Run page clock
+    setCurrentTime();
+    setInterval(setCurrentTime,1000);
+    //Set content section height
+    setContentHeight();
+    //Associate Nav bar click reactions
+    $("#home").click(function () {
+        window.location.href = '/';
+    });
+    $("#services").click(function () {
+        window.location.href = "/services/";
+    });
+});
+
+/**
+ * Reset the size of the content section if the window is resized
+ *
+ * @returns null
+ */
+$(window).resize( function () {
+    setContentHeight();
+});
+
+/**
+ * Gets the current time in the format of "HH:mm:ss DD MMMM YYYY"
+ *
+ * @returns time string formatted as HH:mm:ss DD MMMM YYYY
+ */
+function getCurrentTime(){return moment( new Date()).format("HH:mm:ss DD MMMM YYYY")}
+
+/**
+ * Set the current time on the 'time' element
+ * @returns null
+ */
+function setCurrentTime() {
+    $("#time").text(getCurrentTime());
 }
 
 /**
- * Helper function used to call all functions that need to be executed when the page loads
+ * Get the height of all relatively constant size divs that are top level to the body.  Find the difference of the
+ * window size and this values and assign the content div to be this size
  *
  * @returns null
  */
-function baseOnLoad(){
-    runClock();
+function setContentHeight(){
+    //height of all body elements
+    var navHeight = $("#navBarContainer").outerHeight() +
+            $("#templateFooter").outerHeight() +
+            $("#templateHeader").outerHeight();
+    //set the content element to be the difference between the window size and all other body elements
+    $("#templateContent").height(window.innerHeight - navHeight);
 }

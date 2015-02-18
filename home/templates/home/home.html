@@ -1,0 +1,13 @@
+{%  extends "base/base.html" %}
+
+{% load staticfiles %}
+
+{% block appStylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static "home/home.css" %}" />
+{% endblock %}
+
+{% block body %}
+    <div class = "homePageText">
+        <p>{{ homePageText}}</p>
+    </div>
+{% endblock %}

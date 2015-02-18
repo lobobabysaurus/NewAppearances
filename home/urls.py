@@ -2,9 +2,9 @@ __author__ = 'prs'
 
 from django.conf.urls import patterns, url
 
-from services import views
+from home import views
 
 urlpatterns = patterns('',
     #If no resource is specified call the services/views.py index function
-    url(r'^$', views.services, name='services'),
+    url(r'^$', views.home, name='home'),
 )
