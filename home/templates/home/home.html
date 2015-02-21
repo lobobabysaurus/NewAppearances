@@ -7,7 +7,10 @@
 {% endblock %}
 
 {% block body %}
+    <div class = "newAppearancesImage">
+        <img src="{% static "home/salonfrontCrop.jpg" %}" alt="Main Image" id="homePageImage">
+    </div>
     <div class = "homePageText">
-        <p>{{ homePageText}}</p>
+        <p>{{homePageText | safe}}</p>
     </div>
 {% endblock %}
