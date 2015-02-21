@@ -2121,7 +2121,7 @@
         }
     );
 
-    // returns locale data
+    // returns locale fixtures
     moment.localeData = function (key) {
         var locale;
 

@@ -1,0 +1,11 @@
+- fields: {is_active: true, page_text: "We at New Appearances Salon have been serving\
+      \ the men, women, and children of southeastern Pennsylvania for the past 25\
+      \ years. Our experienced and talented stylists offer all kinds of haircut styles,\
+      \ various forms of hair coloring, color and feather hair extensions, perms and\
+      \ curling, top-of-the-art skincare treatments, including UV Free spray tanning,\
+      \ and modern chemical straightening processes.\r\n\r\n<p>We serve walk ins,\
+      \ and if a specific stylist is requested, we are more than willing to schedule\
+      \ appointments. Current customers can vouch for our quality and new customers\
+      \ will not be disappointed.<p>"}
+  model: home.homepagetext
+  pk: 1
