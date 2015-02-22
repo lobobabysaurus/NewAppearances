@@ -1,0 +1,12 @@
+- fields: {category: 2, maximum_cost: 40, minimum_cost: 30, order: 1, service_name: Blonde}
+  model: services.service
+  pk: 1
+- fields: {category: 2, maximum_cost: null, minimum_cost: 50, order: 2, service_name: Brown}
+  model: services.service
+  pk: 2
+- fields: {category: 2, maximum_cost: 300, minimum_cost: null, order: 3, service_name: Black}
+  model: services.service
+  pk: 3
+- fields: {category: 2, maximum_cost: null, minimum_cost: null, order: 4, service_name: Red}
+  model: services.service
+  pk: 4

@@ -19,7 +19,7 @@ class Service(models.Model):
     PERMS = 4
     SKINCARE = 5
     #Name of service, Primary key
-    service_name = models.CharField(max_length=100, primary_key=True)
+    service_name = models.CharField(max_length=100, unique=True)
     #Minimum and maximum costs
     minimum_cost = models.IntegerField(blank=True, null=True)
     maximum_cost = models.IntegerField(blank=True, null=True)
@@ -34,3 +34,14 @@ class Service(models.Model):
     category = models.IntegerField(choices=category_choices)
     #Set order in a modifiable display
     order = models.IntegerField(unique=True)
+
+
+    def priceStr(self):
+        if self.minimum_cost == None and self.maximum_cost != None:
+            return ("$" + str(self.maximum_cost))
+        elif self.minimum_cost != None and self.maximum_cost != None:
+            return ("$" + str(self.minimum_cost) + " - $" + str(self.maximum_cost))
+        elif self.minimum_cost != None and self.maximum_cost == None:
+            return ("$" + str(self.minimum_cost) + " & up")
+        else:
+            return None

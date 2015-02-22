@@ -13,7 +13,7 @@
 {% block body %}
     <ul>
         {% for service in service_list %}
-            <li><p>{{ service.service_name }}</p></li>
+            <li><p>{{ service.service_name }}-{{ service.priceStr}}</p></li>
         {% endfor %}
     </ul>
 {% endblock %}
