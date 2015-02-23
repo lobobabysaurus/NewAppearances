@@ -26,6 +26,9 @@ $(document).ready( function () {
     $("#services").click(function () {
         window.location.href = "/services/";
     });
+    $("#products").click(function () {
+        window.location.href = "/products/";
+    });
 });
 
 /**
