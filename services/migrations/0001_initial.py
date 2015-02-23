@@ -13,10 +13,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Service',
             fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
-                ('service_name', models.CharField(max_length=100)),
-                ('minimum_cost', models.IntegerField(blank=True, null=True)),
-                ('maximum_cost', models.IntegerField(blank=True, null=True)),
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('service_name', models.CharField(unique=True, max_length=100)),
+                ('minimum_cost', models.IntegerField(null=True, blank=True)),
+                ('maximum_cost', models.IntegerField(null=True, blank=True)),
                 ('category', models.IntegerField(choices=[(1, 'Haircuts'), (2, 'Colors'), (3, 'Straightening'), (4, 'Perms'), (5, 'Skincare')])),
                 ('order', models.IntegerField(unique=True)),
             ],
