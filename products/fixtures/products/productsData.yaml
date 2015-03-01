@@ -1,0 +1,4 @@
+- fields: {alt: Puppy Test, isSold: true, productImage: products/static/products/images/puppies2.jpg,
+    productName: Puppy Test}
+  model: products.product
+  pk: 2
