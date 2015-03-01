@@ -19,23 +19,20 @@ body {
     padding: 0;
     margin: 0;
 }
-.navBar button {
+.navBar>button {
     width: 20%;
     height: 55px;
     font-size: 20px;
-
-}
-.navBar button:hover  {
-    background-color: lightseagreen;
-}
-.navBar button {
     background-color: paleturquoise;
+}
+.navBar>button:hover {
+    background-color: lightseagreen;
 }
 .header {
     background-color: aqua;
     border: 1px solid black;
 }
-.header h1 {
+.header>h1 {
     vertical-align: middle;
     text-align: center;
     margin-top: 0;

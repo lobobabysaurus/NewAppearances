@@ -1,4 +1,16 @@
-- fields: {alt: Puppy Test, isSold: true, productImage: products/static/products/images/puppies2.jpg,
-    productName: Puppy Test}
+- fields: {alt: Redken Fifth Avenue, isSold: true, productImage: products/static/products/images/redken.jpg,
+    productName: Redken}
   model: products.product
-  pk: 2
+  pk: 3
+- fields: {alt: Matrix Hair Care, isSold: true, productImage: products/static/products/images/matrix.jpg,
+    productName: Matrix}
+  model: products.product
+  pk: 4
+- fields: {alt: Purology hair supplies, isSold: true, productImage: products/static/products/images/pureology-logo.jpg,
+    productName: Pureology}
+  model: products.product
+  pk: 5
+- fields: {alt: Kenra Hair, isSold: true, productImage: products/static/products/images/kenra.jpg,
+    productName: Kenra}
+  model: products.product
+  pk: 6

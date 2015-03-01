@@ -1,0 +1,9 @@
+.products {
+    position: relative;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+}
+.products>img {
+    position: absolute;
+}

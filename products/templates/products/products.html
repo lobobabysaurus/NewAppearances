@@ -2,14 +2,22 @@
 
 {% load staticfiles %}
 
+{% block appJavascript %}
+<script src = "{% static "products/products.js" %}" ></script>
+{% endblock %}
+
 {% block appStylesheet %}
-<link rel="stylesheet" type="text/css" href="{% static "home/home.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "products/products.css" %}" />
 {% endblock %}
 
 {% block body %}
     <div class="products">
-        {% for product in images %}
-            <img src={{product.properURL }} alt="{{product.alt}}" />
-        {% endfor %}
+    {% for product in images %}
+        <img id="product{{product.productName}}"
+             src={{product.properURL}}
+             alt="{{product.alt}}"
+             height={{product.productImage.height}}
+             width={{product.productImage.width}}   />
+    {% endfor %}
     </div>
 {% endblock %}
