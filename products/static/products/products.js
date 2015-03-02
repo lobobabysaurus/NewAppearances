@@ -42,7 +42,7 @@ function setImageSizes(){
         //Check to make sure that the width/height don't become 0
         if((bodyWidth/numImages) !=0 && ((bodyWidth/numImages) * ratio != 0)) {
             //Set the width to be a fourth of the body width (magic number for the time being)
-            this.width = Math.floor($(".content").width() / 4);
+            this.width = Math.floor($(".content").width() / numImages);
             //Make the height be the rounded value of the new width times the original aspect ratio
             //If the value is not rounded it will be the floor of the correct value, and shrink of the page pixel by pixel
             this.height = Math.round(this.width * ratio);
