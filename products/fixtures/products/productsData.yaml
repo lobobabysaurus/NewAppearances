@@ -22,3 +22,7 @@
     brandName: Kenra, isCarried: true}
   model: products.brand
   pk: 7
+- fields: {productBrand: 7, productLink: 'http://kenra.com/ProductDetails.aspx?ID=4',
+    productName: Kenra Color Maintenance, productPrice: 13.0}
+  model: products.product
+  pk: 1
