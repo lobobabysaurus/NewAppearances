@@ -4,101 +4,103 @@
  * @creator PRS
  * @created 2/28/2015
  * @last_modified_by PRS
- * @last_modified_date 2/28/2015
+ * @last_modified_date 3/8/2015
  */
 
 $(document).ready( function () {
-    setImageSizes()
+    prepareImages()
 });
-$(window).resize(function (){
-    setImageSizes();
+$(window).resize(function () {
+    prepareImages();
 });
 
 /**
  * Set the image size to be a fourth of the screen and to maintain the aspect ratio
- * Also arange the images in a circle around the page
- * NOTE: ONLY WORKS WITH multiples of 4 images properly for now
+ * Also arrange the images in a circle around the page
  */
-function setImageSizes(){
+function prepareImages(){
     //Find number of images to display
-    var numImages = $("div.products").find("img").length;
-    //Find number of rows of images assuming there doesn't need to be a bottom root
-    var numRows = Math.floor(numImages/2)+1;
-    //Find the center row assuming there doesn't need to be a bottom row
-    var centerRow = Math.floor(numRows/2);
-    //Current row
-    var currentRow = 0;
-    //Point where new row should start
-    var previousRowBottom = 0;
-    //Maximum height of images in the current row
-    var currentMaxHeight =0;
+    var numImages = $("div.brands").find("img").length;
 
-    //For every image in the products div
-    $("div.products").find("img").each(function (index) {
-        //Original aspect ratio of the image
+    // Width of the body section
+    var bodyWidth = $(".content").innerWidth();
+    // Height of the body section
+    var bodyHeight = $(".content").innerHeight();
+    //Angle between each image if they were all in a circle
+    var angleDelta = ((Math.PI) * 2)/numImages;
+
+    //Set each image size
+    setImageSizes(numImages, bodyWidth);
+    //Set each image width
+    setImageLocations(angleDelta, bodyWidth, bodyHeight);
+}
+   /**
+ * Resize each image to properly fit the page
+ * @param numImages Number of images to fit on the page
+ * @param bodyWidth Width of the part of the page that contains the images
+ */
+function setImageSizes(numImages, bodyWidth){
+    $("div.brands").find("img").each(function () {
+        // Original aspect ratio of the image
         var ratio = this.height/this.width;
-        //Width of the body section
-        var bodyWidth = $(".content").innerWidth();
-        //Check to make sure that the width/height don't become 0
+        // Check to make sure that the width/height don't become 0
         if((bodyWidth/numImages) !=0 && ((bodyWidth/numImages) * ratio != 0)) {
-            //Set the width to be a fourth of the body width (magic number for the time being)
+            // Set the width to be a fourth of the body width (magic number for the time being)
             this.width = Math.floor($(".content").width() / numImages);
-            //Make the height be the rounded value of the new width times the original aspect ratio
-            //If the value is not rounded it will be the floor of the correct value, and shrink of the page pixel by pixel
+            // Make the height be the rounded value of the new width times the original aspect ratio
+            // If the value is not rounded it will be the floor of the correct value, and shrink of the page pixel by pixel
             this.height = Math.round(this.width * ratio);
         }
-        //Distance of the current row from either the top or bottom root.  Top and bottom row will be 0, center will be max
-        var distanceFromARoot = centerRow - Math.abs(currentRow-centerRow);
-        //Shift from the center is the size of the page times the distance from a root, divided by two times the max distance from a root
-        var shift = (bodyWidth*distanceFromARoot)/(centerRow*2);
-        //left propery of an image
-        var left =0;
-        //If a right node or first node
-        if(index % 2 ==0){
-            //If the image is not in the center row
-            if(currentRow!=centerRow) {
-                //add the shift to the center point of the page and then center the image by shifting the left more
-                left = ((bodyWidth / 2) + shift) - this.width / 2;
-            }
-            //If the image is in the center row
-            else {
-                //add the shift to the center point of the page, and fit the image by shifting it left by its size
-                left = ((bodyWidth / 2) + shift) - this.width;
-            }
-            //If the current image height is taller than the left image
-            if((this.height) > currentMaxHeight){
-                //Make the max height the current image height
-                currentMaxHeight =  this.height;
-            }
-            //Move on to the next row on the next iteration
-            currentRow++;
+    });
+}
+/**
+ * Set images to be in a ring around the page equidistantly spaced from one another
+ *
+ * @param eachAngle Angle in radians to represent spacing between each element
+ * @param bodyWidth Width of the body container
+ * @param bodyHeight Height of the body container
+ */
+function setImageLocations(eachAngle, bodyWidth, bodyHeight){
+    // Find the center of the page to be the center of the imaginary ring
+    var centerX = bodyWidth/2;
+    var centerY = bodyHeight/2;
+    // For each product image
+    $("div.brands").find("img").each(function (index) {
+        // A Take on parametric equations for a circle en.wikipedia.org/wiki/Circle#Equations
+
+        // Angle becomes the index multiplied by the individual angle to equally space each item,
+        // and shifted to make the top item always be key
+        var angle = (eachAngle * index) - Math.PI/2;
+
+        // Since the ring will normally be an oval, act as though the oval is a circle with the width of the entire body
+        // and shift to horizontally
+        var imgLeft = Math.round(Math.cos(angle) * centerX) + (centerX - this.width/2);
+
+        // Since the ring will normally be an oval, act as though the ova was the height of the entire body
+        // and shift to vertically center image
+        var imgTop  = Math.round(Math.sin(angle) * centerY) + (centerY - this.height/2);
+
+        //If the top of the image is too high, move it down with padding
+        if(imgTop<0){
+            imgTop += this.height/1.9;
         }
-        //If the image is on the left
-        if(index % 2 ==1){
-            //If the image is not in the center row
-            if(currentRow!=centerRow) {
-                //Shift the image to the left of the section center point and shift a little more left to center the image
-                left = ((bodyWidth / 2) - shift) - this.width / 2;
-            }
-            //If the image is in the center row
-            else {
-                //Shift the image to the left of the center point
-                left = (bodyWidth / 2) - shift;
-            }
-            //Current max image height in a row is this by default this value since it is the first image in a row
-            currentMaxHeight = this.height;
+        //if the bottom of the image is too low, move it up with padding
+        else if(imgTop+this.height > bodyHeight){
+            imgTop -= this.height/1.9;
         }
-        //Set the leftmost point of the image to be the computed left value, and the height be the bottom of the previous row
+        // If the left side of the image is too far left, move it right with padding
+        if(imgLeft<0){;
+            imgLeft += this.width/1.9;
+        }
+        // If the right side of the image is too far right, move it left with padding
+        else if(imgLeft+this.width > bodyWidth){
+            imgLeft -= this.width/1.9;
+        }
+
+        // Set the new top and upper left
         $(this).css({
-            "left": left,
-            "top": previousRowBottom
+            "left": imgLeft,
+            "top": imgTop
         });
-        //If the element is a root or the right element
-        if(index % 2 == 0){
-            //Make the new bottom the old bottom plus the current max height
-            previousRowBottom += currentMaxHeight;
-            //Reset the current row max height
-            currentMaxHeight = 0;
-        }
     });
 }
