@@ -1,11 +1,10 @@
 from django.contrib import admin
-from products.models import Product
+from products.models import Brand
 
-# Register your models here.
 """
-Have products display in a clean way
+Have Brands display in a clean way
 """
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('productName', 'alt', 'isSold', 'productImage',)
+    list_display = ('brandName', 'alt', 'isCarried', 'brandLogo',)
 
-admin.site.register(Product, ProductAdmin)
+admin.site.register(Brand, ProductAdmin)

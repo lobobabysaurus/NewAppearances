@@ -11,13 +11,13 @@
 {% endblock %}
 
 {% block body %}
-    <div class="products">
-    {% for product in images %}
-        <img id="product{{product.productName}}"
-             src={{product.properURL}}
-             alt="{{product.alt}}"
-             height={{product.productImage.height}}
-             width={{product.productImage.width}}   />
+    <div class="brands">
+    {% for image in brandImages %}
+        <img id="brand{{image.productName}}"
+             src="{{image.properImageURL}}"
+             alt="{{image.alt}}"
+             height={{image.brandLogo.height}}
+             width={{image.brandLogo.width}}   />
     {% endfor %}
     </div>
 {% endblock %}
