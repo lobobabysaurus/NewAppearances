@@ -1,0 +1,28 @@
+- fields: {alt: Redken Fifth Avenue, brandLogo: products/static/products/images/redken.jpg,
+    brandName: Redken, isCarried: true}
+  model: products.brand
+  pk: 2
+- fields: {alt: Purology hair supplies, brandLogo: products/static/products/images/pureology-logo.jpg,
+    brandName: Purology, isCarried: true}
+  model: products.brand
+  pk: 3
+- fields: {alt: Sexy Hair Products, brandLogo: products/static/products/images/sexyhair-logo.gif,
+    brandName: SexyHair, isCarried: true}
+  model: products.brand
+  pk: 4
+- fields: {alt: Nexxus Hair Products, brandLogo: products/static/products/images/nexxus.png,
+    brandName: Nexxus, isCarried: true}
+  model: products.brand
+  pk: 5
+- fields: {alt: Matrix Hair Care, brandLogo: products/static/products/images/matrix.jpg,
+    brandName: Matrix, isCarried: true}
+  model: products.brand
+  pk: 6
+- fields: {alt: Kenra Salon Quality, brandLogo: products/static/products/images/kenra.jpg,
+    brandName: Kenra, isCarried: true}
+  model: products.brand
+  pk: 7
+- fields: {productBrand: 7, productLink: 'http://kenra.com/ProductDetails.aspx?ID=4',
+    productName: Kenra Color Maintenance, productPrice: 13.0}
+  model: products.product
+  pk: 1

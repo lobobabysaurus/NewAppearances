@@ -1,11 +1,10 @@
 from django.shortcuts import render
 
 from home.models import HomePageText
+
 """
-Display the home page and associate content
+Display the home page with associated content
 """
 def home(request):
-    #Get the active page text object
-    activePageText = HomePageText.objects.get(is_active=True).page_text
-    #cast the text to the template
-    return render(request, 'home/home.html', {"homePageText": activePageText})
+    #cast the acive text to the template
+    return render(request, 'home/home.html', {"homePageText": HomePageText.objects.get(is_active=True).page_text})

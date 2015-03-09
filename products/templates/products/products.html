@@ -1,0 +1,23 @@
+{%  extends "base/base.html" %}
+
+{% load staticfiles %}
+
+{% block appJavascript %}
+<script src = "{% static "products/products.js" %}" ></script>
+{% endblock %}
+
+{% block appStylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static "products/products.css" %}" />
+{% endblock %}
+
+{% block body %}
+    <div class="brands">
+    {% for image in brandImages %}
+        <img id="brand{{image.productName}}"
+             src="{{image.properImageURL}}"
+             alt="{{image.alt}}"
+             height={{image.brandLogo.height}}
+             width={{image.brandLogo.width}}   />
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -26,6 +26,9 @@ $(document).ready( function () {
     $("#services").click(function () {
         window.location.href = "/services/";
     });
+    $("#products").click(function () {
+        window.location.href = "/products/";
+    });
 });
 
 /**
@@ -40,7 +43,7 @@ $(window).resize( function () {
 /**
  * Gets the current time in the format of "HH:mm:ss DD MMMM YYYY"
  *
- * @returns time string formatted as HH:mm:ss DD MMMM YYYY
+ * @returns string formatted as HH:mm:ss DD MMMM YYYY
  */
 function getCurrentTime(){return moment( new Date()).format("HH:mm:ss DD MMMM YYYY")}
 

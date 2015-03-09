@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'services',
     'base',
     'home',
+    'products',
 )
 
 MIDDLEWARE_CLASSES = (
