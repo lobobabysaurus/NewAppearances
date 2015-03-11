@@ -33,4 +33,4 @@ class Product(models.Model):
     productName = models.CharField(max_length=255, unique=True)
     productLink = models.CharField(max_length=1000, null=True)
     productPrice = models.FloatField(null=True)
-    productBrand = models.ForeignKey(Brand)
+    productBrand = models.ForeignKey(Brand, related_name='products')

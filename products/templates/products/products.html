@@ -13,11 +13,23 @@
 {% block body %}
     <div class="brands">
     {% for image in brandImages %}
-        <img id="brand{{image.productName}}"
+
+        <img id="brand{{image.brandName}}"
              src="{{image.properImageURL}}"
              alt="{{image.alt}}"
              height={{image.brandLogo.height}}
              width={{image.brandLogo.width}}   />
+
+        <div id="brand{{image.brandName}}Dialog">
+            {% for product in image.products.all %}
+
+                <a class="productLink" href="{{product.productLink }}" target="_blank">
+                    {{product.productName }}
+                </a>
+                <p class="productPrice">{{ product.productPrice }}</p>
+
+            {% endfor %}
+        </div>
     {% endfor %}
     </div>
 {% endblock %}
