@@ -7,3 +7,7 @@
 .brands>img {
     position: absolute;
 }
+
+.productName {
+    float: left;
+}

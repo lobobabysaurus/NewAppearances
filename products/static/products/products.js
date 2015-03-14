@@ -8,12 +8,31 @@
  */
 
 $(document).ready( function () {
-    prepareImages()
+    prepareImages();
+    prepareDialogs();
 });
 $(window).resize(function () {
     prepareImages();
 });
 
+/**
+ * Set up the product dialogs/modals for each brand
+ */
+function prepareDialogs(){
+    $("div.brands").find("img").each(function () {
+        //Create the dialog name based on the current id
+        var dialogID = "#"+this.id+"Dialog";
+        //Set the dialog functionality
+        $(dialogID).dialog({
+            autoOpen: false,
+            title: this.alt
+        });
+        //Open the dialog on image click
+        $(this).click(function () {
+            $(dialogID).dialog("open");
+        });
+    });
+}
 /**
  * Set the image size to be a fourth of the screen and to maintain the aspect ratio
  * Also arrange the images in a circle around the page
