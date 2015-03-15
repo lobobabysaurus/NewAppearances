@@ -8,9 +8,11 @@
 
 {% block body %}
     <div class = "newAppearancesImage">
-        <img src="{% static "{{ homePageImage.homeImage }}" %}" alt="{{ homePageImage.alt }}" id="homePageImage">
+        <img src="{{ homePageImage }}"
+             alt="{{ imageAlt }}"
+             id="homePageImage">
     </div>
     <div class = "homePageText">
-        <p>{{homePageText | safe}}</p>
+        {{homePageText | safe}}
     </div>
 {% endblock %}

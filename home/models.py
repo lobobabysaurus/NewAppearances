@@ -32,4 +32,4 @@ class HomePageImage(HomePageModel):
     @return shrunken url string
     """
     def properImageURL(self):
-        return self.homePageImage.url[len("home"):]
+        return self.homeImage.url[len("home"):]
