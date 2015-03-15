@@ -20,15 +20,7 @@ $(document).ready( function () {
     //Set content section height
     setContentHeight();
     //Associate Nav bar click reactions
-    $("#home").click(function () {
-        window.location.href = '/';
-    });
-    $("#services").click(function () {
-        window.location.href = "/services/";
-    });
-    $("#products").click(function () {
-        window.location.href = "/products/";
-    });
+    setButtonLinks();
 });
 
 /**
@@ -39,7 +31,24 @@ $(document).ready( function () {
 $(window).resize( function () {
     setContentHeight();
 });
-
+/**
+ * Set the width for the navbar
+ */
+function setButtonWidth(){
+    //Find number of buttons to display
+    var numImages = $("div.navBar").find("img").length;
+    $("div.navBar").find("button").width(100/numImages+"%");
+}
+/**
+ * Set button click functionality
+ */
+function setButtonLinks(){
+    $("div.navBar").find("button").each(function () {
+        $(this).click(function () {
+            window.location.href = "/"+this.id+"/";
+        })
+    });
+}
 /**
  * Gets the current time in the format of "HH:mm:ss DD MMMM YYYY"
  *
