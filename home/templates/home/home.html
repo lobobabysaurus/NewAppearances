@@ -8,7 +8,7 @@
 
 {% block body %}
     <div class = "newAppearancesImage">
-        <img src="{% static "home/salonfrontCrop.jpg" %}" alt="Main Image" id="homePageImage">
+        <img src="{% static "{{ homePageImage.homeImage }}" %}" alt="{{ homePageImage.alt }}" id="homePageImage">
     </div>
     <div class = "homePageText">
         <p>{{homePageText | safe}}</p>

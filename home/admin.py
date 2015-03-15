@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django import forms
-from home.models import HomePageText
+from home.models import HomePageText, HomePageImage
 
 
 """
@@ -13,7 +13,14 @@ class HomeTextForm(forms.ModelForm):
 Show home data in a clean way
 """
 class HomeTextAdmin(admin.ModelAdmin):
-    list_display = ['id', 'page_text', 'is_active',]
+    list_display = ['id', 'pageText', 'isActive',]
     form = HomeTextForm
 
+"""
+Have Brands display in a clean way
+"""
+class HomeImageAdmin(admin.ModelAdmin):
+    list_display = ('alt', 'isActive', 'homeImage',)
+
 admin.site.register(HomePageText, HomeTextAdmin)
+admin.site.register(HomePageImage, HomeImageAdmin)
