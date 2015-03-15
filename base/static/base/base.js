@@ -21,6 +21,8 @@ $(document).ready( function () {
     setContentHeight();
     //Associate Nav bar click reactions
     setButtonLinks();
+    //Set the width of the nav buttons
+    setButtonWidth();
 });
 
 /**
