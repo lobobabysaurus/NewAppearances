@@ -7,7 +7,7 @@ from home.models import HomePageText, HomePageImage
 Set page to display in a full text area
 """
 class HomeTextForm(forms.ModelForm):
-    page_text = forms.CharField(widget=forms.Textarea)
+    pageText = forms.CharField(widget=forms.Textarea)
 
 """
 Show home data in a clean way

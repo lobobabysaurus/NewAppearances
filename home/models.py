@@ -25,7 +25,7 @@ Image for a home page
 """
 class HomePageImage(HomePageModel):
     alt = models.CharField(max_length=1000)
-    homeImage = models.ImageField(upload_to='home/static/products/images')
+    homeImage = models.ImageField(upload_to='home/static/home/images')
 
     """
     Shrinks the stored url to be the url django references while running
