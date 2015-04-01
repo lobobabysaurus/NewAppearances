@@ -26,20 +26,25 @@ $(document).ready( function () {
 });
 
 /**
- * Reset the size of the content section if the window is resized
+ * Reset the size of the content section and nav buttons if the window is resized
  *
  * @returns null
  */
 $(window).resize( function () {
     setContentHeight();
+    setButtonWidth();
 });
+
 /**
  * Set the width for the navbar
  */
 function setButtonWidth(){
+    //get the nav bar div
+    var navBar = $("div.navBar")
     //Find number of buttons to display
-    var numImages = $("div.navBar").find("img").length;
-    $("div.navBar").find("button").width(100/numImages+"%");
+    var numImages = navBar.find("button").length;
+    //set the width each button to be the size of the container divided by the number of images
+    navBar.find("button").outerWidth(navBar.innerWidth()/numImages);
 }
 /**
  * Set button click functionality
