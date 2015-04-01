@@ -11,4 +11,4 @@ class ProperURLTest(TestCase):
     """
     def testURLStripsProduct(self):
         testImage = Brand(brandLogo='products/static/products/images/testImage.jpg')
-        self.assertEquals(testImage.properURL(), "/static/products/images/testImage.jpg", "URL not trimeed as expected")
+        self.assertEquals(testImage.properImageURL(), "/static/products/images/testImage.jpg", "URL not trimeed as expected")

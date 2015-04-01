@@ -10,5 +10,5 @@ class HomeTests(TestCase):
     There should only be one active text returned
     """
     def testIsOneActiveText(self):
-        activeText = HomePageText(is_active=True)
-        self.assertEqual(activeText.is_active, True)
+        activeText = HomePageText(isActive=True)
+        self.assertEqual(activeText.isActive, True)
