@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'base',
     'contact',
     'home',
+    'hours',
     'location',
     'products',
     'services',
