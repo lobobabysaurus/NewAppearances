@@ -1,7 +1,14 @@
+.hoursHeader>h1{
+    text-align: center;
+}
 .dayOfWeek{
     float: left;
+    width: 50%;
+    text-align: center;
 }
 
 .hoursForDay{
     float: right;
+    width: 50%;
+    text-align: center;
 }

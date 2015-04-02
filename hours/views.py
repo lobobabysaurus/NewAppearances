@@ -15,4 +15,4 @@ def hours(request):
 
     :template:`hours/hours.html`
     """
-    return render(request, "hours/hours.html", {'hoursList': Day.objects.all},)
+    return render(request, "hours/hours.html", {'hoursList': Day.objects.order_by('dayName')},)

@@ -26,8 +26,8 @@ class Day(models.Model):
     )
 
     dayName = models.IntegerField(choices=dayChoices, unique=True, help_text="Name of the day of the week")
-    startTime = models.CharField(blank=True, max_length=5, help_text="Time the shop opens")
-    endTime = models.CharField(blank=True, max_length=5, help_text="Time the shop closes")
+    startTime = models.CharField(blank=True, max_length=7, help_text="Time the shop opens")
+    endTime = models.CharField(blank=True, max_length=7, help_text="Time the shop closes")
 
     def getHoursRange(self):
         """
