@@ -1,8 +1,10 @@
 from django.db import models
-"""
-Model for represent open hours for days of the week
-"""
+
+
 class Day(models.Model):
+    """
+    Open hours for days of the week
+    """
     # Constants for days of the week
     MONDAY=1
     TUESDAY=2
@@ -23,21 +25,18 @@ class Day(models.Model):
         (SUNDAY, "Sunday"),
     )
 
-    # Name of the day of the week
-    dayName = models.IntegerField(choices=dayChoices,unique=True,)
-    # Start and End times for the shop for that day
-    startTime = models.CharField(blank=True, max_length=5,)
-    endTime = models.CharField(blank=True, max_length=5,)
+    dayName = models.IntegerField(choices=dayChoices, unique=True, help_text="Name of the day of the week")
+    startTime = models.CharField(blank=True, max_length=5, help_text="Time the shop opens")
+    endTime = models.CharField(blank=True, max_length=5, help_text="Time the shop closes")
 
-    """
-    Get the hours display for a given day
-    :return a string showing the range of hours for a day or Closed if the salon is not open
-    """
     def getHoursRange(self):
-        if (self.startTime=='' and self.endTime==''):
+        """
+        Get the hours to display for a given day - Either closed or a <start>-<end> format
+        """
+        if self.startTime=='' and self.endTime=='':
             return "Closed"
         #Make this a real error case
-        elif(self.startTime=='' or self.endTime ==''):
+        elif self.startTime=='' or self.endTime =='':
             return "Somethings Wrong"
         else:
             return self.startTime + "-" + self.endTime

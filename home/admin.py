@@ -3,23 +3,25 @@ from django import forms
 from home.models import HomePageText, HomePageImage
 
 
-"""
-Set page to display in a full text area
-"""
 class HomeTextForm(forms.ModelForm):
+    """
+    Show page text in a full text area
+    """
     pageText = forms.CharField(widget=forms.Textarea)
 
-"""
-Show home data in a clean way
-"""
+
 class HomeTextAdmin(admin.ModelAdmin):
+    """
+    Have the possible home page texts display in a clean way
+    """
     list_display = ['id', 'pageText', 'isActive',]
     form = HomeTextForm
 
-"""
-Have Brands display in a clean way
-"""
+
 class HomeImageAdmin(admin.ModelAdmin):
+    """
+    Have the possible home page Images display in a clean way
+    """
     list_display = ('alt', 'isActive', 'homeImage',)
 
 admin.site.register(HomePageText, HomeTextAdmin)

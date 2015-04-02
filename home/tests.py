@@ -2,12 +2,10 @@ from django.test import TestCase
 
 from home.models import HomePageText
 
-"""
-Learner for setting up a test
-"""
+
 class HomeTests(TestCase):
     """
-    There should only be one active text returned
+    Learner for setting up a test
     """
     def testIsOneActiveText(self):
         activeText = HomePageText(isActive=True)

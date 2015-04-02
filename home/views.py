@@ -2,11 +2,24 @@ from django.shortcuts import render
 
 from home.models import HomePageText, HomePageImage
 
-"""
-Display the home page with associated content
-"""
+
 def home(request):
-    # cast the active text and image to the template
+    """
+    Display the home page with associated image and text content
+
+    **Context**
+
+    ``homePageText``
+        The active text from :model:`home.HomePageText`
+    ``homePageImage``
+        The active image from :model:`home.HomePageImage`
+    ``imageAlt``
+        Alt text for the active image
+
+    **Template:**
+
+    :template:`home/home.html`
+    """
     return render(request, 'home/home.html', {
         "homePageText": HomePageText.objects.get(isActive=True).pageText,
         "homePageImage": HomePageImage.objects.get(isActive=True).properImageURL,

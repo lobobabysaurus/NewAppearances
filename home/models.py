@@ -1,35 +1,35 @@
 from django.db import models
 
-"""
-Shared fields between other Home Page Models
 
-@field isActive Flag to determine if the text is the actively used home page text
-"""
 class HomePageModel(models.Model):
-    isActive = models.BooleanField(default=False)
+    """
+    Fields to be used by other home page models
+    """
+    isActive = models.BooleanField(default=False, help_text="Flag to mark if the current item should be"
+                                                            " displayed on the home page",)
 
-"""
-Represents home page text on the database
 
-@field pageText Text to be displayed on the home page
-@field isActive Flag to determine if the text is the actively used home page text
-"""
 class HomePageText(HomePageModel):
-    pageText = models.CharField(max_length=2500, null=True)
+    """
+    Text that is displayed on the home page of the site
 
-"""
-Image for a home page
+    There should only be one set of home page text that is flagged as being active
+    """
+    pageText = models.CharField(max_length=2500, null=True, help_text="Text to display",)
 
-@field alt Alt text to include in the html
-@field homePageImage Image of the logo for the brand
-"""
+
 class HomePageImage(HomePageModel):
-    alt = models.CharField(max_length=1000)
-    homeImage = models.ImageField(upload_to='home/static/home/images')
+    """
+    Image to display on the home page
+
+    There should only be one image that is flagged as being active
 
     """
-    Shrinks the stored url to be the url django references while running
-    @return shrunken url string
-    """
+    alt = models.CharField(max_length=1000, help_text="Alternative text if the image cannot be displayed",)
+    homeImage = models.ImageField(upload_to='home/static/home/images', help_text="Image to display",)
+
     def properImageURL(self):
+        """
+        Shrinks the stored url to be the url django references during runtime
+        """
         return self.homeImage.url[len("home"):]
