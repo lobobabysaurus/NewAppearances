@@ -1,10 +1,5 @@
 /**
  * File to implement all javascript resources that will be available to the products Application
- *
- * @creator PRS
- * @created 2/28/2015
- * @last_modified_by PRS
- * @last_modified_date 3/8/2015
  */
 
 $(document).ready( function () {
