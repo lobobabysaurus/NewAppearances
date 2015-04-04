@@ -1,0 +1,21 @@
+{%  extends "base/base.html" %}
+
+{% load staticfiles %}
+
+{% block appStylesheet %}
+    <link rel ="stylesheet" type="text/css" href="{% static "hours/css/hours.css" %}" />
+{% endblock %}
+
+{% block body %}
+    <div class="hoursHeader">
+        <h1>Hours of Operation</h1>
+    </div>
+    {% for day in hoursList %}
+        <div class="dayOfWeek">
+            <p>{{ day.get_dayName_display }}</p>
+        </div>
+        <div class="hoursForDay">
+            <p>{{ day.getHoursRange }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

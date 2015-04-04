@@ -1,19 +1,28 @@
 from django.contrib import admin
 from django import forms
-from home.models import HomePageText
+from home.models import HomePageText, HomePageImage
 
 
-"""
-Set page to display in a full text area
-"""
 class HomeTextForm(forms.ModelForm):
-    page_text = forms.CharField(widget=forms.Textarea)
+    """
+    Show page text in a full text area
+    """
+    pageText = forms.CharField(widget=forms.Textarea)
 
-"""
-Show home data in a clean way
-"""
+
 class HomeTextAdmin(admin.ModelAdmin):
-    list_display = ['id', 'page_text', 'is_active',]
+    """
+    Have the possible home page texts display in a clean way
+    """
+    list_display = ['id', 'pageText', 'isActive',]
     form = HomeTextForm
 
+
+class HomeImageAdmin(admin.ModelAdmin):
+    """
+    Have the possible home page Images display in a clean way
+    """
+    list_display = ('alt', 'isActive', 'homeImage',)
+
 admin.site.register(HomePageText, HomeTextAdmin)
+admin.site.register(HomePageImage, HomeImageAdmin)

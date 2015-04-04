@@ -1,11 +1,6 @@
 /**
  * File to implement all javascript resources that will be available to the base application
  * at least for the main template
- *
- * @creator PRS
- * @created 2/7/2015
- * @last_modified_by PRS
- * @last_modified_date 2/12/2015
  */
 
 /**
@@ -20,26 +15,42 @@ $(document).ready( function () {
     //Set content section height
     setContentHeight();
     //Associate Nav bar click reactions
-    $("#home").click(function () {
-        window.location.href = '/';
-    });
-    $("#services").click(function () {
-        window.location.href = "/services/";
-    });
-    $("#products").click(function () {
-        window.location.href = "/products/";
-    });
+    setButtonLinks();
+    //Set the width of the nav buttons
+    setButtonWidth();
 });
 
 /**
- * Reset the size of the content section if the window is resized
+ * Reset the size of the content section and nav buttons if the window is resized
  *
  * @returns null
  */
 $(window).resize( function () {
     setContentHeight();
+    setButtonWidth();
 });
 
+/**
+ * Set the width for the navbar
+ */
+function setButtonWidth(){
+    //get the nav bar div
+    var navBar = $("div.navBar")
+    //Find number of buttons to display
+    var numImages = navBar.find("button").length;
+    //set the width each button to be the size of the container divided by the number of images
+    navBar.find("button").outerWidth(navBar.innerWidth()/numImages);
+}
+/**
+ * Set button click functionality
+ */
+function setButtonLinks(){
+    $("div.navBar").find("button").each(function () {
+        $(this).click(function () {
+            window.location.href = "/"+this.id+"/";
+        })
+    });
+}
 /**
  * Gets the current time in the format of "HH:mm:ss DD MMMM YYYY"
  *

@@ -3,14 +3,16 @@
 {% load staticfiles %}
 
 {% block appStylesheet %}
-<link rel="stylesheet" type="text/css" href="{% static "home/home.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "home/css/home.css" %}" />
 {% endblock %}
 
 {% block body %}
     <div class = "newAppearancesImage">
-        <img src="{% static "home/salonfrontCrop.jpg" %}" alt="Main Image" id="homePageImage">
+        <img src="{{ homePageImage }}"
+             alt="{{ imageAlt }}"
+             id="homePageImage">
     </div>
     <div class = "homePageText">
-        <p>{{homePageText | safe}}</p>
+        {{homePageText | safe}}
     </div>
 {% endblock %}

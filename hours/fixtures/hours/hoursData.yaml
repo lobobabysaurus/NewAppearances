@@ -1,0 +1,21 @@
+- fields: {dayName: 1, endTime: '', startTime: ''}
+  model: hours.day
+  pk: 1
+- fields: {dayName: 2, endTime: '7:30pm', startTime: '10:00am'}
+  model: hours.day
+  pk: 2
+- fields: {dayName: 7, endTime: '', startTime: ''}
+  model: hours.day
+  pk: 3
+- fields: {dayName: 3, endTime: '7:30pm', startTime: '10:00am'}
+  model: hours.day
+  pk: 4
+- fields: {dayName: 4, endTime: '7:30pm', startTime: '10:00am'}
+  model: hours.day
+  pk: 5
+- fields: {dayName: 5, endTime: '6:00pm', startTime: '10:00am'}
+  model: hours.day
+  pk: 6
+- fields: {dayName: 6, endTime: '3:30pm', startTime: '9:00am'}
+  model: hours.day
+  pk: 7
