@@ -2,5 +2,15 @@
 
 {% load staticfiles %}
 
+{% block appJavascript %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjub9cnpD_-Ptry-nxERgKVU-AD5MQM0w"></script>
+    <script src="{% static "location/js/location.js" %}"></script>
+{% endblock %}
+
+{% block appStylesheet %}
+    <link rel ="stylesheet" type="text/css" href="{% static "location/css/location.css" %}" />
+{% endblock %}
+
 {% block body %}
+    <div id="storeMap"></div>
 {% endblock %}
