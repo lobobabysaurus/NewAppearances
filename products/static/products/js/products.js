@@ -32,7 +32,8 @@ function Product() {
             //Set the dialog functionality
             $(dialogID).dialog({
                 autoOpen: false,
-                title: this.alt
+                title: this.alt,
+                width: 'auto'
             });
             //Open the dialog on image click
             $(this).click(function () {

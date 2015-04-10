@@ -11,6 +11,12 @@
     position: absolute;
 }
 
-.productName {
+.productLink {
     float: left;
+    width: 300px;
+}
+
+.productPrice {
+    float: left;
+    width: 150px;
 }
