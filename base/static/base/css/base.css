@@ -9,11 +9,23 @@ body {
     margin-right: auto;
     margin-top: 0;
 }
+
+p {
+    color: #ffe9f0;
+}
+
+.content {
+    background-color: mediumpurple;
+    border: 1px solid black;
+    overflow: auto;
+}
+
 .navBar {
     font-size: 0;
     padding: 0;
     margin: 0;
 }
+
 .navBar>button {
     height: 55px;
     font-size: 20px;
@@ -22,10 +34,12 @@ body {
 .navBar>button:hover {
     background-color: lightseagreen;
 }
+
 .header {
     background-color: aqua;
     border: 1px solid black;
 }
+
 .header>h1 {
     vertical-align: middle;
     text-align: center;
@@ -35,11 +49,7 @@ body {
     padding-top: 4px;
     padding-bottom: 12px;
 }
-.content {
-    background-color: mediumpurple;
-    border: 1px solid black;
-    overflow: auto;
-}
+
 .footer {
     text-align: center;
     width: inherit;
