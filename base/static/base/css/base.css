@@ -9,6 +9,10 @@ body {
     margin-right: auto;
     margin-top: 0;
 }
+h1, h3 {
+    text-align: center;
+    color: #ffefbe
+}
 
 p {
     color: #ffe9f0;
@@ -41,8 +45,8 @@ p {
 }
 
 .header>h1 {
+    color: #000000;
     vertical-align: middle;
-    text-align: center;
     margin-top: 0;
     font-size: 50px;
     margin-bottom: 0;
