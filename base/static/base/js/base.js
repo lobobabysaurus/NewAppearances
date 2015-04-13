@@ -47,9 +47,12 @@ function Base() {
         //get the nav bar div
         var navBar = $("div.navBar")
         //Find number of buttons to display
-        var numImages = navBar.find("button").length;
+        var numButtons = navBar.find("button").length;
         //set the width each button to be the size of the container divided by the number of images
-        navBar.find("button").outerWidth(navBar.innerWidth()/numImages);
+        var size = navBar.innerWidth()/numButtons;
+        navBar.find("button").outerWidth(size);
+        //Bullshit fix to a weird rollover issue
+        navBar.find("button").last().outerWidth(size-1);
     };
 
     /**

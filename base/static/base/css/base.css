@@ -21,7 +21,7 @@ p, label{
 }
 
 .content {
-    background-color: mediumpurple;
+    background-color: #a42bff;
     border: 1px solid black;
     overflow: auto;
 }
@@ -35,22 +35,23 @@ p, label{
 .navBar>button {
     height: 55px;
     font-size: 20px;
-    background-color: paleturquoise;
+    background-color: #ffd2e5;
 }
 .navBar>button:hover {
     background-color: lightseagreen;
 }
 
 .header {
-    background-color: aqua;
+    background-color: #000000;
     border: 1px solid black;
 }
 
 .header>h1 {
-    color: #000000;
     vertical-align: middle;
     margin-top: 0;
     font-size: 50px;
+    color: #ffffff;
+    -webkit-text-stroke: 1px red;
     margin-bottom: 0;
     padding-top: 4px;
     padding-bottom: 12px;
@@ -59,9 +60,13 @@ p, label{
 .footer {
     text-align: center;
     width: inherit;
-    background-color: seagreen;
+    background-color: #f4c7da;
     bottom: 0;
     position: absolute;
     height: 50px;
     border: 1px solid black;
+}
+
+.footer>p {
+    color: #a42bff;
 }
