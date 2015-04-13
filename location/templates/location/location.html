@@ -3,7 +3,8 @@
 {% load staticfiles %}
 
 {% block appJavascript %}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjub9cnpD_-Ptry-nxERgKVU-AD5MQM0w"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjub9cnpD_-Ptry-nxERgKVU-AD5MQM0w"
+            xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"></script>
     <script src="{% static "location/js/location.js" %}"></script>
 {% endblock %}
 
@@ -12,7 +13,22 @@
 {% endblock %}
 
 {% block body %}
-    <button id="routeCalculate">Calculate Route</button>
+    <div class="addressStatic">
+        <h2>NewAppearances is located at</h2>
+        <p>530 Burmont Road</p>
+        <p>Drexel Hill</p>
+        <p>PA 19026</p>
+    </div>
     <div id="storeMap"></div>
+    <div class="directionsFormHolder">
+        <h2>Enter Address to Receive Directions</h2>
+        <form id="directionsForm">
+            <label>Street:</label><input type="text" name="Street" />
+            <label>City:</label><input type="text" name="City" />
+            <label>State:</label><input type="text" name="State" value="Pennslvania" />
+            <label>Zip:</label><input type="text" name="Zip" />
+            <input type="button" id="attemptCalculation" value="Find Directions" />
+        </form>
+    </div>
     <div id="directions"></div>
 {% endblock %}
