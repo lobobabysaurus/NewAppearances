@@ -20,6 +20,10 @@ p, label{
     color: #ffe9f0;
 }
 
+p {
+    font-size: 20px;
+}
+
 .content {
     background-color: #a42bff;
     border: 1px solid black;
@@ -49,7 +53,7 @@ p, label{
 .header>h1 {
     vertical-align: middle;
     margin-top: 0;
-    font-size: 50px;
+    font-sitze: 50px;
     color: #ffffff;
     -webkit-text-stroke: 1px red;
     margin-bottom: 0;
