@@ -10,8 +10,25 @@
  * @class Location
  */
 function Location () {
+    /**
+     * Latitute and Longitude location of New Appearances
+     * @property salonLatLng
+     * @type {google.maps.LatLng}
+     */
     var salonLatLng = new google.maps.LatLng(39.946707,-75.302254);
+
+    /**
+     * Direction service to set on map generation and to be used for finding directions
+     * @property directionService
+     * @type {google.maps.DirectionsService}
+     */
     var directionService = new google.maps.DirectionsService();
+
+    /**
+     * Renders the directions to the salon after form submission
+     * @property directionsToSalon
+     * @type {google.maps.DirectionsRenderer}
+     */
     var directionsToSalon = new google.maps.DirectionsRenderer();
 
     /**
@@ -38,6 +55,7 @@ function Location () {
 
     /**
      * Find the route between the entered location and the salon and display it on the page
+     * @method calculateRoute
      * @param {String} originAddress
      */
     this.calculateRoute = function (originAddress) {
@@ -46,15 +64,21 @@ function Location () {
             destination: salonLatLng,
             travelMode: google.maps.TravelMode.DRIVING
         };
-        directionService.route(request, function (response, status) {
+        console.log(directionService.route(request, function (response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
                 directionsToSalon.setDirections(response);
+                $("#directionsError").text(null);
             }
-        });
+            else {
+                $("#directionsError").text("Error finding a route to the salon");
+                $("#directions").html(null);
+            }
+        }));
     };
 
     /**
      * Parse the directions form for address data and cast it to a formatted string
+     * @method processForm
      * @returns {String} The address which has been entered by the user
      */
     this.processForm = function (){
@@ -77,7 +101,6 @@ function Location () {
 $(document).ready(function (){
     var local = new Location();
     google.maps.event.addDomListener(window, 'load', local.initializeMaps);
-    $("")
     $("#attemptCalculation").click(function (){
         local.calculateRoute(local.processForm());
     });

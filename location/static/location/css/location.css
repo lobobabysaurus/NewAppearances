@@ -13,6 +13,12 @@
     float: right;
 }
 
+#directionsError {
+    color: rgba(255, 0, 0, 0.99);
+    text-align: center;
+    font-weight: bold;
+}
+
 #directionsForm{
     height: 50%;
 }
