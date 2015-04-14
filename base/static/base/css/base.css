@@ -71,6 +71,12 @@ p {
     border: 1px solid black;
 }
 
-.footer>p {
+#facebookLink{
+    margin-top: 5px;
+    height: 40px;
+}
+
+#time {
+    display: inline-block;
     color: #a42bff;
 }
