@@ -31,7 +31,7 @@
     font-size: 25px;
 }
 
-#directionsForm>input {
+#directionsForm>input, #directionsForm>select{
     float: left;
     width: 40%;
     font-size: 20px;
