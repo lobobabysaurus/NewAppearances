@@ -20,6 +20,8 @@ $(document).ready( function () {
     base.setButtonLinks();
     //Set the width of the nav buttons
     base.setButtonWidth();
+    //Set the size of text content
+    base.setTextSize();
 });
 
 /**
@@ -39,6 +41,15 @@ $(window).resize( function () {
  */
 function Base() {
 
+    /**
+     * Set text size for p and label elements
+     * @method setTextSize
+     */
+    this.setTextSize = function() {
+        $("p").css("font-size",
+            $("p").css("font-size").substring(0,2) *
+            (window.innerHeight/900));
+    };
     /**
      * Set the width for the navbar
      * @method setButtonWidth
