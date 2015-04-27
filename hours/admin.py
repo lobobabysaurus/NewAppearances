@@ -6,6 +6,6 @@ class HoursAdmin(admin.ModelAdmin):
     """
     Display hours in a clean list
     """
-    list_display = ('dayName','startTime','endTime',)
+    list_display = ('dayName', 'startTime', 'endTime',)
 
 admin.site.register(Day, HoursAdmin)
