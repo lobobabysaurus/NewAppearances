@@ -2,6 +2,7 @@ from django.test import TestCase
 
 from hours.models import Day
 
+
 class HourStringTest(TestCase):
     """
     Tests for the formatting of the open hours display
