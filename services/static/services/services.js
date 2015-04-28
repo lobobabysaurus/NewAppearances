@@ -1,5 +1,5 @@
 /**
- * File to implement all CSS that is available to the services application
+ * File to implement all Javascript that is available to the services application
  *
  * @creator PRS
  * @created 2/7/2015
