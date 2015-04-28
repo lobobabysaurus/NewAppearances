@@ -19,17 +19,22 @@
              alt="{{image.alt}}"
              height={{image.brandLogo.height}}
              width={{image.brandLogo.width}}   />
-
-        <div id="brand{{image.brandName}}Dialog">
-            {% for product in image.products.all %}
-
-                <a class="productLink" href="{{product.productLink }}" target="_blank">
-                    {{product.productName }}
-                </a>
-                <p class="productPrice">{{ product.productPrice }}</p>
-
-            {% endfor %}
-        </div>
+        {% if image.products.all %}
+            <div id="brand{{image.brandName}}Dialog" class="brandProduct">
+                {% for product in image.products.all %}
+                    <div class="productLink">
+                        <p><a href="{{product.productLink }}" target="_blank">
+                            {{ product.productName }}
+                        </a></p>
+                    </div>
+                    <div class="productPrice">
+                        <p>
+                            {{ product.productPrice }}
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        {%  endif %}
     {% endfor %}
     </div>
 {% endblock %}

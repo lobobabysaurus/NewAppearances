@@ -1,7 +1,12 @@
 from django.shortcuts import render
 
-"""
-Display the location page
-"""
+
 def location(request):
+    """
+    Display the location page
+
+    **Templates**
+
+    :template:`location/location.html`
+    """
     return render(request, "location/location.html")

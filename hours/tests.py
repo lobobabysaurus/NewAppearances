@@ -2,6 +2,7 @@ from django.test import TestCase
 
 from hours.models import Day
 
+
 class HourStringTest(TestCase):
     """
     Tests for the formatting of the open hours display
@@ -12,6 +13,7 @@ class HourStringTest(TestCase):
         """
         closedDay = Day(dayName=Day.MONDAY)
         self.assertEquals(closedDay.getHoursRange(), "Closed", "Output when closed is not as expected")
+
     def testOpen(self):
         """
         Tests that a day with specified hours appears as expected

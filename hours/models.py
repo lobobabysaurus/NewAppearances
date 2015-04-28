@@ -6,13 +6,13 @@ class Day(models.Model):
     Open hours for days of the week
     """
     # Constants for days of the week
-    MONDAY=1
-    TUESDAY=2
-    WEDNESDAY=3
-    THURSDAY=4
-    FRIDAY=5
-    SATURDAY=6
-    SUNDAY=7
+    MONDAY = 1
+    TUESDAY = 2
+    WEDNESDAY = 3
+    THURSDAY = 4
+    FRIDAY = 5
+    SATURDAY = 6
+    SUNDAY = 7
 
     # Choices to map day constants to Names
     dayChoices = (
