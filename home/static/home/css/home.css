@@ -2,14 +2,16 @@
  * Formatting for the home page application
  */
 
-.homePageText p {
+.homePageText > p {
     text-align: center;
     font-size: 38px;
 }
+
 .newAppearancesImage {
     max-width: 50%;
     float:left;
 }
+
 #homePageImage {
     width: 100%;
     height: auto;
