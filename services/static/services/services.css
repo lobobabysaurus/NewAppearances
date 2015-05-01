@@ -2,16 +2,22 @@
  * Style data for the services application
  */
 
-.tftable {
-	font-size: 12px;
-	color: #fbfbfb;
-	width: 75%;
-	border-width: 1px;
-	border-color: #686767;
-	border-collapse: collapse;
-	text-align: center;
+.serviceHeader>a {
+    display: inline-block;
+    float: left;
+    width: 16.66%;
+    background-color: #46ceff;
+    text-align: center;
 }
-.tftable th {font-size:12px;background-color:#171515;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;text-align:left;}
-.tftable tr {background-color:#2f2f2f;}
-.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}
-.tftable tr:hover {background-color:#171515;}
+
+.serviceName {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.servicePrice {
+    float: right;
+    width: 50%;
+    text-align: center;
+}

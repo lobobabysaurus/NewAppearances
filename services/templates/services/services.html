@@ -11,32 +11,21 @@
 {% endblock %}
 
 {% block body %}
-    <div style="float:left; border:solid 2px; height: 50px; width: 74.5%; background-color: orange;">
-    <br />
-    &nbsp;&nbsp;
-    <a href ="/services">All Services</a>&nbsp;&nbsp;&nbsp;
-    <a href ="/services/haircuts">Haircuts</a>&nbsp;&nbsp;&nbsp;
-    <a href ="/services/colors">Colors</a>&nbsp;&nbsp;&nbsp;
-    <a href ="/services/straightening">Straightening</a>&nbsp;&nbsp;&nbsp;
-    <a href ="/services/perms">Perms</a>&nbsp;&nbsp;&nbsp;
-    <a href ="/services/skincare">Skincare</a>&nbsp;&nbsp;&nbsp;
+    <div class="serviceHeader">
+        <a href ="/services">All Services</a>
+        <a href ="/services/haircuts">Haircuts</a>
+        <a href ="/services/colors">Colors</a>
+        <a href ="/services/straightening">Straightening</a>
+        <a href ="/services/perms">Perms</a>
+        <a href ="/services/skincare">Skincare</a>
     </div>
-    
-    <table class="tftable" border="1">
-        
-		<tr><td colspan="2"><h1>{{ category }}</h1></td></tr>
-		<tr>
-                    <th>Service</th>
-                    <th>Price</th>
-                </tr>
-                
-        {% for service in service_list %}
-        <tr>
-        <td>{{ service.service_name }}</td>
-        <td>{{ service.priceStr }}</td>
-        </tr>
-        {% endfor %}
-    
-    </table>
-
+    <h2>{{ category }}</h2>
+    {% for service in service_list %}
+        <div class="serviceName">
+            <p>{{ service.service_name }}</p>
+        </div>
+        <div class="servicePrice">
+            <p>{{ service.priceStr }}</p>
+        </div>
+    {% endfor %}
 {% endblock %}
