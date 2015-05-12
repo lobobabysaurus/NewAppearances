@@ -1,10 +1,14 @@
-.dayOfWeek{
+/**
+ * Style data for the hours application
+ */
+
+.dayOfWeek {
     float: left;
     width: 50%;
     text-align: center;
 }
 
-.hoursForDay{
+.hoursForDay {
     float: right;
     width: 50%;
     text-align: center;

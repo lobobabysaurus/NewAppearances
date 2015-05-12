@@ -1,8 +1,6 @@
 /**
- * File to implement all Javascript that is available to the services application
+ * Module to implement all javascript resources that will be available to the base application
+ * at least for the main template
  *
- * @creator PRS
- * @created 2/7/2015
- * @last_modified_by PRS
- * @last_modified_date 2/7/2015
+ * @module Base
  */
