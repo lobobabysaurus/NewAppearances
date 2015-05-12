@@ -36,12 +36,12 @@ p {
     margin: 0;
 }
 
-.navBar>button {
+.navBar > button {
     height: 55px;
     font-size: 20px;
     background-color: #ffd2e5;
 }
-.navBar>button:hover {
+.navBar > button:hover {
     background-color: lightseagreen;
 }
 
@@ -50,7 +50,7 @@ p {
     border: 1px solid black;
 }
 
-.header>h1 {
+.header > h1 {
     vertical-align: middle;
     margin-top: 0;
     font-sitze: 50px;
@@ -70,7 +70,7 @@ p {
     height: 50px;
     border: 1px solid black;
 }
-.footer> p {
+.footer > p {
     vertical-align: top;
 }
 

@@ -2,7 +2,7 @@
  * Style data for the services application
  */
 
-.serviceHeader>a {
+.serviceHeader > a {
     display: inline-block;
     float: left;
     width: 16.66%;
