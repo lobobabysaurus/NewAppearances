@@ -13,6 +13,12 @@
     float: right;
 }
 
+#directions {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+}
+
 #directionsError {
     color: rgba(255, 0, 0, 0.99);
     text-align: center;
@@ -23,7 +29,7 @@
     height: 50%;
 }
 
-#directionsForm>label {
+#directionsForm > label {
     float: left;
     width: 35%;
     clear: left;
@@ -31,14 +37,14 @@
     font-size: 25px;
 }
 
-#directionsForm>input, #directionsForm>select{
+#directionsForm > input, #directionsForm > select{
     float: left;
     width: 40%;
     font-size: 20px;
     margin-bottom: 5px;
 }
 
-#directionsForm>input[type='button']{
+#directionsForm > input[type='button']{
     margin-left: 40%;
     width: 25%;
     font-size: 20px;
