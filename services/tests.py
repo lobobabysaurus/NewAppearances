@@ -12,25 +12,25 @@ class TestPriceStr(TestCase):
         Tests the ranged display case
         """
         service = Service(minimum_cost=30, maximum_cost=40)
-        self.assertEquals(service.priceStr(), "$30 - $40")
+        self.assertEquals(service.price_str(), "$30 - $40")
 
     def testMaxString(self):
         """
         Checks the single value display case
         """
         service = Service(maximum_cost=40)
-        self.assertEquals(service.priceStr(), "$40")
+        self.assertEquals(service.price_str(), "$40")
 
     def testMinString(self):
         """
         Checks the & up display case
         """
-        service = Service(minimum_cost = 30)
-        self.assertEquals(service.priceStr(), "$30 & up")
+        service = Service(minimum_cost=30)
+        self.assertEquals(service.price_str(), "$30 & up")
 
     def testNoString(self):
         """
         Checks the case of no prices set
         """
         service = Service()
-        self.assertIsNone(service.priceStr())
+        self.assertIsNone(service.price_str())

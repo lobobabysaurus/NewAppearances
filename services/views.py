@@ -35,7 +35,8 @@ def services(request, category_resource):
     :param category_resource: Name of the category of services to display
     :return: A html file rendered for the category
     """
+    proper_cat = category_resource.title()
     service_by_cat = Service.objects.filter(
-        category=Service.category_reverse[category_resource.title()]).order_by('service_name')
+        category=Service.category_reverse[proper_cat]).order_by('order')
     return render(request, 'services/services.html',
-                  {'service_list': service_by_cat, 'category': category_resource.title()}, )
+                  {'service_list': service_by_cat, 'category': proper_cat}, )

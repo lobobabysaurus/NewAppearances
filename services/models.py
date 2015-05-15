@@ -30,7 +30,7 @@ class Service(models.Model):
     # Reverse key/value lookup
     category_reverse = {category: cat_int for cat_int, category in dict(category_choices).items()}
     
-    def priceStr(self):
+    def price_str(self):
         """
         Formats a string representing the price depending on minimum and maximum costs
         :return: $<max> if only a max is set, $<min>-$<max> if both are set and $<min> & up if only min is set
