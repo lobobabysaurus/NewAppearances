@@ -1,163 +1,163 @@
 - fields: {category: 1, maximum_cost: 35, minimum_cost: null, order: 0, service_name: Women's}
   model: services.service
   pk: 5
-- fields: {category: 1, maximum_cost: 25, minimum_cost: null, order: 1, service_name: Men's}
+- fields: {category: 1, maximum_cost: 25, minimum_cost: null, order: 5, service_name: Men's}
   model: services.service
   pk: 6
-- fields: {category: 1, maximum_cost: 30, minimum_cost: null, order: 2, service_name: Girls
+- fields: {category: 1, maximum_cost: 30, minimum_cost: null, order: 10, service_name: Girls
       13-18}
   model: services.service
   pk: 7
-- fields: {category: 1, maximum_cost: 20, minimum_cost: null, order: 3, service_name: Boy's
+- fields: {category: 1, maximum_cost: 20, minimum_cost: null, order: 15, service_name: Boy's
       13-18}
   model: services.service
   pk: 8
-- fields: {category: 1, maximum_cost: 25, minimum_cost: 20, order: 4, service_name: Girl's
+- fields: {category: 1, maximum_cost: 25, minimum_cost: 20, order: 20, service_name: Girl's
       12 & Under}
   model: services.service
   pk: 9
-- fields: {category: 1, maximum_cost: 18, minimum_cost: 13, order: 5, service_name: Boy's
+- fields: {category: 1, maximum_cost: 18, minimum_cost: 13, order: 25, service_name: Boy's
       12 & Under}
   model: services.service
   pk: 10
-- fields: {category: 1, maximum_cost: 10, minimum_cost: null, order: 6, service_name: Buzz}
+- fields: {category: 1, maximum_cost: 10, minimum_cost: null, order: 30, service_name: Buzz}
   model: services.service
   pk: 11
-- fields: {category: 1, maximum_cost: 8, minimum_cost: null, order: 7, service_name: Bang
+- fields: {category: 1, maximum_cost: 8, minimum_cost: null, order: 35, service_name: Bang
       Trim}
   model: services.service
   pk: 12
-- fields: {category: 1, maximum_cost: 20, minimum_cost: null, order: 8, service_name: Blowouts}
+- fields: {category: 1, maximum_cost: 20, minimum_cost: null, order: 40, service_name: Blowouts}
   model: services.service
   pk: 13
-- fields: {category: 1, maximum_cost: 25, minimum_cost: null, order: 9, service_name: Sets}
+- fields: {category: 1, maximum_cost: 25, minimum_cost: null, order: 45, service_name: Sets}
   model: services.service
   pk: 14
-- fields: {category: 2, maximum_cost: 10, minimum_cost: null, order: 11, service_name: All
+- fields: {category: 2, maximum_cost: 10, minimum_cost: null, order: 0, service_name: All
       Blowout with Color Add}
   model: services.service
   pk: 15
-- fields: {category: 2, maximum_cost: null, minimum_cost: 45, order: 12, service_name: Single
+- fields: {category: 2, maximum_cost: null, minimum_cost: 45, order: 5, service_name: Single
       Process}
   model: services.service
   pk: 16
-- fields: {category: 2, maximum_cost: 45, minimum_cost: null, order: 13, service_name: Glazing}
+- fields: {category: 2, maximum_cost: 45, minimum_cost: null, order: 10, service_name: Glazing}
   model: services.service
   pk: 17
-- fields: {category: 2, maximum_cost: null, minimum_cost: 70, order: 14, service_name: Double
+- fields: {category: 2, maximum_cost: null, minimum_cost: 70, order: 15, service_name: Double
       Process}
   model: services.service
   pk: 18
-- fields: {category: 2, maximum_cost: null, minimum_cost: 90, order: 15, service_name: Foil
+- fields: {category: 2, maximum_cost: null, minimum_cost: 90, order: 20, service_name: Foil
       Highlights}
   model: services.service
   pk: 19
-- fields: {category: 2, maximum_cost: 65, minimum_cost: null, order: 16, service_name: Partial
+- fields: {category: 2, maximum_cost: 65, minimum_cost: null, order: 25, service_name: Partial
       Foil}
   model: services.service
   pk: 20
-- fields: {category: 2, maximum_cost: 60, minimum_cost: null, order: 17, service_name: Cap
+- fields: {category: 2, maximum_cost: 60, minimum_cost: null, order: 30, service_name: Cap
       Highlights}
   model: services.service
   pk: 21
-- fields: {category: 2, maximum_cost: 25, minimum_cost: null, order: 18, service_name: Men's
+- fields: {category: 2, maximum_cost: 25, minimum_cost: null, order: 35, service_name: Men's
       Color Camo}
   model: services.service
   pk: 22
-- fields: {category: 3, maximum_cost: null, minimum_cost: 70, order: 21, service_name: Straightening}
+- fields: {category: 3, maximum_cost: null, minimum_cost: 70, order: 0, service_name: Straightening}
   model: services.service
   pk: 23
-- fields: {category: 3, maximum_cost: 300, minimum_cost: null, order: 22, service_name: Chi
+- fields: {category: 3, maximum_cost: 300, minimum_cost: null, order: 5, service_name: Chi
       Thermal}
   model: services.service
   pk: 24
-- fields: {category: 3, maximum_cost: 250, minimum_cost: null, order: 23, service_name: Chi
+- fields: {category: 3, maximum_cost: 250, minimum_cost: null, order: 10, service_name: Chi
       Touch Up}
   model: services.service
   pk: 25
-- fields: {category: 3, maximum_cost: 225, minimum_cost: null, order: 24, service_name: Keratin
+- fields: {category: 3, maximum_cost: 225, minimum_cost: null, order: 15, service_name: Keratin
       Smoothing}
   model: services.service
   pk: 26
-- fields: {category: 3, maximum_cost: 275, minimum_cost: null, order: 25, service_name: Brazilian
+- fields: {category: 3, maximum_cost: 275, minimum_cost: null, order: 20, service_name: Brazilian
       Blow Out}
   model: services.service
   pk: 27
-- fields: {category: 3, maximum_cost: 70, minimum_cost: null, order: 26, service_name: Keratin
+- fields: {category: 3, maximum_cost: 70, minimum_cost: null, order: 25, service_name: Keratin
       Color Seal}
   model: services.service
   pk: 28
-- fields: {category: 4, maximum_cost: null, minimum_cost: 65, order: 31, service_name: Perms}
+- fields: {category: 4, maximum_cost: null, minimum_cost: 65, order: 0, service_name: Perms}
   model: services.service
   pk: 29
-- fields: {category: 4, maximum_cost: null, minimum_cost: 85, order: 32, service_name: Spiral
+- fields: {category: 4, maximum_cost: null, minimum_cost: 85, order: 5, service_name: Spiral
       Perms}
   model: services.service
   pk: 30
-- fields: {category: 4, maximum_cost: null, minimum_cost: 50, order: 33, service_name: Formal
+- fields: {category: 4, maximum_cost: null, minimum_cost: 50, order: 10, service_name: Formal
       Styling}
   model: services.service
   pk: 31
-- fields: {category: 5, maximum_cost: 60, minimum_cost: 55, order: 41, service_name: Facial}
+- fields: {category: 5, maximum_cost: 60, minimum_cost: 55, order: 0, service_name: Facial}
   model: services.service
   pk: 32
-- fields: {category: 5, maximum_cost: 70, minimum_cost: null, order: 42, service_name: Vitamin
+- fields: {category: 5, maximum_cost: 70, minimum_cost: null, order: 5, service_name: Vitamin
       C Peel}
   model: services.service
   pk: 33
-- fields: {category: 5, maximum_cost: 70, minimum_cost: null, order: 43, service_name: Glycolic
+- fields: {category: 5, maximum_cost: 70, minimum_cost: null, order: 10, service_name: Glycolic
       Peel}
   model: services.service
   pk: 34
-- fields: {category: 5, maximum_cost: 50, minimum_cost: null, order: 44, service_name: Makeup
+- fields: {category: 5, maximum_cost: 50, minimum_cost: null, order: 20, service_name: Makeup
       Application}
   model: services.service
   pk: 35
-- fields: {category: 5, maximum_cost: 10, minimum_cost: null, order: 45, service_name: (With
+- fields: {category: 5, maximum_cost: 10, minimum_cost: null, order: 25, service_name: (With
       Eyelashes Add)}
   model: services.service
   pk: 36
-- fields: {category: 5, maximum_cost: 12, minimum_cost: null, order: 46, service_name: Eyebrow
+- fields: {category: 5, maximum_cost: 12, minimum_cost: null, order: 30, service_name: Eyebrow
       Wax}
   model: services.service
   pk: 37
-- fields: {category: 5, maximum_cost: 10, minimum_cost: null, order: 47, service_name: Lip
+- fields: {category: 5, maximum_cost: 10, minimum_cost: null, order: 35, service_name: Lip
       Wax}
   model: services.service
   pk: 38
-- fields: {category: 5, maximum_cost: 10, minimum_cost: 8, order: 48, service_name: Chin
+- fields: {category: 5, maximum_cost: 10, minimum_cost: 8, order: 40, service_name: Chin
       Wax}
   model: services.service
   pk: 39
-- fields: {category: 5, maximum_cost: 35, minimum_cost: null, order: 488, service_name: Leg
+- fields: {category: 5, maximum_cost: 35, minimum_cost: null, order: 45, service_name: Leg
       Wax}
   model: services.service
   pk: 40
-- fields: {category: 5, maximum_cost: 55, minimum_cost: null, order: 49, service_name: Full
+- fields: {category: 5, maximum_cost: 55, minimum_cost: null, order: 50, service_name: Full
       Leg}
   model: services.service
   pk: 41
-- fields: {category: 5, maximum_cost: 50, minimum_cost: null, order: 50, service_name: Arm
+- fields: {category: 5, maximum_cost: 50, minimum_cost: null, order: 55, service_name: Arm
       Wax}
   model: services.service
   pk: 42
-- fields: {category: 5, maximum_cost: 30, minimum_cost: 25, order: 51, service_name: Bikini
+- fields: {category: 5, maximum_cost: 30, minimum_cost: 25, order: 60, service_name: Bikini
       Wax}
   model: services.service
   pk: 43
-- fields: {category: 5, maximum_cost: 25, minimum_cost: 20, order: 52, service_name: Under
+- fields: {category: 5, maximum_cost: 25, minimum_cost: 20, order: 65, service_name: Under
       Arm Wax}
   model: services.service
   pk: 44
-- fields: {category: 5, maximum_cost: 25, minimum_cost: null, order: 53, service_name: Ear
+- fields: {category: 5, maximum_cost: 25, minimum_cost: null, order: 70, service_name: Ear
       Piercing}
   model: services.service
   pk: 45
-- fields: {category: 5, maximum_cost: 50, minimum_cost: 40, order: 54, service_name: Men's
+- fields: {category: 5, maximum_cost: 50, minimum_cost: 40, order: 75, service_name: Men's
       Back Wax}
   model: services.service
   pk: 46
-- fields: {category: 5, maximum_cost: 50, minimum_cost: 40, order: 55, service_name: Men's
+- fields: {category: 5, maximum_cost: 50, minimum_cost: 40, order: 80, service_name: Men's
       Chest Wax}
   model: services.service
   pk: 47
