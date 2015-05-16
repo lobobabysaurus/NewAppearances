@@ -2,3 +2,4 @@
 *.pyc
 */migrations/0*.py
 tools/api
+*~
