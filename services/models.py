@@ -3,13 +3,13 @@ from django.db import models
 
 class Service(models.Model):
     """
-    Represents a service on the database
+    A Service offered by the business
     """
     service_name = models.CharField(max_length=100, unique=True, help_text="Name of the providable service",)
     minimum_cost = models.IntegerField(blank=True, null=True,
-            help_text="Minimum cost of a range price service or base price of an & up services",)
+                        help_text="Minimum cost of a range price service or base price of an & up services",)
     maximum_cost = models.IntegerField(blank=True, null=True,
-            help_text="Maximum cost of a range price service or price of a fixed price service",)
+                        help_text="Maximum cost of a range price service or price of a fixed price service",)
     order = models.IntegerField(help_text="Value to order what services should appear where")
 
     # Constants to represent service types
@@ -26,7 +26,7 @@ class Service(models.Model):
         (SKINCARE, 'Skincare'),
     )
     category = models.IntegerField(choices=category_choices,
-            help_text="Mapping of constants to strings of service types so that we can save database space",)
+                    help_text="Mapping of constants to strings of service types so that we can save database space",)
     # Reverse key/value lookup
     category_reverse = {category: cat_int for cat_int, category in dict(category_choices).items()}
 
@@ -49,3 +49,13 @@ class Service(models.Model):
             return "$" + str(self.minimum_cost) + " & up"
         else:
             return None
+
+
+class SubService:
+    """
+    Related statement or price for a service
+    """
+    text = models.CharField(max_length=255, help_text="Name of text to help another service",)
+    price = models.IntegerField(blank=True, null=True, help_text="optional price",)
+    service = models.ForeignKey(Service, related_name='services',
+                                help_text="Link to the service this addend",)
