@@ -11,21 +11,17 @@
 {% endblock %}
 
 {% block body %}
-    <div class="serviceHeader">
-        <a href ="/services">All Services</a>
-        <a href ="/services/haircuts">Haircuts</a>
-        <a href ="/services/colors">Colors</a>
-        <a href ="/services/straightening">Straightening</a>
-        <a href ="/services/perms">Perms</a>
-        <a href ="/services/skincare">Skincare</a>
-    </div>
     <h2>{{ category }}</h2>
-    {% for service in service_list %}
-        <div class="serviceName">
-            <p>{{ service.service_name }}</p>
-        </div>
-        <div class="servicePrice">
-            <p>{{ service.price_str }}</p>
-        </div>
-    {% endfor %}
+    <div class="servicesContainer">
+       {% for service in service_list %}
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="even">
+            {% else %}
+                <div class="odd">
+            {% endif %}   
+                    <p class="serviceName">{{ service.service_name }}</p>
+                    <p class="servicePrice">{{ service.price_str }}</p>
+               </div>      
+       {% endfor %}
+    </div>
 {% endblock %}
