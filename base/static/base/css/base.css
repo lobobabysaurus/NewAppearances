@@ -30,23 +30,83 @@ p {
     overflow: auto;
 }
 
-.navBar {
-    font-size: 0;
-    padding: 0;
-    margin: 0;
+
+/* START drop-down nav bar structure */
+nav {
+	margin: auto; 
+	text-align: center;
 }
 
-.navBar > button {
-    height: 55px;
-    font-size: 20px;
-    background-color: #ffd2e5;
+ul, li {
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    position:relative
 }
-.navBar > button:hover {
-    background-color: lightseagreen;
+
+nav ul ul {
+    display: none;
 }
+	nav ul li:hover > ul {
+		display: block;
+                z-index: 1000; 
+	}
+
+nav ul {
+    background: #efefef; 
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    border-radius: 10px;  
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+	nav ul:after {
+	    display: block;
+	}
+
+	nav ul li {
+		float: left;
+	}
+		nav ul li:hover {
+			background: #4b545f;
+		}
+			nav ul li:hover button {
+				color: black;
+			}
+		
+		nav ul li button {
+			display: block; 
+                        padding: 20px 60px;
+			color: black;
+		}
+	nav ul ul {
+		background: #5f6975; 
+                border-radius: 0px; 
+                padding: 0;
+		position: absolute; 
+                top: 100%;
+	}
+		nav ul ul li {
+			float: none; 
+			border-top: 1px solid #6b727c;
+			border-bottom: 1px solid #575f6a; 
+                        position: relative;
+		}
+			nav ul ul li button {
+				padding: 15px 55px
+				color: black;
+			}	
+				nav ul ul li button:hover {
+					background: #4b545f;
+                                        color: white;
+				}
+	nav ul ul ul {
+		position: absolute; left: 100%; top:0;
+	}
+/* END drop-down nav bar structure */	
 
 .header {
-    background-color: #000000;
+    background-color: darkslateblue;
     border: 1px solid black;
 }
 

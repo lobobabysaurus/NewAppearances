@@ -10,14 +10,38 @@
     text-align: center;
 }
 
+.servicesContainer{
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
 .serviceName {
     float: left;
     width: 50%;
     text-align: center;
+    margin:0;
+    padding-top:10px;
+    height: 30px;
+    font-size: 150%;
 }
 
 .servicePrice {
     float: right;
     width: 50%;
     text-align: center;
+    margin:0;
+    padding-top:10px;
+    height: 30px;
+    font-size: 150%;
 }
+
+.even > .serviceName, .even > .servicePrice {	
+	background-color:#FF6CB5;
+}
+
+.odd > .serviceName, .odd > .servicePrice {
+	background-color:#FF3399;
+}
+
+
