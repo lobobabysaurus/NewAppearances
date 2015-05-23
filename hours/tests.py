@@ -11,12 +11,12 @@ class HourStringTest(TestCase):
         """
         Test that a day with no specified hours appears as closed
         """
-        closedDay = Day(dayName=Day.MONDAY)
-        self.assertEquals(closedDay.getHoursRange(), "Closed", "Output when closed is not as expected")
+        closed_day = Day(day_name=Day.MONDAY)
+        self.assertEquals(closed_day.get_hours_range(), "Closed", "Output when closed is not as expected")
 
     def testOpen(self):
         """
         Tests that a day with specified hours appears as expected
         """
-        openDay = Day(dayName=Day.TUESDAY, startTime="6:00", endTime="10:00")
-        self.assertEquals(openDay.getHoursRange(), "6:00-10:00", "Time range is not displaying as expected")
+        open_day = Day(day_name=Day.TUESDAY, start_time="6:00", end_time="10:00")
+        self.assertEquals(open_day.get_hours_range(), "6:00-10:00", "Time range is not displaying as expected")

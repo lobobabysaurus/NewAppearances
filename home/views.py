@@ -21,7 +21,7 @@ def home(request):
     :template:`home/home.html`
     """
     return render(request, 'home/home.html', {
-        "homePageText": HomePageText.objects.get(isActive=True).pageText,
-        "homePageImage": HomePageImage.objects.get(isActive=True).properImageURL,
-        "imageAlt": HomePageImage.objects.get(isActive=True).alt,
+        "homePageText": HomePageText.objects.get(is_active=True).page_text,
+        "homePageImage": HomePageImage.objects.get(is_active=True).proper_image_url,
+        "imageAlt": HomePageImage.objects.get(is_active=True).alt,
     })

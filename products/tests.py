@@ -11,5 +11,6 @@ class ProperURLTest(TestCase):
         """
         Test that stripping the initial section of the url functions properly
         """
-        testImage = Brand(brandLogo='products/static/products/images/testImage.jpg')
-        self.assertEquals(testImage.properImageURL(), "/static/products/images/testImage.jpg", "URL not trimeed as expected")
+        test_image = Brand(brand_logo='products/static/products/images/testImage.jpg')
+        self.assertEquals(test_image.proper_image_url(), "/static/products/images/testImage.jpg",
+                          "URL not trimeed as expected")

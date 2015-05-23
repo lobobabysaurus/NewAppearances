@@ -14,7 +14,7 @@ class BrandAdmin(admin.ModelAdmin):
     """
     Have Brands display in a clean way
     """
-    list_display = ('brandName', 'alt', 'isCarried', 'brandLogo',)
+    list_display = ('brand_name', 'alt', 'is_carried', 'brand_logo',)
     inlines = [ProductInline]
 
 admin.site.register(Brand, BrandAdmin)

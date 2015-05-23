@@ -1,20 +1,20 @@
-- fields: {isActive: true}
+- fields: {is_active: true}
   model: home.homepagemodel
   pk: 1
-- fields: {isActive: true}
+- fields: {is_active: true}
   model: home.homepagemodel
   pk: 2
-- fields: {pageText: "<p> We at New Appearances Salon have been serving the men, women,\
-      \ and children of southeastern Pennsylvania for the past 25 years. Our experienced\
-      \ and talented stylists offer all kinds of haircut styles, various forms of\
-      \ hair coloring, color and feather hair extensions, perms and curling, top-of-the-art\
-      \ skincare treatments, including UV Free spray tanning, and modern chemical\
-      \ straightening processes.</p>\r\n\r\n<p>We serve walk ins, and if a specific\
-      \ stylist is requested, we are more than willing to schedule  appointments.\
+- fields: {page_text: "<p> We at New Appearances Salon have been serving the men,\
+      \ women, and children of southeastern Pennsylvania for the past 25 years. Our\
+      \ experienced and talented stylists offer all kinds of haircut styles, various\
+      \ forms of hair coloring, color and feather hair extensions, perms and curling,\
+      \ top-of-the-art skincare treatments, including UV Free spray tanning, and modern\
+      \ chemical straightening processes.</p>\r\n\r\n<p>We serve walk ins, and if\
+      \ a specific stylist is requested, we are more than willing to schedule  appointments.\
       \ Current customers can vouch for our quality and new customers will not be\
       \ disappointed.</p>"}
   model: home.homepagetext
   pk: 2
-- fields: {alt: Home Page Image, homeImage: home/static/home/images/salonfrontCrop.jpg}
+- fields: {alt: Home Page Image, home_image: home/static/home/images/salonfrontCrop.jpg}
   model: home.homepageimage
   pk: 1

@@ -15,7 +15,7 @@ class Day(models.Model):
     SUNDAY = 7
 
     # Choices to map day constants to Names
-    dayChoices = (
+    day_choices = (
         (MONDAY, "Monday"),
         (TUESDAY, "Tuesday"),
         (WEDNESDAY, "Wednesday"),
@@ -25,18 +25,18 @@ class Day(models.Model):
         (SUNDAY, "Sunday"),
     )
 
-    dayName = models.IntegerField(choices=dayChoices, unique=True, help_text="Name of the day of the week")
-    startTime = models.CharField(blank=True, max_length=7, help_text="Time the shop opens")
-    endTime = models.CharField(blank=True, max_length=7, help_text="Time the shop closes")
+    day_name = models.IntegerField(choices=day_choices, unique=True, help_text="Name of the day of the week")
+    start_time = models.CharField(blank=True, max_length=7, help_text="Time the shop opens")
+    end_time = models.CharField(blank=True, max_length=7, help_text="Time the shop closes")
 
-    def getHoursRange(self):
+    def get_hours_range(self):
         """
         Get the hours to display for a given day - Either closed or a <start>-<end> format
         """
-        if self.startTime=='' and self.endTime=='':
+        if self.start_time == '' and self.end_time == '':
             return "Closed"
-        #Make this a real error case
-        elif self.startTime=='' or self.endTime =='':
+        # TODO Make this a real error case
+        elif self.start_time == '' or self.end_time == '':
             return "Somethings Wrong"
         else:
-            return self.startTime + "-" + self.endTime
+            return self.start_time + "-" + self.end_time

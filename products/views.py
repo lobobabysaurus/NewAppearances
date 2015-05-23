@@ -16,4 +16,4 @@ def products(request):
 
     :template:`products/products.html`
     """
-    return render(request, 'products/products.html', {"brandImages": Brand.objects.filter(isCarried=True)})
+    return render(request, 'products/products.html', {"brandImages": Brand.objects.filter(is_carried=True)})

@@ -14,22 +14,22 @@
     <div class="brands">
     {% for image in brandImages %}
 
-        <img id="brand{{image.brandName}}"
-             src="{{image.properImageURL}}"
+        <img id="brand{{image.brand_name}}"
+             src="{{image.proper_image_url}}"
              alt="{{image.alt}}"
-             height={{image.brandLogo.height}}
-             width={{image.brandLogo.width}}   />
+             height={{image.brand_logo.height}}
+             width={{image.brand_logo.width}}   />
         {% if image.products.all %}
-            <div id="brand{{image.brandName}}Dialog" class="brandProduct">
+            <div id="brand{{image.brand_name}}Dialog" class="brandProduct">
                 {% for product in image.products.all %}
                     <div class="productLink">
-                        <p><a href="{{product.productLink }}" target="_blank">
-                            {{ product.productName }}
+                        <p><a href="{{product.product_link }}" target="_blank">
+                            {{ product.product_name }}
                         </a></p>
                     </div>
                     <div class="productPrice">
                         <p>
-                            {{ product.productPrice }}
+                            {{ product.product_price }}
                         </p>
                     </div>
                 {% endfor %}

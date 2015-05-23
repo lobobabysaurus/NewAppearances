@@ -12,10 +12,10 @@
     </div>
     {% for day in hoursList %}
         <div class="dayOfWeek">
-            <p>{{ day.get_dayName_display }}</p>
+            <p>{{ day.get_day_name_display }}</p>
         </div>
         <div class="hoursForDay">
-            <p>{{ day.getHoursRange }}</p>
+            <p>{{ day.get_hours_range }}</p>
         </div>
     {% endfor %}
     <div class="hoursFooter">
