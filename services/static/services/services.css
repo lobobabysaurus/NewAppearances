@@ -16,8 +16,7 @@
     left: 5%;
 }
 
-.serviceName {
-    float: left;
+.serviceName, .servicePrice {
     width: 50%;
     text-align: center;
     margin:0;
@@ -26,14 +25,12 @@
     font-size: 150%;
 }
 
+.serviceName {
+    float: left;
+}
+
 .servicePrice {
     float: right;
-    width: 50%;
-    text-align: center;
-    margin:0;
-    padding-top:10px;
-    height: 30px;
-    font-size: 150%;
 }
 
 .even > .serviceName, .even > .servicePrice {	
