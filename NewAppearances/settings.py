@@ -66,7 +66,7 @@ WSGI_APPLICATION = 'NewAppearances.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'NewAppearances',
         'USER': 'root',
         'PASSWORD': 'NewAppearances',
@@ -93,3 +93,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+# Root directory of the project
+ENV_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+# Directory and url for media files
+MEDIA_ROOT = os.path.join(ENV_PATH, 'image_repo/')
+MEDIA_URL = '/images/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+# Email created just for sending and receiving contact emails
+EMAIL_HOST_USER = 'newappearancesemail@gmail.com'
+EMAIL_HOST_PASSWORD = 'NewAppearances1!'
+EMAIL_USE_TLS = True
+

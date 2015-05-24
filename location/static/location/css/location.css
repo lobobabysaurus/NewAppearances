@@ -1,15 +1,16 @@
 /**
  * Basic styling for the Location app
  */
+
 .addressStatic {
     width: 100%;
-    height: 25%;
+    height: 35%;
     text-align: center;
 }
 
 .directionsFormHolder {
     width: 50%;
-    height: 50%;
+    height: 60%;
     float: right;
 }
 
@@ -20,7 +21,7 @@
 }
 
 #directionsError {
-    color: rgba(255, 0, 0, 0.99);
+    color: rgb(255, 0, 0);
     text-align: center;
     font-weight: bold;
 }
@@ -29,7 +30,7 @@
     height: 50%;
 }
 
-#directionsForm > label {
+.formRow > label {
     float: left;
     width: 35%;
     clear: left;
@@ -37,14 +38,14 @@
     font-size: 25px;
 }
 
-#directionsForm > input, #directionsForm > select{
+.formRow > input, .formRow > select {
     float: left;
     width: 40%;
     font-size: 20px;
     margin-bottom: 5px;
 }
 
-#directionsForm > input[type='button']{
+#directionsForm > input{
     margin-left: 40%;
     width: 25%;
     font-size: 20px;

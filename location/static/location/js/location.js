@@ -86,7 +86,7 @@ function Location () {
         $.each($("#directionsForm").serializeArray() , function(index, formSet){
             var value = formSet['value'];
             if(value){
-                if($.inArray(formSet['name'], ["Zip", "State"])==-1){
+                if($.inArray(formSet['name'], ["zip", "state"])==-1){
                     address += value + ", ";
                 }
                 else {

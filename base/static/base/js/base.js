@@ -14,14 +14,14 @@ $(document).ready( function () {
     //Run page clock
     base.setCurrentTime();
     setInterval(function () {base.setCurrentTime();}, 1000);
-    //Set content section height
-    base.setContentHeight();
     //Associate Nav bar click reactions
     base.setButtonLinks();
     //Set the width of the nav buttons
     base.setButtonWidth();
     //Set the size of text content
     base.setTextSize();
+    //Set content section height
+    base.setContentHeight();
 });
 
 /**
@@ -30,8 +30,8 @@ $(document).ready( function () {
  */
 $(window).resize( function () {
     var base = new Base();
-    base.setContentHeight();
     base.setButtonWidth();
+    base.setContentHeight();
 });
 
 /**
@@ -42,21 +42,23 @@ $(window).resize( function () {
 function Base() {
 
     /**
-     * Set text size for p and label elements
+     * Set text size for p, input, and label elements
      * @method setTextSize
      */
     this.setTextSize = function() {
-        $("p").css("font-size",
-            $("p").css("font-size").substring(0,2) *
-            (window.innerHeight/900));
+        if ($(".content p").length > 0) {
+            $(".content p, input, label").css("font-size",
+                $(".content p").css("font-size").substring(0, 2) *
+                (window.innerHeight / 750));
+        }
     };
     /**
      * Set the width for the navbar
      * @method setButtonWidth
      */
-    this.setButtonWidth = function(){
+    this.setButtonWidth = function() {
         //get the nav bar div
-        var navBar = $("div.navBar")
+        var navBar = $("div.navBar");
         //Find number of buttons to display
         var numButtons = navBar.find("button").length;
         //set the width each button to be the size of the container divided by the number of images
@@ -70,7 +72,7 @@ function Base() {
      * Set button click functionality
      * @method setButtonLinks
      */
-    this.setButtonLinks= function(){
+    this.setButtonLinks = function() {
         $("div.navBar").find("button").each(function () {
             $(this).click(function () {
                 window.location.href = "/"+this.id+"/";
@@ -84,7 +86,7 @@ function Base() {
      * @method getCurrentTime
      * @return {String} Time formatted as HH:mm:ss DD MMMM YYYY
      */
-    this.getCurrentTime = function(){
+    this.getCurrentTime = function() {
         return moment(new Date()).format("HH:mm:ss DD MMMM YYYY");
     };
 
@@ -103,12 +105,12 @@ function Base() {
      *
      * @method setContentHeight
      */
-    this.setContentHeight = function(){
+    this.setContentHeight = function() {
         //height of all body elements
         var navHeight = $("#navBarContainer").outerHeight() +
             $("#templateFooter").outerHeight() +
             $("#templateHeader").outerHeight();
         //set the content element to be the difference between the window size and all other body elements
-        $("#templateContent").height(window.innerHeight - navHeight);
+        $("#templateContent").innerHeight(window.innerHeight - navHeight);
     };
 }

@@ -10,14 +10,18 @@
     <div class="hoursHeader">
         <h1>Hours of Operation</h1>
     </div>
-    {% for day in hoursList %}
-        <div class="dayOfWeek">
-            <p>{{ day.get_dayName_display }}</p>
-        </div>
-        <div class="hoursForDay">
-            <p>{{ day.getHoursRange }}</p>
-        </div>
-    {% endfor %}
+    <div class="hoursContainer">
+        {% for day in hoursList %}
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="even">
+            {% else %}
+                <div class="odd">
+            {% endif %}
+                    <p class="dayOfWeek">{{ day.get_day_name_display }}</p>
+                    <p class="hoursForDay">{{ day.get_hours_range }}</p>
+                </div>
+        {% endfor %}
+    </div>
     <div class="hoursFooter">
         <h3>Contact us for the hours of individual stylists</h3>
     </div>

@@ -2,5 +2,23 @@
 
 {% load staticfiles %}
 
+{% block appStylesheet %}
+    <link rel ="stylesheet" type="text/css" href="{% static "contact/css/contact.css" %}" />
+{% endblock %}
+
 {% block body %}
+    <h1>Contact Us</h1>
+    <h3>Please fill out all of the fields in the form below</h3>
+    {% if failed %}
+        <h5>Submission failed because all fields were not completed</h5>
+    {% endif %}
+    <form class = "contactForm" method="POST">
+        {% csrf_token %}
+        <div class = "formRow">
+            {% for field in form %}
+                {{ field.label_tag }}{{ field }}
+            {% endfor %}
+        </div>
+        <input id="submitButton" type="submit" value="Submit" />
+    </form>
 {% endblock %}

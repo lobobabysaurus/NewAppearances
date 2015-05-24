@@ -8,5 +8,8 @@ class HomeTests(TestCase):
     Learner for setting up a test
     """
     def testIsOneActiveText(self):
-        activeText = HomePageText(isActive=True)
-        self.assertEqual(activeText.isActive, True)
+        """
+        Trivial test to learn tests and make sure that an active home page text is active
+        """
+        active_text = HomePageText(is_active=True)
+        self.assertEqual(active_text.is_active, True)

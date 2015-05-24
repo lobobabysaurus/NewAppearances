@@ -23,13 +23,12 @@
     <div class="directionsFormHolder">
         <h2>Enter Address to Receive Directions</h2>
         <form id="directionsForm">
-            <label>Street:</label><input type="text" name="Street" />
-            <label>City:</label><input type="text" name="City" />
-            <label>State:</label>
-            <select name="State">
-                {% include 'location/state_options.html' %}
-            </select>
-            <label>Zip:</label><input type="text" name="Zip" />
+            {% csrf_token %}
+            <div class = "formRow">
+                {% for field in form %}
+                    {{ field.label_tag }}{{ field }}
+                {% endfor %}
+            </div>
             <input type="button" id="attemptCalculation" value="Find Directions" />
         </form>
         <p id="directionsError"></p>
