@@ -9,15 +9,8 @@ class Brand(models.Model):
                                  help_text="Name of the providable service should not have spaces",)
     alt = models.CharField(max_length=1000, help_text="Alternative text if the image cannot be displayed",)
     is_carried = models.BooleanField(default=True, help_text="Flag for if the product is being sold",)
-    brand_logo = models.ImageField(upload_to='products/static/products/images',
+    brand_logo = models.ImageField(upload_to='products/',
                                   help_text="Image of the logo for the brand",)
-
-    def proper_image_url(self):
-        """
-        Shrinks the stored url to be the url django references during runtime
-        """
-        return self.brand_logo.url[len("products"):]
-
 
 class Product(models.Model):
     """

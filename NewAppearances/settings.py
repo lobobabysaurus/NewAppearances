@@ -93,6 +93,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+# Root directory of the project
+ENV_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+# Directory and url for media files
+MEDIA_ROOT = os.path.join(ENV_PATH, 'image_repo/')
+MEDIA_URL = '/images/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -101,3 +106,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'newappearancesemail@gmail.com'
 EMAIL_HOST_PASSWORD = 'NewAppearances1!'
 EMAIL_USE_TLS = True
+

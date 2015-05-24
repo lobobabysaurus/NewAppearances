@@ -15,6 +15,6 @@
       \ disappointed.</p>"}
   model: home.homepagetext
   pk: 2
-- fields: {alt: Home Page Image, home_image: home/static/home/images/salonfrontCrop.jpg}
+- fields: {alt: Home Page Image, home_image: home/salonfrontCrop.jpg}
   model: home.homepageimage
   pk: 1

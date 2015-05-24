@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
@@ -18,4 +19,8 @@ urlpatterns = patterns('',
     url(r'^admin/docs/', include('django.contrib.admindocs.urls')),
     # Forward a url with admin/ to the admin site url
     url(r'^admin/', include(admin.site.urls)),
+    # To include the image repo
+    url(r'^images/(?P<path>.*)$', 'django.views.static.serve', {
+        'document_root': settings.MEDIA_ROOT,
+    }),
 )

@@ -1,28 +1,29 @@
-- fields: {alt: Redken Fifth Avenue, brand_logo: products/static/products/images/redken.jpg,
-    brand_name: Redken, is_carried: true}
+- fields: {alt: Redken Fifth Avenue, brand_logo: products/redken.jpg, brand_name: Redken,
+    is_carried: true}
   model: products.brand
   pk: 2
-- fields: {alt: Purology hair supplies, brand_logo: products/static/products/images/pureology-logo.jpg,
-    brand_name: Purology, is_carried: true}
+- fields: {alt: Purology hair supplies, brand_logo: products/pureology-logo.jpg, brand_name: Purology,
+    is_carried: true}
   model: products.brand
   pk: 3
-- fields: {alt: Sexy Hair Products, brand_logo: products/static/products/images/sexyhair-logo.gif,
-    brand_name: SexyHair, is_carried: true}
+- fields: {alt: Sexy Hair Products, brand_logo: products/sexyhair-logo.gif, brand_name: SexyHair,
+    is_carried: true}
   model: products.brand
   pk: 4
-- fields: {alt: Nexxus Hair Products, brand_logo: products/static/products/images/nexxus.png,
-    brand_name: Nexxus, is_carried: true}
+- fields: {alt: Nexxus Hair Products, brand_logo: products/nexxus.png, brand_name: Nexxus,
+    is_carried: true}
   model: products.brand
   pk: 5
-- fields: {alt: Matrix Hair Care, brand_logo: products/static/products/images/matrix.jpg,
-    brand_name: Matrix, is_carried: true}
+- fields: {alt: Matrix Hair Care, brand_logo: products/matrix.jpg, brand_name: Matrix,
+    is_carried: true}
   model: products.brand
   pk: 6
-- fields: {alt: Kenra Salon Quality, brand_logo: products/static/products/images/kenra.jpg,
-    brand_name: Kenra, is_carried: true}
+- fields: {alt: Kenra Salon Quality, brand_logo: products/kenra.jpg, brand_name: Kenra,
+    is_carried: true}
   model: products.brand
   pk: 7
 - fields: {product_brand: 7, product_link: 'http://kenra.com/ProductDetails.aspx?ID=4',
     product_name: Kenra Color Maintenance, product_price: 13.0}
   model: products.product
   pk: 1
+

@@ -22,6 +22,6 @@ def home(request):
     """
     return render(request, 'home/home.html', {
         "homePageText": HomePageText.objects.get(is_active=True).page_text,
-        "homePageImage": HomePageImage.objects.get(is_active=True).proper_image_url,
+        "homePageImage": HomePageImage.objects.get(is_active=True).home_image,
         "imageAlt": HomePageImage.objects.get(is_active=True).alt,
     })

@@ -15,7 +15,7 @@
     {% for image in brandImages %}
 
         <img id="brand{{image.brand_name}}"
-             src="{{image.proper_image_url}}"
+             src="{{image.brand_logo.url}}"
              alt="{{image.alt}}"
              height={{image.brand_logo.height}}
              width={{image.brand_logo.width}}   />
