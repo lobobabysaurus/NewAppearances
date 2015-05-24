@@ -7,27 +7,16 @@
     height: 35%;
     text-align: center;
 }
+/* Google maps directions step colors */
+.adp-substep{
+    background-color: darkorchid;
+    color: #ffe9f0;
+}
 
 .directionsFormHolder {
     width: 50%;
     height: 60%;
     float: right;
-}
-
-#directions {
-    text-align: center;
-    margin: auto;
-    width: 60%;
-}
-
-#directionsError {
-    color: rgb(255, 0, 0);
-    text-align: center;
-    font-weight: bold;
-}
-
-#directionsForm{
-    height: 50%;
 }
 
 .formRow > label {
@@ -43,6 +32,23 @@
     width: 40%;
     font-size: 20px;
     margin-bottom: 5px;
+}
+
+#directions {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    clear: both;
+}
+
+#directionsError {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-weight: bold;
+}
+
+#directionsForm{
+    height: 50%;
 }
 
 #directionsForm > input{

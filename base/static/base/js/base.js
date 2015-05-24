@@ -41,17 +41,22 @@ $(window).resize( function () {
  * @constructor Initializes the original text size
  */
 function Base() {
-    this.original_text_size = 0;
+    /**
+     * Size of p elements when the page is first loaded
+     * @property originalTextSize
+     * @type {Integer}
+     */
+    this.originalTextSize = 0;
     if($(".content p").length >0){
-        this.original_text_size = parseInt($(".content p").css("font-size").substring(0, 2));
+        this.originalTextSize = parseInt($(".content p").css("font-size").substring(0, 2));
     }
     /**
      * Set text size for p, input, and label elements
      * @method setTextSize
      */
     this.setTextSize = function() {
-        if (this.original_text_size > 0) {
-            $(".content p, input, label, select").css("font-size", this.original_text_size * (window.innerHeight / 750));
+        if (this.originalTextSize > 0) {
+            $(".content p, input, label, select").css("font-size", this.originalTextSize * (window.innerHeight / 750));
         }
     };
     /**
