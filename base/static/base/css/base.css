@@ -24,13 +24,6 @@ p {
     font-size: 20px;
 }
 
-.content {
-    background-color: rgb(104, 99, 255);
-    border: 1px solid black;
-    overflow: auto;
-}
-
-
 /* START drop-down nav bar structure */
 nav {
 	margin: auto; 
@@ -105,9 +98,18 @@ nav ul {
 	}
 /* END drop-down nav bar structure */	
 
+.content, .header, .footer {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.content {
+    background-color: rgb(104, 99, 255);
+    overflow: auto;
+}
+
 .header {
     background-color: darkslateblue;
-    border: 1px solid black;
 }
 
 .header > h1 {
@@ -128,7 +130,6 @@ nav ul {
     bottom: 0;
     position: absolute;
     height: 50px;
-    border: 1px solid black;
 }
 .footer > p {
     vertical-align: top;

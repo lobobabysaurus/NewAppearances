@@ -7,11 +7,13 @@
 {% endblock %}
 
 {% block body %}
+    <!--Set image in upper left corner-->
     <div class = "newAppearancesImage">
         <img src="{{ homePageImage.url }}"
              alt="{{ imageAlt }}"
              id="homePageImage">
     </div>
+    <!--Fill rest of page with text-->
     <div class = "homePageText">
         <p>{{ homePageText | safe }}</p>
     </div>

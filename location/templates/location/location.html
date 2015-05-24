@@ -3,6 +3,7 @@
 {% load staticfiles %}
 
 {% block appJavascript %}
+    <!--Google map library-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjub9cnpD_-Ptry-nxERgKVU-AD5MQM0w"
             xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"></script>
     <script src="{% static "location/js/location.js" %}"></script>
@@ -13,25 +14,32 @@
 {% endblock %}
 
 {% block body %}
+    <!--Address on top part of page-->
     <div class="addressStatic">
         <h2>NewAppearances is located at</h2>
         <p>530 Burmont Road</p>
         <p>Drexel Hill</p>
         <p>PA 19026</p>
     </div>
+    <!--Map where the store is on the lower left side of the page-->
     <div id="storeMap"></div>
+    <!--Directions form on the lower right side of the page-->
     <div class="directionsFormHolder">
         <h2>Enter Address to Receive Directions</h2>
         <form id="directionsForm">
+            <!--Check for CSRF attack-->
             {% csrf_token %}
             <div class = "formRow">
+                <!--row for each form <label><input> set-->
                 {% for field in form %}
                     {{ field.label_tag }}{{ field }}
                 {% endfor %}
             </div>
             <input type="button" id="attemptCalculation" value="Find Directions" />
         </form>
+        <!--Error section below the directions form-->
         <p id="directionsError"></p>
     </div>
+    <!--Directions result on the bottom portion of the page-->
     <div id="directions"></div>
 {% endblock %}

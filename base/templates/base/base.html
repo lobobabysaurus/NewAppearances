@@ -8,24 +8,31 @@
 
         {% load staticfiles %}
 
-        <link rel ="stylesheet" type="text/css" href="{% static "base/css/base.css" %}" />
-        {% block appStylesheet %}
-        {% endblock %}
-
+        <!--Required 3rd party js/css-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+
+        <!--Project wide JS, CSS, and inheritance blocks for js/css-->
+        <link rel ="stylesheet" type="text/css" href="{% static "base/css/base.css" %}" />
+
         <script src="{% static "base/js/base.js" %}"></script>
+
+        {% block appStylesheet %}
+        {% endblock %}
+
         {% block appJavascript %}
         {% endblock %}
     </head>
     <body>
+        <!--Header-->
         <div class ="header" id="templateHeader">
             <h1 id="headerText">
                 New Appearances Hair Salon
             </h1>
         </div>
+        <!--Nav Bar-->
         <div class ="navBar" id="navBarContainer">
             <nav>
                 <ul>
@@ -46,10 +53,12 @@
                 </ul>
             </nav>
         </div>
+        <!--Inherited Content-->
         <div class = "content" id="templateContent">
             {%  block body %}
             {%  endblock %}
         </div>
+        <!--Footer-->
         <div class = "footer" id="templateFooter">
             <a href="http://www.facebook.com/pages/New-Appearances/136050426486694" target="_blank">
                 <img src="{%  static "base/images/FindUsOnFacebook.png" %}" alt="Find us on Facebook" id="facebookLink">

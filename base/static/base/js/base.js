@@ -5,51 +5,53 @@
  * @module Base
  */
 
+//Container for module-wide variables
+var BaseObj = {};
 /**
  * Jquery to call all functions that need to be executed when the page loads
  *
  */
 $(document).ready( function () {
-    var base = new Base();
+    BaseObj.base = new Base();
     //Run page clock
-    base.setCurrentTime();
-    setInterval(function () {base.setCurrentTime();}, 1000);
+    BaseObj.base.setCurrentTime();
+    setInterval(function () {BaseObj.base.setCurrentTime();}, 1000);
     //Associate Nav bar click reactions
-    base.setButtonLinks();
+    BaseObj.base.setButtonLinks();
     //Set the width of the nav buttons
-    base.setButtonWidth();
+    BaseObj.base.setButtonWidth();
     //Set the size of text content
-    base.setTextSize();
+    BaseObj.base.setTextSize();
     //Set content section height
-    base.setContentHeight();
+    BaseObj.base.setContentHeight();
 });
 
 /**
- * Reset the size of the content section and nav buttons if the window is resized
- *
+ * Reset the size of the content section, nav buttons, and text if the window is resized
  */
 $(window).resize( function () {
-    var base = new Base();
-    base.setButtonWidth();
-    base.setContentHeight();
+    BaseObj.base.setButtonWidth();
+    BaseObj.base.setContentHeight();
+    BaseObj.base.setTextSize();
 });
 
 /**
  * Class representing the base functionality
  * @class Base
- * @constructor
+ * @constructor Initializes the original text size
  */
 function Base() {
-
+    this.original_text_size = 0;
+    if($(".content p").length >0){
+        this.original_text_size = parseInt($(".content p").css("font-size").substring(0, 2));
+    }
     /**
      * Set text size for p, input, and label elements
      * @method setTextSize
      */
     this.setTextSize = function() {
-        if ($(".content p").length > 0) {
-            $(".content p, input, label").css("font-size",
-                $(".content p").css("font-size").substring(0, 2) *
-                (window.innerHeight / 750));
+        if (this.original_text_size > 0) {
+            $(".content p, input, label, select").css("font-size", this.original_text_size * (window.innerHeight / 750));
         }
     };
     /**

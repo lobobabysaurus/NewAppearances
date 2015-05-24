@@ -20,3 +20,7 @@
     float: left;
     width: 150px;
 }
+
+.productPrice> p {
+    color: black;
+}

@@ -13,6 +13,7 @@
 {% block body %}
     <h2>{{ category }}</h2>
     <div class="servicesContainer">
+        <!--Print service name and corresponding price in a row and change class every other row for styling-->
        {% for service in service_list %}
             {% if forloop.counter|divisibleby:2 %}
                 <div class="even">
