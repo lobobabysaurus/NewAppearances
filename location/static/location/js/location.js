@@ -100,13 +100,27 @@ function Location () {
                     address += value + " ";
                 }
             }
+            //Sets form field value as cookie
+            $.cookie(formSet['name'], formSet['value'], {expires:7});
         });
         return address;
+    };
+
+    /**
+     * Iterates through all fields in the form and populates them with a value stored in Cookies if it exists
+     * @method initializeForm
+     */
+    this.initializeForm = function(){
+        var formFields = ["street","city","state","zip"];
+        $.each(formFields, function (index, field){
+            $("input[name='"+field+"']").val($.cookie(field));
+        });
     };
 }
 
 $(document).ready(function (){
     var local = new Location();
+    local.initializeForm();
     google.maps.event.addDomListener(window, 'load', local.initializeMaps);
     $("#attemptCalculation").click(function (){
         local.calculateRoute(local.processForm());
