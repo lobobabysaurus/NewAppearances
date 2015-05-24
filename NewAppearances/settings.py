@@ -66,7 +66,7 @@ WSGI_APPLICATION = 'NewAppearances.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'NewAppearances',
         'USER': 'root',
         'PASSWORD': 'NewAppearances',
