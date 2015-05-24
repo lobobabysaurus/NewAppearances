@@ -46,8 +46,8 @@ function Base() {
      * @method setTextSize
      */
     this.setTextSize = function() {
-        $("p").css("font-size",
-            $("p").css("font-size").substring(0,2) *
+        $(".content p ").css("font-size",
+            $(".content p").css("font-size").substring(0,2) *
             (window.innerHeight/900));
     };
     /**
