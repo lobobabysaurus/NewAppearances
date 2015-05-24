@@ -11,6 +11,7 @@
         <h1>Hours of Operation</h1>
     </div>
     <div class="hoursContainer">
+        <!--Print day of week and hours in a row and change class every other row for styling-->
         {% for day in hoursList %}
             {% if forloop.counter|divisibleby:2 %}
                 <div class="even">
