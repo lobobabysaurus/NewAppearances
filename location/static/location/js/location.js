@@ -18,6 +18,13 @@ function Location () {
     var salonLatLng = new google.maps.LatLng(39.946707,-75.302254);
 
     /**
+     * Street Address location of New Appearances
+     * @property salonAddress
+     * @type {String}
+     */
+    var salonAddress = "530 Burmont Road, Drexel Hill, PA 19026";
+
+    /**
      * Direction service to set on map generation and to be used for finding directions
      * @property directionService
      * @type {google.maps.DirectionsService}
@@ -61,10 +68,10 @@ function Location () {
     this.calculateRoute = function (originAddress) {
         var request = {
             origin: originAddress,
-            destination: salonLatLng,
+            destination: salonAddress,
             travelMode: google.maps.TravelMode.DRIVING
         };
-        console.log(directionService.route(request, function (response, status) {
+        directionService.route(request, function (response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
                 directionsToSalon.setDirections(response);
                 $("#directionsError").text(null);
@@ -73,7 +80,7 @@ function Location () {
                 $("#directionsError").text("Error finding a route to the salon");
                 $("#directions").html(null);
             }
-        }));
+        });
     };
 
     /**
