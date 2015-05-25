@@ -19,11 +19,15 @@
 .serviceName, .servicePrice {
     width: 50%;
     text-align: center;
-    margin:0;
-    padding-top:10px;
+    margin: 0;
+    padding-top: 10px;
     height: 30px;
 }
 
+.subText > .serviceName, .subText > .servicePrice {
+    padding : 0;
+    height: 20px;
+}
 .serviceName {
     float: left;
 }
@@ -32,11 +36,11 @@
     float: right;
 }
 
-.even > .serviceName, .even > .servicePrice {	
+.even .serviceName, .even .servicePrice {
 	background-color:#FF6CB5;
 }
 
-.odd > .serviceName, .odd > .servicePrice {
+.odd .serviceName, .odd .servicePrice {
 	background-color:#FF3399;
 }
 

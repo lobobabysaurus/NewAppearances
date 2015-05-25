@@ -51,11 +51,11 @@ class Service(models.Model):
             return None
 
 
-class SubService:
+class SubService(models.Model):
     """
     Related statement or price for a service
     """
     text = models.CharField(max_length=255, help_text="Name of text to help another service",)
     price = models.IntegerField(blank=True, null=True, help_text="optional price",)
-    service = models.ForeignKey(Service, related_name='services',
+    service = models.ForeignKey(Service, related_name='sub_services',
                                 help_text="Link to the service this addend",)
