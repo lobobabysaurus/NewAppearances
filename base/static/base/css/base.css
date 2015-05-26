@@ -11,6 +11,12 @@ body {
     padding-bottom: 50px;
 }
 
+button {
+    min-height: 40px;
+    min-width: 100%;
+    font-size: 2.5vw;
+}
+
 h1, h2, h3 {
     text-align: center;
     color: #ffefbe
@@ -24,11 +30,12 @@ p {
     font-size: 20px;
 }
 
-button {
-
-    min-height: 50px;
-    min-width: 100px;
-    background-color: mediumaquamarine;
+ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    width: 100%;
 }
 
 .navBar {
@@ -36,81 +43,70 @@ button {
     background-color: purple;
     padding-top: 15px;
     padding-bottom: 10px;
-    min-width: 700px;
-    min-height: 60px;
+    padding-left:10px;
+    padding-right:10px;
+    text-align:center;
 }
 
-/* START drop-down nav bar structure */
-nav {
-	margin: auto;
-	text-align: center;
-}
-
-ul, li {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    position:relative
-}
-
-nav ul ul {
-    display: none;
-}
-	nav ul li:hover > ul {
-		display: block;
-        z-index: 1000;
-	}
-
-nav ul {
+.navBar ul {
     background-color: purple;
-    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     list-style: none;
     position: relative;
     display: inline-table;
 }
-	nav ul:after {
-	    display: block;
-        color: white;
-	}
 
-	nav ul li {
-		float: left;
-	}
-		nav ul li:hover {
-		}
-			nav ul li:hover button {
-				color: white;
-			}
+.navBar ul:after {
+    display: block;
+}
 
-		nav ul li button {
-			display: block;
-			color: black;
-		}
-	nav ul ul {
-		background-color: purple;
-        border-radius: 0px;
-        padding: 0;
-		position: absolute;
-        top: 100%;
-	}
-		nav ul ul li {
-			float: none;
-			border-top: 1px solid #6b727c;
-			border-bottom: 1px solid #575f6a;
-            position: relative;
-		}
-			nav ul ul li button {
-				color: black;
-			}
-				nav ul ul li button:hover {
-					background-color: mistyrose;
-                    color: black;
-				}
-	nav ul ul ul {
-		position: absolute; left: 100%; top:0;
-	}
-/* END drop-down nav bar structure */
+.navBar ul li {
+    float: left;
+    width: 16.66%;
+}
+
+.navBar ul li button {
+    display: block;
+    background-color: mediumaquamarine;
+    color: white;
+    width: 100%;
+}
+
+.navBar ul li:hover button {
+    color: black;
+}
+
+.navBar ul li:hover > ul {
+    display: block;
+    z-index: 1000;
+}
+
+.navBar ul ul {
+    background-color: purple;
+    border-radius: 0px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    display: none;
+    width: 135%;
+}
+
+.navBar ul ul li {
+    float: none;
+    position: relative;
+    width: 100%;
+}
+
+.navBar ul ul li button {
+    width: 100%;
+}
+
+.navBar ul ul li button:hover {
+    display: block;
+    background-color: orange;
+    color:white;
+}
 
 .content, .header, .footer, .navBar {
     border: 1px solid black;
