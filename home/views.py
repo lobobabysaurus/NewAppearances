@@ -20,8 +20,20 @@ def home(request):
 
     :template:`home/home.html`
     """
+    try:
+        home_text = HomePageText.objects.get(is_active=True).page_text
+    except HomePageText.DoesNotExist:
+        home_text = None
+
+    try:
+        home_image = HomePageImage.objects.get(is_active=True).home_image
+        image_alt = home_image.alt
+    except HomePageImage.DoesNotExist:
+        home_image = None
+        image_alt = None
+
     return render(request, 'home/home.html', {
-        "homePageText": HomePageText.objects.get(is_active=True).page_text,
-        "homePageImage": HomePageImage.objects.get(is_active=True).home_image,
-        "imageAlt": HomePageImage.objects.get(is_active=True).alt,
+        "homePageText": home_text,
+        "homePageImage": home_image,
+        "imageAlt": image_alt,
     })
