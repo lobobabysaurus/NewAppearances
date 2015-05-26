@@ -33,10 +33,6 @@
 - fields: {category: 1, maximum_cost: 25, minimum_cost: null, order: 45, service_name: Sets}
   model: services.service
   pk: 14
-- fields: {category: 2, maximum_cost: 10, minimum_cost: null, order: 0, service_name: All
-      Blowout with Color Add}
-  model: services.service
-  pk: 15
 - fields: {category: 2, maximum_cost: null, minimum_cost: 45, order: 5, service_name: Single
       Process}
   model: services.service
@@ -113,10 +109,6 @@
       Application}
   model: services.service
   pk: 35
-- fields: {category: 5, maximum_cost: 10, minimum_cost: null, order: 25, service_name: (With
-      Eyelashes Add)}
-  model: services.service
-  pk: 36
 - fields: {category: 5, maximum_cost: 12, minimum_cost: null, order: 30, service_name: Eyebrow
       Wax}
   model: services.service
@@ -161,3 +153,9 @@
       Chest Wax}
   model: services.service
   pk: 47
+- fields: {price: null, service: 35, text: (With Eyelashes Add $10)}
+  model: services.subservice
+  pk: 1
+- fields: {price: null, service: 28, text: (Lasts Six Weeks)}
+  model: services.subservice
+  pk: 2

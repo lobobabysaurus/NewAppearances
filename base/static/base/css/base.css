@@ -16,7 +16,7 @@ h1, h2, h3 {
     color: #ffefbe
 }
 
-p, label{
+p, label, small {
     color: #ffe9f0;
 }
 
