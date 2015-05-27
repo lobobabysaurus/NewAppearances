@@ -63,7 +63,7 @@ ul, li {
 */
 .navBar {
     margin: auto auto;
-    background-color: #00ffc0;
+    background-color: #fdfd96;
     padding: 10px 10px 8px 10px;
     text-align:center;
 }
@@ -94,15 +94,16 @@ ul, li {
 */
 .navBar ul li button {
     display: block;
-    background-color: #83adcd;
-    color: #963226;
+    background-color: #FFD1DC;
+    color: #4B0082;
 }
 
 /*
     Change button color on mouse hover.
 */
 .navBar ul li:hover button {
-    color: #7fd951;
+    background-color: #9400D3;
+    color: #FFBBFF;
 }
 
 /*
@@ -138,8 +139,8 @@ ul, li {
 */
 .navBar ul ul li button:hover {
     display: block;
-    background-color: #ff4600;
-    color:white;
+    background-color: #00ccff;
+    color: #003366;
 }
 
 /*
