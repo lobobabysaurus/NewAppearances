@@ -2,11 +2,6 @@
  * Basic styling for the Location app
  */
 
-.addressStatic {
-    width: 100%;
-    height: 35%;
-    text-align: center;
-}
 /* Google maps directions step colors */
 .adp-substep{
     background-color: darkorchid;
@@ -24,17 +19,15 @@
     width: 35%;
     clear: left;
     text-align: right;
-    font-size: 25px;
 }
 
 .formRow > input, .formRow > select {
     float: left;
     width: 40%;
-    font-size: 20px;
     margin-bottom: 5px;
 }
 
-#directions {
+#directionsResult {
     text-align: center;
     margin: auto;
     width: 60%;

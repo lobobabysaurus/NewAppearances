@@ -13,15 +13,8 @@ var BaseObj = {};
  */
 $(document).ready( function () {
     BaseObj.base = new Base();
-    //Run page clock
-    BaseObj.base.setCurrentTime();
-    setInterval(function () {BaseObj.base.setCurrentTime();}, 1000);
     //Associate Nav bar click reactions
     BaseObj.base.setButtonLinks();
-    //Set the width of the nav buttons
-    BaseObj.base.setButtonWidth();
-    //Set the size of text content
-    BaseObj.base.setTextSize();
     //Set content section height
     BaseObj.base.setContentHeight();
 });
@@ -30,9 +23,7 @@ $(document).ready( function () {
  * Reset the size of the content section, nav buttons, and text if the window is resized
  */
 $(window).resize( function () {
-    BaseObj.base.setButtonWidth();
     BaseObj.base.setContentHeight();
-    BaseObj.base.setTextSize();
 });
 
 /**
@@ -41,40 +32,6 @@ $(window).resize( function () {
  * @constructor Initializes the original text size
  */
 function Base() {
-    /**
-     * Size of p elements when the page is first loaded
-     * @property originalTextSize
-     * @type {Integer}
-     */
-    this.originalTextSize = 0;
-    if($(".content p").length >0){
-        this.originalTextSize = parseInt($(".content p").css("font-size").substring(0, 2));
-    }
-    /**
-     * Set text size for p, input, and label elements
-     * @method setTextSize
-     */
-    this.setTextSize = function() {
-        if (this.originalTextSize > 0) {
-            $(".content p, input, label, select").css("font-size", this.originalTextSize * (window.innerHeight / 750));
-        }
-    };
-    /**
-     * Set the width for the navbar
-     * @method setButtonWidth
-     */
-    this.setButtonWidth = function() {
-        //get the nav bar div
-        var navBar = $("div.navBar");
-        //Find number of buttons to display
-        var numButtons = navBar.find("button").length;
-        //set the width each button to be the size of the container divided by the number of images
-        var size = navBar.innerWidth()/numButtons;
-        navBar.find("button").outerWidth(size);
-        //Bullshit fix to a weird rollover issue
-        navBar.find("button").last().outerWidth(size-1);
-    };
-
     /**
      * Set button click functionality
      * @method setButtonLinks
@@ -85,25 +42,6 @@ function Base() {
                 window.location.href = "/"+this.id+"/";
             })
         });
-    };
-
-    /**
-     * Gets the current time in the format of "HH:mm:ss DD MMMM YYYY"
-     *
-     * @method getCurrentTime
-     * @return {String} Time formatted as HH:mm:ss DD MMMM YYYY
-     */
-    this.getCurrentTime = function() {
-        return moment(new Date()).format("HH:mm:ss DD MMMM YYYY");
-    };
-
-    /**
-     * Set the current time on the 'time' element
-     *
-     * @method setCurrentTime
-     */
-    this.setCurrentTime = function() {
-        $("#time").text(this.getCurrentTime());
     };
 
     /**

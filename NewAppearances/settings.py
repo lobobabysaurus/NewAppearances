@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'contact',
     'home',
     'hours',
-    'location',
+    'directions',
     'products',
     'services',
 )

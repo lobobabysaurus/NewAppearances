@@ -20,14 +20,17 @@ def home(request):
 
     :template:`home/home.html`
     """
+
+    # Make sure there is data to back the image and text
     try:
         home_text = HomePageText.objects.get(is_active=True).page_text
     except HomePageText.DoesNotExist:
         home_text = None
 
     try:
-        home_image = HomePageImage.objects.get(is_active=True).home_image
-        image_alt = home_image.alt
+        image_data = HomePageImage.objects.get(is_active=True)
+        home_image = image_data.home_image
+        image_alt = image_data.alt
     except HomePageImage.DoesNotExist:
         home_image = None
         image_alt = None

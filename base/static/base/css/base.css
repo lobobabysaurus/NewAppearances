@@ -4,7 +4,7 @@
 
 body {
     width: 75%;
-    background-color: #FFFDD0;
+    background-color: #00ccff;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -14,20 +14,32 @@ body {
 button {
     min-height: 40px;
     min-width: 100%;
-    font-size: 2.5vw;
+    font-size: 2vw;
 }
 
 h1, h2, h3 {
     text-align: center;
-    color: #ffefbe
+    color: #ffefbe;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 1.75vw;
 }
 
 p, label, small {
     color: #ffe9f0;
 }
 
-p {
-    font-size: 20px;
+p, label, input, select {
+    font-size: 1.5vw;
 }
 
 ul, li {
@@ -40,11 +52,8 @@ ul, li {
 
 .navBar {
     margin: auto auto;
-    background-color: purple;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left:10px;
-    padding-right:10px;
+    background-color: #00ffc0;
+    padding: 10px 10px 8px 10px;
     text-align:center;
 }
 
@@ -68,13 +77,12 @@ ul, li {
 
 .navBar ul li button {
     display: block;
-    background-color: mediumaquamarine;
-    color: white;
-    width: 100%;
+    background-color: #83adcd;
+    color: #963226;
 }
 
 .navBar ul li:hover button {
-    color: black;
+    color: #7fd951;
 }
 
 .navBar ul li:hover > ul {
@@ -83,8 +91,6 @@ ul, li {
 }
 
 .navBar ul ul {
-    background-color: purple;
-    border-radius: 0px;
     padding: 0;
     position: absolute;
     top: 100%;
@@ -104,7 +110,7 @@ ul, li {
 
 .navBar ul ul li button:hover {
     display: block;
-    background-color: orange;
+    background-color: #ff4600;
     color:white;
 }
 
@@ -114,18 +120,17 @@ ul, li {
 }
 
 .content {
-    background-color: rgb(104, 99, 255);
+    background-color: rgb(169, 76, 255);
     overflow: auto;
 }
 
 .header {
-    background-color: darkslateblue;
+    background-color: #aa6a87;
 }
 
 .header > h1 {
     vertical-align: middle;
     margin-top: 0;
-    font-size: 40px;
     color: #ffffff;
     -webkit-text-stroke: 1px red;
     margin-bottom: 0;
@@ -141,16 +146,30 @@ ul, li {
     position: absolute;
     height: 50px;
 }
-.footer > p {
-    vertical-align: top;
+
+.footer  p {
+    margin-top: 0;
+    color: #7032ff;
+    font-size: 14px;
 }
 
+#addressStatic {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+#facebookContainer {
+    width: 33%;
+    float: left;
+}
 #facebookLink{
     margin-top: 5px;
     height: 40px;
 }
 
-#time {
-    display: inline-block;
-    color: #a42bff;
+#number {
+    font-size: 25px;
+    margin-top: 12px;
 }
+

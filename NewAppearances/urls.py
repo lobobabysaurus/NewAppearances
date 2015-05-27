@@ -9,8 +9,8 @@ urlpatterns = patterns('',
     url(r'^contact/', include('contact.urls')),
     # Forward a url with the hours/ resource to the hours application
     url(r'^hours/', include('hours.urls')),
-    # Forward a url with the location/ resource to the location application
-    url(r'^location/', include('location.urls')),
+    # Forward a url with the directions/ resource to the directions application
+    url(r'^directions/', include('directions.urls')),
     # Forward a url with the products/ resource to the products application
     url(r'^products/', include('products.urls')),
     # Forward a url with the services/ resource to the services application

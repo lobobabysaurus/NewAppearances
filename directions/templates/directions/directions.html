@@ -6,21 +6,14 @@
     <!--Google map library-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjub9cnpD_-Ptry-nxERgKVU-AD5MQM0w"
             xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"></script>
-    <script src="{% static "location/js/location.js" %}"></script>
+    <script src="{% static "directions/js/directions.js" %}"></script>
 {% endblock %}
 
 {% block appStylesheet %}
-    <link rel ="stylesheet" type="text/css" href="{% static "location/css/location.css" %}" />
+    <link rel ="stylesheet" type="text/css" href="{% static "directions/css/directions.css" %}" />
 {% endblock %}
 
 {% block body %}
-    <!--Address on top part of page-->
-    <div class="addressStatic">
-        <h2>NewAppearances is located at</h2>
-        <p>530 Burmont Road</p>
-        <p>Drexel Hill</p>
-        <p>PA 19026</p>
-    </div>
     <!--Map where the store is on the lower left side of the page-->
     <div id="storeMap"></div>
     <!--Directions form on the lower right side of the page-->
@@ -41,5 +34,5 @@
         <p id="directionsError"></p>
     </div>
     <!--Directions result on the bottom portion of the page-->
-    <div id="directions"></div>
+    <div id="directionsResult"></div>
 {% endblock %}
