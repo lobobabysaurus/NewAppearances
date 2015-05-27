@@ -13,19 +13,30 @@ body {
 
 h1, h2, h3 {
     text-align: center;
-    color: #ffefbe
+    color: #ffefbe;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 2.0vw;
 }
 
 p, label, small {
     color: #ffe9f0;
 }
 
-p {
-    font-size: 20px;
+p, label, input, select {
+    font-size: 1.5vw;
 }
 
 button {
-
     min-height: 50px;
     min-width: 100px;
     background-color: mediumaquamarine;
@@ -129,7 +140,6 @@ nav ul {
 .header > h1 {
     vertical-align: middle;
     margin-top: 0;
-    font-size: 40px;
     color: #ffffff;
     -webkit-text-stroke: 1px red;
     margin-bottom: 0;
@@ -145,16 +155,29 @@ nav ul {
     position: absolute;
     height: 50px;
 }
-.footer > p {
-    vertical-align: top;
+
+.footer  p {
+    margin-top: 0;
+    color: #7032ff;
+    font-size: 14px;
 }
 
+#addressStatic {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+#facebookContainer {
+    width: 33%;
+    float: left;
+}
 #facebookLink{
     margin-top: 5px;
     height: 40px;
 }
 
-#time {
-    display: inline-block;
-    color: #a42bff;
+#number {
+    font-size: 25px;
+    margin-top: 12px;
 }

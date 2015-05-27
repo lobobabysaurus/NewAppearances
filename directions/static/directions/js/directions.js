@@ -11,14 +11,14 @@
  */
 function Location () {
     /**
-     * Latitute and Longitude location of New Appearances
+     * Latitute and Longitude directions of New Appearances
      * @property salonLatLng
      * @type {google.maps.LatLng}
      */
     var salonLatLng = new google.maps.LatLng(39.946707,-75.302254);
 
     /**
-     * Street Address location of New Appearances
+     * Street Address directions of New Appearances
      * @property salonAddress
      * @type {String}
      */
@@ -57,11 +57,11 @@ function Location () {
             title: "New Appearances"
         });
         directionsToSalon.setMap(map);
-        directionsToSalon.setPanel(document.getElementById('directions'));
+        directionsToSalon.setPanel(document.getElementById('directionsResult'));
     };
 
     /**
-     * Find the route between the entered location and the salon and display it on the page
+     * Find the route between the entered directions and the salon and display it on the page
      * @method calculateRoute
      * @param {String} originAddress
      */
