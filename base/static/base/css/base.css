@@ -42,6 +42,14 @@ p, label, input, select {
     font-size: 1.5vw;
 }
 
+/**************************************
+       NavBar with dropdown menu        
+ **************************************
+/*
+    Overview: Pure CSS NavBar with dropdown menu. 
+              Resizable/scalable to fit different size monitors/browser-windows
+              Uses ul/li nested structure.     
+*/
 ul, li {
     margin: 0;
     padding: 0;
@@ -50,6 +58,9 @@ ul, li {
     width: 100%;
 }
 
+/* 
+    NavBar container:
+*/
 .navBar {
     margin: auto auto;
     background-color: #00ffc0;
@@ -57,6 +68,9 @@ ul, li {
     text-align:center;
 }
 
+/*
+    Parent list: 
+*/
 .navBar ul {
     background-color: purple;
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
@@ -66,30 +80,35 @@ ul, li {
     display: inline-table;
 }
 
-.navBar ul:after {
-    display: block;
-}
-
+/* 
+    Parent list items:
+    100%/6(items) = 16.66%
+*/ 
 .navBar ul li {
     float: left;
     width: 16.66%;
 }
 
+/*
+    Each list item has a corresponding button
+*/
 .navBar ul li button {
     display: block;
     background-color: #83adcd;
     color: #963226;
 }
 
+/*
+    Change button color on mouse hover.
+*/
 .navBar ul li:hover button {
     color: #7fd951;
 }
 
-.navBar ul li:hover > ul {
-    display: block;
-    z-index: 1000;
-}
-
+/*
+    First nested list:
+    display set to none so nested list (drop down items) is hidden by default.
+*/
 .navBar ul ul {
     padding: 0;
     position: absolute;
@@ -98,21 +117,46 @@ ul, li {
     width: 135%;
 }
 
+/*
+    Nested list items:
+*/
 .navBar ul ul li {
     float: none;
     position: relative;
     width: 100%;
 }
 
+/*
+   Nested list items' corresponding buttons:
+*/
 .navBar ul ul li button {
     width: 100%;
 }
 
+/*
+    Change color on hover.
+*/
 .navBar ul ul li button:hover {
     display: block;
     background-color: #ff4600;
     color:white;
 }
+
+/*
+    Simple drop down magic:
+    Nested ul items are hidden by default, however,
+    if a list item that is hovered on has a nested ul element, 
+    display is changed to block and will reveal the nested list's items!
+*/
+.navBar ul li:hover > ul {
+    display: block;
+    z-index: 1000;
+}
+
+/*****************************************
+             End of NavBar             
+*****************************************/
+
 
 .content, .header, .footer, .navBar {
     border: 1px solid black;
