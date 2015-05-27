@@ -15,8 +15,6 @@ $(document).ready( function () {
     BaseObj.base = new Base();
     //Associate Nav bar click reactions
     BaseObj.base.setButtonLinks();
-    //Set the width of the nav buttons
-    BaseObj.base.setButtonWidth();
     //Set content section height
     BaseObj.base.setContentHeight();
 });
@@ -25,7 +23,6 @@ $(document).ready( function () {
  * Reset the size of the content section, nav buttons, and text if the window is resized
  */
 $(window).resize( function () {
-    BaseObj.base.setButtonWidth();
     BaseObj.base.setContentHeight();
 });
 
@@ -35,22 +32,6 @@ $(window).resize( function () {
  * @constructor Initializes the original text size
  */
 function Base() {
-    /**
-     * Set the width for the navbar
-     * @method setButtonWidth
-     */
-    this.setButtonWidth = function() {
-        //get the nav bar div
-        var navBar = $("div.navBar");
-        //Find number of buttons to display
-        var numButtons = navBar.find("button").length;
-        //set the width each button to be the size of the container divided by the number of images
-        var size = navBar.innerWidth()/numButtons;
-        navBar.find("button").outerWidth(size);
-        //Bullshit fix to a weird rollover issue
-        navBar.find("button").last().outerWidth(size-1);
-    };
-
     /**
      * Set button click functionality
      * @method setButtonLinks
@@ -62,7 +43,6 @@ function Base() {
             })
         });
     };
-
 
     /**
      * Get the height of all relatively constant size divs that are top level to the body.  Find the difference of the

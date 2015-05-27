@@ -4,7 +4,7 @@
 
 body {
     width: 75%;
-    background-color: #FFFDD0;
+    background-color: #00ccff;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -52,11 +52,8 @@ ul, li {
 
 .navBar {
     margin: auto auto;
-    background-color: purple;
-    padding-top: 10px;
-    padding-bottom: 8px;
-    padding-left:10px;
-    padding-right:10px;
+    background-color: #00ffc0;
+    padding: 10px 10px 8px 10px;
     text-align:center;
 }
 
@@ -80,13 +77,12 @@ ul, li {
 
 .navBar ul li button {
     display: block;
-    background-color: mediumaquamarine;
-    color: white;
-    width: 100%;
+    background-color: #83adcd;
+    color: #963226;
 }
 
 .navBar ul li:hover button {
-    color: black;
+    color: #7fd951;
 }
 
 .navBar ul li:hover > ul {
@@ -95,8 +91,6 @@ ul, li {
 }
 
 .navBar ul ul {
-    background-color: purple;
-    border-radius: 0px;
     padding: 0;
     position: absolute;
     top: 100%;
@@ -116,7 +110,7 @@ ul, li {
 
 .navBar ul ul li button:hover {
     display: block;
-    background-color: orange;
+    background-color: #ff4600;
     color:white;
 }
 
@@ -126,12 +120,12 @@ ul, li {
 }
 
 .content {
-    background-color: rgb(104, 99, 255);
+    background-color: rgb(169, 76, 255);
     overflow: auto;
 }
 
 .header {
-    background-color: darkslateblue;
+    background-color: #aa6a87;
 }
 
 .header > h1 {
