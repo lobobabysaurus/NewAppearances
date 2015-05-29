@@ -13,8 +13,6 @@ var BaseObj = {};
  */
 $(document).ready( function () {
     BaseObj.base = new Base();
-    //Associate Nav bar click reactions
-    BaseObj.base.setButtonLinks();
     //Set content section height
     BaseObj.base.setContentHeight();
 });
@@ -32,18 +30,6 @@ $(window).resize( function () {
  * @constructor Initializes the original text size
  */
 function Base() {
-    /**
-     * Set button click functionality
-     * @method setButtonLinks
-     */
-    this.setButtonLinks = function() {
-        $("div.navBar").find("button").each(function () {
-            $(this).click(function () {
-                window.location.href = "/"+this.id+"/";
-            })
-        });
-    };
-
     /**
      * Get the height of all relatively constant size divs that are top level to the body.  Find the difference of the
      * window size and this values and assign the content div to be this size
