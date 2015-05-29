@@ -10,3 +10,4 @@ class Location(models.Model):
     city = models.CharField(max_length=255, blank=True, help_text="City for a Location",)
     state = us_models.USStateField(blank=True, help_text="US State for a directions",)
     zip = us_models.USZipCodeField(blank=True, help_text="Locations Zip Code",)
+    count = models.IntegerField(default=1, help_text="Number of times that location has be searched from",)
