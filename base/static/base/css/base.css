@@ -28,16 +28,11 @@ h3 {
     font-size: 1.75vw;
 }
 
-p, label {
-    color: #ffe9f0;
-    font-size: 1.5vw;
-}
-
-small {
+p, label, small {
     color: #ffe9f0;
 }
 
-input, select {
+input, select, p, label {
     font-size: 1.5vw;
 }
 
@@ -62,7 +57,7 @@ ul, li {
 */
 .navBar {
     margin: auto auto;
-    padding: 10px;
+    padding: 3px;
     background-color: #fdfd96;
 }
 
@@ -149,7 +144,7 @@ ul, li {
 /* 
     style element to look like button 
 */
-.butt {  
+.buttonLink {
     /* Basic Button Styles */
     display: block;
     min-height: 75%;
@@ -160,7 +155,7 @@ ul, li {
     /* Text/Link Styles */
     color: rgba(0, 0, 0, 0.55);
     text-align: center;
-    font: 2vw "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font: 1.5vw "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     text-decoration: none;
      
     /* Fancy CSS3 Styles */
@@ -178,7 +173,7 @@ ul, li {
     -moz-box-shadow: 0 4px 0 #1b383b;
     text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);   
 }
-.butt:hover {
+.buttonLink:hover {
     background: #3d7a80;
     background: -webkit-linear-gradient(top, #3d7a80, #2f5f63);
     background: -moz-linear-gradient(top, #3d7a80, #2f5f63);
