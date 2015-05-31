@@ -122,8 +122,10 @@ $(document).ready(function (){
     var local = new Location();
     local.initializeForm();
     google.maps.event.addDomListener(window, 'load', local.initializeMaps);
+    //Attempt to calculate route and save location
     $("#attemptCalculation").click(function (){
         local.calculateRoute(local.processForm());
+        $.post( "/directions/save", $("#directionsForm").serializeArray())
     });
 });
 
