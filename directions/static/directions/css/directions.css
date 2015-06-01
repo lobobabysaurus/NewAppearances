@@ -8,11 +8,14 @@
  * Override base font sizes to be height relative instead of width
  */
 h2 {
+    padding-top: 0px;
+    margin-top: 0px;
     font-size: 3.5vh;
 }
 
 p, label, input, select {
-    font-size: 2.5vh;
+    font-size: 1.5vh;
+    font-size: 1.5vw;
 }
 
 .adp-substep{
@@ -40,10 +43,10 @@ p, label, input, select {
 }
 
 #directionsResult {
+    display: block;
+    float:left;
     text-align: center;
-    margin: auto;
     width: 60%;
-    clear: both;
 }
 
 #directionsError {
@@ -63,6 +66,6 @@ p, label, input, select {
 
 #storeMap {
     width: 50%;
-    height: 50%;
+    height: 60%;
     float: left;
 }
