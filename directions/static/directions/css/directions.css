@@ -14,8 +14,7 @@ h2 {
 }
 
 p, label, input, select {
-    font-size: 1.5vh;
-    font-size: 1.5vw;
+    font-size: 2.5vh;
 }
 
 .adp-substep{
@@ -24,7 +23,7 @@ p, label, input, select {
 }
 
 .directionsFormHolder {
-    width: 50%;
+    width: 45%;
     height: 50%;
     float: right;
 }
@@ -46,7 +45,7 @@ p, label, input, select {
     display: block;
     float:left;
     text-align: center;
-    width: 60%;
+    width: 55%;
 }
 
 #directionsError {
@@ -65,7 +64,7 @@ p, label, input, select {
 }
 
 #storeMap {
-    width: 50%;
+    width: 55%;
     height: 60%;
     float: left;
 }
