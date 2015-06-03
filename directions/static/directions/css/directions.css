@@ -8,6 +8,8 @@
  * Override base font sizes to be height relative instead of width
  */
 h2 {
+    padding-top: 0px;
+    margin-top: 0px;
     font-size: 3.5vh;
 }
 
@@ -21,7 +23,7 @@ p, label, input, select {
 }
 
 .directionsFormHolder {
-    width: 50%;
+    width: 45%;
     height: 50%;
     float: right;
 }
@@ -40,10 +42,10 @@ p, label, input, select {
 }
 
 #directionsResult {
+    display: block;
+    float:left;
     text-align: center;
-    margin: auto;
-    width: 60%;
-    clear: both;
+    width: 55%;
 }
 
 #directionsError {
@@ -62,7 +64,7 @@ p, label, input, select {
 }
 
 #storeMap {
-    width: 50%;
-    height: 50%;
+    width: 55%;
+    height: 60%;
     float: left;
 }
