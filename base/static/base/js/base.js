@@ -9,7 +9,6 @@
 var BaseObj = {};
 /**
  * Jquery to call all functions that need to be executed when the page loads
- *
  */
 $(document).ready( function () {
     BaseObj.base = new Base();
