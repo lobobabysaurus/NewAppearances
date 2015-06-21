@@ -3,6 +3,17 @@
  * @module Location
  */
 
+$(document).ready(function () {
+    var local = new Location();
+    local.initializeForm();
+    google.maps.event.addDomListener(window, 'load', local.initializeMaps);
+    //Attempt to calculate route and save location
+    $("#attemptCalculation").click(function (){
+        local.calculateRoute(local.processForm());
+        $.post( "/directions/save", $("#directionsForm").serializeArray())
+    });
+});
+
 /**
  * Class for dealing with Location data
  *
@@ -88,7 +99,7 @@ function Location () {
      * @method processForm
      * @returns {String} The address which has been entered by the user
      */
-    this.processForm = function (){
+    this.processForm = function () {
         var address = "";
         $.each($("#directionsForm").serializeArray() , function(index, formSet){
             var value = formSet['value'];
@@ -110,23 +121,10 @@ function Location () {
      * Iterates through all fields in the form and populates them with a value stored in Cookies if it exists
      * @method initializeForm
      */
-    this.initializeForm = function(){
+    this.initializeForm = function() {
         var formFields = ["street","city","state","zip"];
         $.each(formFields, function (index, field){
             $("input[name='"+field+"']").val($.cookie(field));
         });
     };
 }
-
-$(document).ready(function (){
-    var local = new Location();
-    local.initializeForm();
-    google.maps.event.addDomListener(window, 'load', local.initializeMaps);
-    //Attempt to calculate route and save location
-    $("#attemptCalculation").click(function (){
-        local.calculateRoute(local.processForm());
-        $.post( "/directions/save", $("#directionsForm").serializeArray())
-    });
-});
-
-

@@ -7,19 +7,13 @@
 
 //Container for module-wide variables
 var BaseObj = {};
-/**
- * Jquery to call all functions that need to be executed when the page loads
- *
- */
+
 $(document).ready( function () {
     BaseObj.base = new Base();
     //Set content section height
     BaseObj.base.setContentHeight();
 });
 
-/**
- * Reset the size of the content section, nav buttons, and text if the window is resized
- */
 $(window).resize( function () {
     BaseObj.base.setContentHeight();
 });
