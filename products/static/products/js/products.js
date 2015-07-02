@@ -69,10 +69,10 @@ function Product() {
      * Resize each image to properly fit the page
      *
      * @method setImageSizes
-     * @param {Integer} numImages Number of images to fit on the page
-     * @param {Integer} bodyWidth Width of the part of the page that contains the images
+     * @param {number} numImages Number of images to fit on the page
+     * @param {number} bodyWidth Width of the part of the page that contains the images
      */
-    this.setImageSizes = function (numImages, bodyWidth){
+    this.setImageSizes = function (numImages, bodyWidth) {
         $("div.brands").find("img").each(function () {
             // Original aspect ratio of the image
             var ratio = this.height/this.width;
@@ -91,11 +91,11 @@ function Product() {
      * Set images to be in a ring around the page equidistantly spaced from one another
      *
      * @method setImageLocation
-     * @param {Integer} eachAngle Angle in radians to represent spacing between each element
-     * @param {Integer} bodyWidth Width of the body container
-     * @param {Integer} bodyHeight Height of the body container
+     * @param {number} eachAngle Angle in radians to represent spacing between each element
+     * @param {number} bodyWidth Width of the body container
+     * @param {number} bodyHeight Height of the body container
      */
-    function setImageLocations(eachAngle, bodyWidth, bodyHeight){
+    function setImageLocations(eachAngle, bodyWidth, bodyHeight) {
         // Find the center of the page to be the center of the imaginary ring
         var centerX = bodyWidth/2;
         var centerY = bodyHeight/2;
@@ -124,7 +124,7 @@ function Product() {
                 imgTop -= this.height/1.9;
             }
             // If the left side of the image is too far left, move it right with padding
-            if(imgLeft<0){;
+            if(imgLeft<0){
                 imgLeft += this.width/1.9;
             }
             // If the right side of the image is too far right, move it left with padding
@@ -138,5 +138,5 @@ function Product() {
                 "top": imgTop
             });
         });
-    };
+    }
 }
