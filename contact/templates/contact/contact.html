@@ -11,9 +11,6 @@
     <!--Set up main text/validation text/form-->
     <h1>Contact Us</h1>
     <h3>Please fill out all of the fields in the form below</h3>
-    {% if failed %}
-        <h5>Submission failed because all fields were not completed</h5>
-    {% endif %}
     <form class = "contactForm" method="POST">
         <!--Check for CSRF attack-->
         {% csrf_token %}

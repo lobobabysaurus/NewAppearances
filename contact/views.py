@@ -19,7 +19,6 @@ def contact(request):
 
     :template:`contact/contact.html`
     """
-    failed_attempt = False
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -30,9 +29,7 @@ def contact(request):
                       fields['email'],
                       ['newappearancesemail@gmail.com'],)
             return render(request, "contact/success.html",)
-        else:
-            failed_attempt = True
     else:
         form = ContactForm()
 
-    return render(request, "contact/contact.html", {"form": form, "failed": failed_attempt},)
+    return render(request, "contact/contact.html", {"form": form, },)
