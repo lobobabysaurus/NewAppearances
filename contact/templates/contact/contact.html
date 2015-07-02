@@ -6,6 +6,7 @@
     <link rel ="stylesheet" type="text/css" href="{% static "contact/css/contact.css" %}" />
 {% endblock %}
 
+{% load widget_tweaks %}
 {% block body %}
     <!--Set up main text/validation text/form-->
     <h1>Contact Us</h1>
@@ -16,12 +17,14 @@
     <form class = "contactForm" method="POST">
         <!--Check for CSRF attack-->
         {% csrf_token %}
-        <div class = "formRow">
-            <!--Row for each form <label><input> set-->
-            {% for field in form %}
-                {{ field.label_tag }}{{ field }}
+        <!--Row for each form <label><input> set-->
+        {% for field in form %}
+            <label for="{{ field.id_for_label}}" class="{{field.css_classes}}">{{ field.label }}</label>
+            {{ field|add_class:field.css_classes }}
+            {% for error in field.errors %}
+                <small>*{{ error }}</small>
             {% endfor %}
-        </div>
+        {% endfor %}
         <input id="submitButton" type="submit" value="Submit" />
     </form>
 {% endblock %}

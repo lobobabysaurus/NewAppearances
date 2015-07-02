@@ -7,20 +7,32 @@ h5 {
     color: red;
 }
 
-.formRow > label {
-    float: left;
-    width: 25%;
-    text-align: right;
-    clear: left;
-}
-
-.formRow > input, .formRow > textarea {
+.contactForm > input, .contactForm > textarea {
     float: left;
     width: 55%;
     margin-bottom: 5px;
 }
 
+.contactForm > label {
+    float: left;
+    width: 25%;
+    text-align: right;
+    clear: left;
+    margin-right: 5px;
+}
+
+.contactForm > small {
+    margin-left: 25.5%;
+    float: left;
+    clear: both;
+}
+
+.errorFormField {
+    color: red;
+}
+
 #submitButton {
     margin-left: 37.5%;
-    width: 25%
+    width: 25%;
+    clear: both;
 }
