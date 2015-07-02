@@ -10,4 +10,3 @@ class LocationAdmin(admin.ModelAdmin):
     list_display = ('street', 'city', 'state', 'zip', 'count')
 
 admin.site.register(Location, LocationAdmin)
-

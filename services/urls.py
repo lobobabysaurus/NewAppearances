@@ -8,5 +8,4 @@ urlpatterns = patterns('',
     url(r'^$', views.services_menu, name='services_menu'),
     # If resource is specified, call the services/views.py services function
     url(r'^(?P<category_resource>\w+)/$', views.services, name='services'),
-    
 )

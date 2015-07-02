@@ -107,4 +107,3 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'newappearancesemail@gmail.com'
 EMAIL_HOST_PASSWORD = 'NewAppearances1!'
 EMAIL_USE_TLS = True
-
