@@ -12,8 +12,6 @@ def contact(request):
 
     ``form``
     Django generated contact form
-    ``failed``
-    Boolean if the form is being displayed after a failed submission attempt
 
     **Templates**
 
