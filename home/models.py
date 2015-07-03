@@ -27,4 +27,3 @@ class HomePageImage(HomePageModel):
     """
     alt = models.CharField(max_length=1000, help_text="Alternative text if the image cannot be displayed",)
     home_image = models.ImageField(upload_to='home/', help_text="Image to display",)
-
