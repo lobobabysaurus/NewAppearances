@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from products.models import Brand
+from .models import Brand
 
 
 def products(request):

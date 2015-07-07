@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from contact import views
+from . import views
 
 urlpatterns = patterns('',
     #If no resource is specified call the views.py hours function

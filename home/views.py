@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from home.models import HomePageText, HomePageImage
+from .models import HomePageText, HomePageImage
 
 
 def home(request):

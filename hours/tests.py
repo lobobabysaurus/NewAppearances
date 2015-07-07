@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from hours.models import Day
+from .models import Day
 
 
 class HourStringTest(TestCase):

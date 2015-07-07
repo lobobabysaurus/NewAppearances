@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from hours.models import Day
+
+from .models import Day
 
 
 def hours(request):

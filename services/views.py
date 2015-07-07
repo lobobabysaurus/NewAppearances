@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from services.models import Service
+from .models import Service
 
 
 def services_menu(request):
