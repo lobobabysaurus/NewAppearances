@@ -15,5 +15,8 @@ def products(request):
     **Templates**
 
     :template:`products/products.html`
+
+    :param request Data sent to the sever as part of a web request
+    :return A file containing all product related information
     """
     return render(request, 'products/products.html', {"brandImages": Brand.objects.filter(is_carried=True)})

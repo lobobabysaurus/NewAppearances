@@ -16,6 +16,9 @@ def contact(request):
     **Templates**
 
     :template:`contact/contact.html`
+
+    :param request Data sent to the sever as part of a web request
+    :return A contact form on a failed submission or a success page if all required data is present
     """
     if request.method == "POST":
         form = ContactForm(request.POST)

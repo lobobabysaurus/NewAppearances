@@ -19,8 +19,10 @@ def home(request):
     **Template:**
 
     :template:`home/home.html`
-    """
 
+    :param request Data sent to the sever as part of a web request
+    :return A rendered home page for the site
+    """
     # Make sure there is data to back the image and text
     try:
         home_text = HomePageText.objects.get(is_active=True).page_text

@@ -5,17 +5,16 @@ from .models import Service
 
 def services_menu(request):
     """
-    Default services view -  currently uses no model data
-    TODO: Update services/models.py to include category images
+    Default services view - display images for each category that map to each category specific page
 
     **Templates**
 
-    :template:`products/products.html`
+    :template:`services/serviceMenu.html`
 
-    :param request: Data send to the sever as part of a web request
-    :return: A rendered blank services html file
+    :param request: Data sent to the sever as part of a web request
+    :return: An html file with picture representations of all services
     """
-    return render(request, 'services/services.html')
+    return render(request, 'services/serviceMenu.html')
 
 
 def services(request, category_resource):
@@ -29,9 +28,9 @@ def services(request, category_resource):
 
     **Templates**
 
-    :template:`products/products.html`
+    :template:`services/services.html`
 
-    :param request: Data send to the sever as part of a web request
+    :param request: Data sent to the sever as part of a web request
     :param category_resource: Name of the category of services to display
     :return: A html file rendered for the category
     """
