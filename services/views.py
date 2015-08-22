@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Service
+from .models import Service, ServiceCategory
 
 
 def services_menu(request):
@@ -14,7 +14,8 @@ def services_menu(request):
     :param request: Data sent to the sever as part of a web request
     :return: An html file with picture representations of all services
     """
-    return render(request, 'services/serviceMenu.html')
+    categories = ServiceCategory.objects.order_by('order')
+    return render(request, 'services/serviceMenu.html', {'categories': categories})
 
 
 def services(request, category_resource):

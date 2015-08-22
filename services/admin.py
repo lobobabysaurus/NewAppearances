@@ -24,8 +24,7 @@ class ServiceCategoryAdmin(admin.ModelAdmin):
     """
     Display categories for services
     """
-    list_display = ('category_name', 'category_image',)
-
+    list_display = ('category_name', 'category_image', 'order')
 
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(ServiceCategory, ServiceCategoryAdmin)

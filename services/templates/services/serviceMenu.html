@@ -2,4 +2,10 @@
 
 {% block body %}
     <h2>Click an Image to See Services</h2>
+    {% for category in categories %}
+        <img id="{{category.category_name}}"
+                 src="{{category.category_image.url}}"
+                 alt="{{category.category_name}}"
+                 width=19%  />
+    {% endfor %}
 {% endblock %}
