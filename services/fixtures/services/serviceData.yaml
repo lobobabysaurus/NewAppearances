@@ -1,3 +1,23 @@
+- fields: {category_image: services/girl-dj-black-hair-hd-place-com-602628.jpg, category_name: Haircuts,
+    order: 1}
+  model: services.servicecategory
+  pk: 1
+- fields: {category_image: services/girl-dj-black-hair-hd-place-com-602628_jSf7nnV.jpg,
+    category_name: Colors, order: 2}
+  model: services.servicecategory
+  pk: 2
+- fields: {category_image: services/girl-dj-black-hair-hd-place-com-602628_jHbrKxa.jpg,
+    category_name: Straightening, order: 3}
+  model: services.servicecategory
+  pk: 3
+- fields: {category_image: services/girl-dj-black-hair-hd-place-com-602628_6ISRXFp.jpg,
+    category_name: Perms, order: 5}
+  model: services.servicecategory
+  pk: 4
+- fields: {category_image: services/girl-dj-black-hair-hd-place-com-602628_9UZO1tC.jpg,
+    category_name: Skincare, order: 4}
+  model: services.servicecategory
+  pk: 5
 - fields: {category: 1, maximum_cost: 35, minimum_cost: null, order: 0, service_name: Women's}
   model: services.service
   pk: 5
