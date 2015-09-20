@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from services.models import Service
+from .models import Service
 
 
 class TestPriceStr(TestCase):

@@ -1,5 +1,6 @@
 from django.contrib import admin
-from hours.models import Day
+
+from .models import Day
 
 
 class HoursAdmin(admin.ModelAdmin):

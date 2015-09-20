@@ -1,6 +1,7 @@
-from django.contrib import admin
 from django import forms
-from home.models import HomePageText, HomePageImage
+from django.contrib import admin
+
+from .models import HomePageText, HomePageImage
 
 
 class HomeTextForm(forms.ModelForm):

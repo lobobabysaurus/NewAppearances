@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from contact.models import ContactSubmission
+from .models import ContactSubmission
 
 
 class ContactAdmin(admin.ModelAdmin):

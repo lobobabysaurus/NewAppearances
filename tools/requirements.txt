@@ -1,0 +1,6 @@
+pillow
+pyyaml
+mysqlclient
+django-localflavor
+django-widget-tweaks
+django==1.8.2

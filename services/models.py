@@ -1,6 +1,14 @@
 from django.db import models
 
 
+class ServiceCategory(models.Model):
+    """
+    A category of services
+    """
+    category_name = models.CharField(max_length=55, unique=True, help_text="Name of the service category",)
+    category_image = models.ImageField(upload_to="services/", help_text="Image to represent the category",)
+    order = models.IntegerField(unique=True, help_text="Value to order what service categories should appear where",)
+
 class Service(models.Model):
     """
     A Service offered by the business

@@ -17,6 +17,9 @@ def directions(request):
     **Templates**
 
     :template:`directions/directions.html`
+
+    :param request Data sent to the sever as part of a web request
+    :return A directions finding form
     """
     return render(request, "directions/directions.html", {"form": DirectionForm()},)
 
@@ -24,8 +27,8 @@ def directions(request):
 def save_location(request):
     """
     Save or update the Location data a user has entered
-    :param request: The form data that was submitted by the user
-    :return: Json response containing the status of what happened in the request
+    :param request The form data that was submitted by the user
+    :return Json response containing the status of what happened in the request
     """
     response_json = {'status': "Not a post"}
     if request.method == "POST":
