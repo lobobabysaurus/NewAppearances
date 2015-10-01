@@ -1,0 +1,42 @@
+/**
+ * Style data for the services application
+ */
+.serviceHeader > a {
+  display: inline-block;
+  float: left;
+  width: 16.66%;
+  background-color: #46ceff;
+  text-align: center;
+}
+.servicesContainer {
+  position: relative;
+  width: 90%;
+  left: 5%;
+}
+.serviceName,
+.servicePrice {
+  width: 50%;
+  text-align: center;
+  margin: 0;
+  padding-top: 10px;
+  height: 30px;
+}
+.subText > .serviceName,
+.subText > .servicePrice {
+  padding: 0;
+  height: 20px;
+}
+.serviceName {
+  float: left;
+}
+.servicePrice {
+  float: right;
+}
+.even .serviceName,
+.even .servicePrice {
+  background-color: #FF6CB5;
+}
+.odd .serviceName,
+.odd .servicePrice {
+  background-color: #FF3399;
+}
