@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block appStylesheet %}
-    <link rel ="stylesheet" type="text/css" href="{% static "directions/css/directions.css" %}" />
+    <link rel ="stylesheet" type="text/css" href="{% static "directions/style/directions.css" %}" />
 {% endblock %}
 
 {% block body %}
@@ -35,4 +35,5 @@
     </div>
     <!--Directions result on the bottom portion of the page-->
     <div id="directionsResult"></div>
+    <div><button id="printDirections">Print Directions</button></div>
 {% endblock %}

@@ -1,0 +1,15 @@
+/**
+ * Formatting for the home page application
+ */
+.homePageText > p {
+  text-align: center;
+  font-size: 1.75vw;
+}
+.newAppearancesImage {
+  max-width: 50%;
+  float: left;
+}
+#homePageImage {
+  width: 100%;
+  height: auto;
+}

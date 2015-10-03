@@ -2,9 +2,29 @@
  * Define all of the CSS styling for the base template
  */
 
+@headerTextColor: #ffffff;
+@navBackgroundColor: #fdfd96;
+@buttonForegroundColor: #34696f;
+@buttonBackgroundColor: #2f5f63;
+@buttonTextColor: #4B0082;
+@buttonTextHoverColor: #FFBBFF;
+@pageBackgroundColor: #00ccff;
+@contentBackgroundColor: rgb(169, 76, 255);
+@textColor: #ffe9f0;
+@footerBackgroundColor: #f4c7da;
+@footerTextColor: #7032ff;
+
+.buttonColorDisplay {
+    background: -webkit-linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
+    background: -moz-linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
+    background: -o-linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
+    background: -ms-linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
+    background: linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
+}
+
 body {
     width: 75%;
-    background-color: #00ccff;
+    background-color: @pageBackgroundColor;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -29,7 +49,7 @@ h3 {
 }
 
 p, label, small {
-    color: #ffe9f0;
+    color: @textColor;
 }
 
 input, select, p, label {
@@ -37,12 +57,12 @@ input, select, p, label {
 }
 
 /**************************************
-       NavBar with dropdown menu        
+       NavBar with dropdown menu
  **************************************
 /*
-    Overview: Pure CSS NavBar with dropdown menu. 
+    Overview: Pure CSS NavBar with dropdown menu.
               Resizable/scalable to fit different size monitors/browser-windows
-              Uses ul/li nested structure.     
+              Uses ul/li nested structure.
 */
 ul, li {
     margin: 0;
@@ -52,17 +72,17 @@ ul, li {
     width: 100%;
 }
 
-/* 
+/*
     NavBar container:
 */
 .navBar {
     margin: auto auto;
     padding: 3px;
-    background-color: #fdfd96;
+    background-color: @navBackgroundColor;
 }
 
 /*
-    Parent list: 
+    Parent list:
 */
 .navBar ul {
     list-style: none;
@@ -70,10 +90,10 @@ ul, li {
     display: inline-table;
 }
 
-/* 
+/*
     Parent list items:
     100%/6(items) = 16.66%
-*/ 
+*/
 .navBar ul li {
     float: left;
     width: 16.66%;
@@ -84,14 +104,14 @@ ul, li {
 */
 .navBar ul li a {
     display: block;
-    color: #4B0082;
+    color: @buttonTextColor;
 }
 
 /*
     Change button color on mouse hover.
 */
 .navBar ul li:hover a {
-    color: #FFBBFF;
+    color: @buttonTextHoverColor;
 }
 
 /*
@@ -132,7 +152,7 @@ ul, li {
 /*
     Simple drop down magic:
     Nested ul items are hidden by default, however,
-    if a list item that is hovered on has a nested ul element, 
+    if a list item that is hovered on has a nested ul element,
     display is changed to block and will reveal the nested list's items!
 */
 .navBar ul li:hover > ul {
@@ -141,29 +161,25 @@ ul, li {
 }
 
 
-/* 
-    style element to look like button 
+/*
+    style element to look like button
 */
 .buttonLink {
     /* Basic Button Styles */
     display: block;
     min-height: 75%;
     min-width: 90%;
-    background: #34696f;
+    background: @buttonForegroundColor;
     border: 2px solid rgba(33, 68, 72, 0.59);
-     
+
     /* Text/Link Styles */
     color: rgba(0, 0, 0, 0.55);
     text-align: center;
     font: 1.5vw "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     text-decoration: none;
-     
+
     /* Fancy CSS3 Styles */
-    background: -webkit-linear-gradient(top, #34696f, #2f5f63);
-    background: -moz-linear-gradient(top, #34696f, #2f5f63);
-    background: -o-linear-gradient(top, #34696f, #2f5f63);
-    background: -ms-linear-gradient(top, #34696f, #2f5f63);
-    background: linear-gradient(top, #34696f, #2f5f63);
+    .buttonColorDisplay;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
@@ -171,19 +187,15 @@ ul, li {
     box-shadow: 0 4px 0 #1b383b;
     -webkit-box-shadow: 0 4px 0 #1b383b;
     -moz-box-shadow: 0 4px 0 #1b383b;
-    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);   
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
 }
 .buttonLink:hover {
     background: #3d7a80;
-    background: -webkit-linear-gradient(top, #3d7a80, #2f5f63);
-    background: -moz-linear-gradient(top, #3d7a80, #2f5f63);
-    background: -o-linear-gradient(top, #3d7a80, #2f5f63);
-    background: -ms-linear-gradient(top, #3d7a80, #2f5f63);
-    background: linear-gradient(top, #3d7a80, #2f5f63);
+    .buttonColorDisplay;
     border-color: ButtonHighlight;
 }
 /*****************************************
-             End of NavBar             
+             End of NavBar
 *****************************************/
 
 .content, .header, .footer, .navBar {
@@ -192,7 +204,7 @@ ul, li {
 }
 
 .content {
-    background-color: rgb(169, 76, 255);
+    background-color: @contentBackgroundColor;
     overflow: auto;
 }
 
@@ -204,7 +216,7 @@ ul, li {
     -webkit-text-stroke: 1px red;
     vertical-align: middle;
     margin-top: 0;
-    color: #ffffff;
+    color: @headerTextColor;
     margin-bottom: 0;
     padding-top: 4px;
     padding-bottom: 12px;
@@ -213,7 +225,7 @@ ul, li {
 .footer {
     text-align: center;
     width: inherit;
-    background-color: #f4c7da;
+    background-color: @footerBackgroundColor;
     bottom: 0;
     position: absolute;
     height: 50px;
@@ -221,7 +233,7 @@ ul, li {
 
 .footer  p {
     margin-top: 0;
-    color: #7032ff;
+    color: @footerTextColor;
     font-size: 14px;
 }
 
@@ -235,6 +247,7 @@ ul, li {
     width: 33%;
     float: left;
 }
+
 #facebookLink{
     margin-top: 5px;
     height: 40px;

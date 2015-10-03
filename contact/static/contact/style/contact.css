@@ -1,0 +1,33 @@
+/**
+ * Main CSS for the Contact application
+ */
+h5 {
+  text-align: center;
+  color: red;
+}
+.contactForm > input,
+.contactForm > textarea {
+  float: left;
+  width: 55%;
+  margin-bottom: 5px;
+}
+.contactForm > label {
+  float: left;
+  width: 25%;
+  text-align: right;
+  clear: left;
+  margin-right: 5px;
+}
+.contactForm > small {
+  margin-left: 25.5%;
+  float: left;
+  clear: both;
+}
+.errorFormField {
+  color: red;
+}
+#submitButton {
+  margin-left: 37.5%;
+  width: 25%;
+  clear: both;
+}

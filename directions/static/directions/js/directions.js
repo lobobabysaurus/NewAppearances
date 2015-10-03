@@ -4,13 +4,20 @@
  */
 
 $(document).ready(function () {
+    $("#printDirections").hide();
     var local = new Location();
     local.initializeForm();
     google.maps.event.addDomListener(window, 'load', local.initializeMaps);
     //Attempt to calculate route and save location
-    $("#attemptCalculation").click(function (){
+    $("#attemptCalculation").click(function () {
         local.calculateRoute(local.processForm());
         $.post( "/directions/save", $("#directionsForm").serializeArray())
+    });
+    $("#printDirections").click(function () {
+        var printWindow = window.open('','','width='+window.innerWidth+",height="+window.innerHeight);
+        printWindow.document.write($("#directionsResult").html());
+        printWindow.print();
+        printWindow.close();
     });
 });
 
@@ -84,12 +91,15 @@ function Location () {
         };
         directionService.route(request, function (response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
+                $("#directionsResult").show();
                 directionsToSalon.setDirections(response);
                 $("#directionsError").text(null);
+                $("#printDirections").show();
             }
             else {
                 $("#directionsError").text("Error finding a route to the salon");
-                $("#directions").html(null);
+                $("#directionsResult").hide();
+                $("#printDirections").hide();
             }
         });
     };
