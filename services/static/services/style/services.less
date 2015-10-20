@@ -3,8 +3,10 @@
  */
 
 @headerColor: #46ceff;
-@evenRowColor: #FF6CB5;
-@oddRowColor: #FF3399;
+@evenRowColor: white;
+@oddTextColor: white;
+@oddRowColor: #ff1ae7;
+@evenTextColor: #ff1ae7;
 
 .serviceHeader > a {
     display: inline-block;
@@ -42,8 +44,10 @@
 
 .even .serviceName, .even .servicePrice {
 	background-color: @evenRowColor;
+    color: @evenTextColor;
 }
 
 .odd .serviceName, .odd .servicePrice {
 	background-color: @oddRowColor;
+    color: @oddTextColor;
 }

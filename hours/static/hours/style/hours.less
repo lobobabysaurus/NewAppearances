@@ -2,8 +2,10 @@
  * Style data for the hours application
  */
 
-@evenRowColor: #FF6CB5;
-@oddRowColor: #FF3399;
+@evenRowColor: white;
+@oddTextColor: white;
+@oddRowColor: #ff1ae7;
+@evenTextColor: #ff1ae7;
 
 .hoursContainer {
     position: relative;
@@ -29,8 +31,10 @@
 
 .even > .dayOfWeek, .even > .hoursForDay {
 	background-color:@evenRowColor;
+    color:@evenTextColor;
 }
 
 .odd > .dayOfWeek, .odd > .hoursForDay {
 	background-color:@oddRowColor;
+    color: @oddTextColor;
 }

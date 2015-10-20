@@ -22,9 +22,11 @@
 }
 .even > .dayOfWeek,
 .even > .hoursForDay {
-  background-color: #FF6CB5;
+  background-color: white;
+  color: #ff1ae7;
 }
 .odd > .dayOfWeek,
 .odd > .hoursForDay {
-  background-color: #FF3399;
+  background-color: #ff1ae7;
+  color: white;
 }
