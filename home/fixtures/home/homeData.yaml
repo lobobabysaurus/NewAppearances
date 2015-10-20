@@ -4,17 +4,17 @@
 - fields: {is_active: true}
   model: home.homepagemodel
   pk: 2
-- fields: {page_text: "<p> We at New Appearances Salon have been serving the men,\
-      \ women, and children of southeastern Pennsylvania for the past 25 years. Our\
-      \ experienced and talented stylists offer all kinds of haircut styles, various\
-      \ forms of hair coloring, color and feather hair extensions, perms and curling,\
-      \ top-of-the-art skincare treatments, including UV Free spray tanning, and modern\
-      \ chemical straightening processes.</p>\r\n\r\n<p>We serve walk ins, and if\
-      \ a specific stylist is requested, we are more than willing to schedule  appointments.\
-      \ Current customers can vouch for our quality and new customers will not be\
-      \ disappointed.</p>"}
+- fields: {page_text: "<p> New Appearances Salon in Drexel Hill has been owned and\
+      \ operated since 1985 by stylists Linda and Maria, along with their team of\
+      \ talented stylists. We are a family friendly salon with a relaxed atmosphere.\
+      \ We use Redken hair color and are educated in the latest techniques and shades.\
+      \ We also specialize in advanced hair cutting and styling, formal styling, keratin\
+      \ treatments, permanent waves, waxing, skincare, makeup and uv free spray tanning.\
+      \ </p>\r\n\r\n<p>We serve walk ins, and if a specific stylist is requested,\
+      \ we are more than willing to schedule  appointments. Current customers can\
+      \ vouch for our quality and new customers will not be disappointed.</p>"}
   model: home.homepagetext
   pk: 2
-- fields: {alt: Home Page Image, home_image: home/salonfrontCrop.jpg}
+- fields: {alt: Home Page Image, home_image: home/2015-10-01_19.41.45.jpg}
   model: home.homepageimage
   pk: 1

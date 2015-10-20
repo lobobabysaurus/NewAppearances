@@ -2,24 +2,41 @@
  * Define all of the CSS styling for the base template
  */
 
-@headerTextColor: #ffffff;
-@navBackgroundColor: #fdfd96;
-@buttonForegroundColor: #34696f;
-@buttonBackgroundColor: #2f5f63;
-@buttonTextColor: #4B0082;
-@buttonTextHoverColor: #FFBBFF;
-@pageBackgroundColor: #00ccff;
-@contentBackgroundColor: rgb(169, 76, 255);
-@textColor: #ffe9f0;
-@footerBackgroundColor: #f4c7da;
-@footerTextColor: #7032ff;
+@white: white;
+@black: black;
+@lightPink: #ff1ae7;
+@peach: #ff9cb0;
+@purpleBlue: #6110ff;
+@gold: gold;
+@red: red;
+
+@pageBackgroundColor: @lightPink;
+@sectionBorderColor: @black;
+
+@headerTextColor: @white;
+@headerTextOutlineColor: @lightPink;
+@headerBackgroundColor: @black;
+
+@navBarBackgroundColor: @gold;
+@buttonGradientTopColor: @lightPink;
+@buttonGradientBottomColor: @white;
+@buttonBorderColor: @black;
+@buttonTextColor: @black;
+@buttonTextHoverColor: @red;
+@buttonDropdownHoverColor: @black;
+
+@contentBackgroundColor: @black;
+@textColor: @white;
+
+@footerBackgroundColor: @peach;
+@footerTextColor: @purpleBlue;
 
 .buttonColorDisplay {
-    background: -webkit-linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
-    background: -moz-linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
-    background: -o-linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
-    background: -ms-linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
-    background: linear-gradient(top, @buttonForegroundColor, @buttonBackgroundColor);
+    background: -webkit-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
+    background: -moz-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
+    background: -o-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
+    background: -ms-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
+    background: linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
 }
 
 body {
@@ -28,7 +45,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    padding-bottom: 50px;
 }
 
 h1, h2, h3 {
@@ -77,8 +93,8 @@ ul, li {
 */
 .navBar {
     margin: auto auto;
-    padding: 3px;
-    background-color: @navBackgroundColor;
+    padding: 2px 2px 0px 2px;
+    background-color: @navBarBackgroundColor;
 }
 
 /*
@@ -146,7 +162,7 @@ ul, li {
     Change color on hover.
 */
 .navBar ul ul li a:hover {
-    color: #003366;
+    color: @buttonDropdownHoverColor;
 }
 
 /*
@@ -169,28 +185,24 @@ ul, li {
     display: block;
     min-height: 75%;
     min-width: 90%;
-    background: @buttonForegroundColor;
-    border: 2px solid rgba(33, 68, 72, 0.59);
+    border: 1px solid @buttonBorderColor;
 
     /* Text/Link Styles */
-    color: rgba(0, 0, 0, 0.55);
     text-align: center;
     font: 1.5vw "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     text-decoration: none;
 
     /* Fancy CSS3 Styles */
     .buttonColorDisplay;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    -moz-border-radius: 20px;
-    box-shadow: 0 4px 0 #1b383b;
-    -webkit-box-shadow: 0 4px 0 #1b383b;
-    -moz-box-shadow: 0 4px 0 #1b383b;
-    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    -moz-border-radius: 15px;
+    box-shadow: 0 2px 0 @buttonBorderColor;
+    -webkit-box-shadow: 0 2px 0 @buttonBorderColor;
+    -moz-box-shadow: 0 2px 0 @buttonBorderColor;
 }
 .buttonLink:hover {
-    background: #3d7a80;
     .buttonColorDisplay;
     border-color: ButtonHighlight;
 }
@@ -199,8 +211,8 @@ ul, li {
 *****************************************/
 
 .content, .header, .footer, .navBar {
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid @sectionBorderColor;
+    border-radius: 5px;
 }
 
 .content {
@@ -209,11 +221,11 @@ ul, li {
 }
 
 .header {
-    background-color: #aa6a87;
+    background-color: @headerBackgroundColor;
 }
 
 .header > h1 {
-    -webkit-text-stroke: 1px red;
+    -webkit-text-stroke: 1px @headerTextOutlineColor;
     vertical-align: middle;
     margin-top: 0;
     color: @headerTextColor;
