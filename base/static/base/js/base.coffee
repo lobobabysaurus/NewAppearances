@@ -21,14 +21,14 @@ $(window).resize(() ->
 # @class Base
 # @constructor Initializes the original text size
 ###
-Base = () ->
+class Base
   ###
   # Get the height of all relatively constant size divs that are top level to the body.  Find the difference of the
   # window size and this values and assign the content div to be this size
   #
   # @method setContentHeight
   ###
-  this.setContentHeight = () ->
+  setContentHeight: ->
       navHeight = $("#navBarContainer").outerHeight() +
           $("#templateFooter").outerHeight() +
           $("#templateHeader").outerHeight()

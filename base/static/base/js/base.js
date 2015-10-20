@@ -28,7 +28,9 @@
    * @constructor Initializes the original text size
    */
 
-  Base = function() {
+  Base = (function() {
+    function Base() {}
+
 
     /*
      * Get the height of all relatively constant size divs that are top level to the body.  Find the difference of the
@@ -36,12 +38,16 @@
      *
      * @method setContentHeight
      */
-    return this.setContentHeight = function() {
+
+    Base.prototype.setContentHeight = function() {
       var navHeight;
       navHeight = $("#navBarContainer").outerHeight() + $("#templateFooter").outerHeight() + $("#templateHeader").outerHeight();
       return $("#templateContent").innerHeight(window.innerHeight - navHeight);
     };
-  };
+
+    return Base;
+
+  })();
 
 }).call(this);
 
