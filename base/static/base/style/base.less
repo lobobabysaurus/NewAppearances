@@ -5,10 +5,9 @@
 @white: white;
 @black: black;
 @lightPink: #ff1ae7;
-@peach: #ff9cb0;
-@purpleBlue: #6110ff;
 @gold: gold;
 @red: red;
+@tan: #faffa5;
 
 @pageBackgroundColor: @lightPink;
 @sectionBorderColor: @black;
@@ -26,10 +25,12 @@
 @buttonDropdownHoverColor: @black;
 
 @contentBackgroundColor: @black;
+@contentHeaderColor: @tan;
 @textColor: @white;
 
-@footerBackgroundColor: @peach;
-@footerTextColor: @purpleBlue;
+@footerBackgroundColor: #222222;
+@footerBorderColor: @white;
+@footerTextColor: @gold;
 
 .buttonColorDisplay {
     background: -webkit-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
@@ -49,7 +50,7 @@ body {
 
 h1, h2, h3 {
     text-align: center;
-    color: #ffefbe;
+    color: @contentHeaderColor;
 }
 
 h1 {
@@ -93,7 +94,7 @@ ul, li {
 */
 .navBar {
     margin: auto auto;
-    padding: 2px 2px 0px 2px;
+    padding: 2px 2px 0 2px;
     background-color: @navBarBackgroundColor;
 }
 
@@ -210,7 +211,7 @@ ul, li {
              End of NavBar
 *****************************************/
 
-.content, .header, .footer, .navBar {
+.content, .header, .navBar {
     border: 1px solid @sectionBorderColor;
     border-radius: 5px;
 }
@@ -235,12 +236,14 @@ ul, li {
 }
 
 .footer {
+    border: 1px solid @footerBorderColor;
     text-align: center;
     width: inherit;
     background-color: @footerBackgroundColor;
     bottom: 0;
     position: absolute;
     height: 50px;
+    border-radius: 5px;
 }
 
 .footer  p {

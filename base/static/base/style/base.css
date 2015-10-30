@@ -19,7 +19,7 @@ h1,
 h2,
 h3 {
   text-align: center;
-  color: #ffefbe;
+  color: #faffa5;
 }
 h1 {
   font-size: 3vw;
@@ -62,7 +62,7 @@ li {
 */
 .navBar {
   margin: auto auto;
-  padding: 2px 2px 0px 2px;
+  padding: 2px 2px 0 2px;
   background-color: gold;
 }
 /*
@@ -175,7 +175,6 @@ li {
 *****************************************/
 .content,
 .header,
-.footer,
 .navBar {
   border: 1px solid black;
   border-radius: 5px;
@@ -197,16 +196,18 @@ li {
   padding-bottom: 12px;
 }
 .footer {
+  border: 1px solid white;
   text-align: center;
   width: inherit;
-  background-color: #ff9cb0;
+  background-color: #222222;
   bottom: 0;
   position: absolute;
   height: 50px;
+  border-radius: 5px;
 }
 .footer p {
   margin-top: 0;
-  color: #6110ff;
+  color: gold;
   font-size: 14px;
 }
 #addressStatic {
