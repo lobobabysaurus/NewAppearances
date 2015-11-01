@@ -1,0 +1,21 @@
+{
+  "name": "NewAppearances",
+  "version": "0.0.0",
+  "description": "The business website for New Appearances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://philsim7@bitbucket.org/philsim7/newappearances-fork.git"
+  },
+  "author": "Phil Simmons and Geoff Pitman",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "coffee-script": "~1.10.0",
+    "http-server": "~0.8.5",
+    "less": "~2.5.3",
+    "yuidocjs": "~0.9.0"
+  }
+}

@@ -3,3 +3,4 @@
 */migrations/0*.py
 tools/api
 *~
+node_modules/
