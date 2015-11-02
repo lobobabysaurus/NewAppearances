@@ -1,20 +1,20 @@
 ###
-# Module to implement all javascript resources that will be available to the base application
-# at least for the main template
+# Module to implement all javascript resources that will be
+# available to the base application at least for the main template
 #
 # @module Base
 ###
 
-#Container for module-wide variables
-BaseObj = {};
-
+# Container for module-wide variables
+baseObj = {}
+ 
 $ ->
-  BaseObj.base = new Base()
-  #Set content section height
-  BaseObj.base.setContentHeight()
+  baseObj.base = new Base()
+  # Set content section height
+  baseObj.base.setContentHeight()
 
-$(window).resize(() ->
-  BaseObj.base.setContentHeight())
+$(window).resize ->
+  baseObj.base.setContentHeight()
 
 ###
 # Class representing the base functionality
@@ -23,13 +23,14 @@ $(window).resize(() ->
 ###
 class Base
   ###
-  # Get the height of all relatively constant size divs that are top level to the body.  Find the difference of the
-  # window size and this values and assign the content div to be this size
+  # Get the height of all relatively constant size divs that are top level
+  # to the body.  Find the difference of the window size and this values and
+  # assign the content div to be this size
   #
   # @method setContentHeight
   ###
   setContentHeight: ->
-      navHeight = $("#navBarContainer").outerHeight() +
-          $("#templateFooter").outerHeight() +
-          $("#templateHeader").outerHeight()
-      $("#templateContent").innerHeight(window.innerHeight - navHeight)
+    navHeight = $("#navBarContainer").outerHeight() +
+      $("#templateFooter").outerHeight() +
+      $("#templateHeader").outerHeight()
+    $("#templateContent").innerHeight(window.innerHeight - navHeight)

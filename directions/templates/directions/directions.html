@@ -15,11 +15,11 @@
 
 {% block body %}
     <!--Map where the store is on the lower left side of the page-->
-    <div id="storeMap"></div>
+    <div id="storeMap" class="storeMap"></div>
     <!--Directions form on the lower right side of the page-->
     <div class="directionsFormHolder">
         <h2>Enter Address to Receive Directions</h2>
-        <form id="directionsForm">
+        <form class="directionsForm">
             <!--Check for CSRF attack-->
             {% csrf_token %}
             <div class = "formRow">
@@ -28,12 +28,12 @@
                     {{ field.label_tag }}{{ field }}
                 {% endfor %}
             </div>
-            <input type="button" id="attemptCalculation" value="Find Route" />
+            <input type="button" class="attemptCalculation" value="Find Route" />
             <!--Error section below the directions form-->
-            <p id="directionsError"></p>
+            <p class="directionsError"></p>
         </form>
     </div>
     <!--Directions result on the bottom portion of the page-->
-    <div id="directionsResult"></div>
-    <div><button id="printDirections">Print Directions</button></div>
+    <div id="directionsResult" class="directionsResult"></div>
+    <div><button class="printDirections">Print Directions</button></div>
 {% endblock %}

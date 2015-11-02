@@ -9,45 +9,46 @@
 @evenTextColor: #ff1ae7;
 
 .serviceHeader > a {
-    display: inline-block;
-    float: left;
-    width: 16.66%;
-    background-color: @headerColor;
-    text-align: center;
+  display: inline-block;
+  float: left;
+  width: 16.66%;
+  text-align: center;
+  background-color: @headerColor;
 }
 
-.servicesContainer{
-    position: relative;
-    width: 90%;
-    left: 5%;
+.servicesContainer {
+  position: relative;
+  left: 5%;
+  width: 90%;
 }
 
 .serviceName, .servicePrice {
-    width: 50%;
-    text-align: center;
-    margin: 0;
-    padding-top: 10px;
-    height: 30px;
+  width: 50%;
+  height: 30px;
+  padding-top: 10px;
+  margin: 0;
+  text-align: center;
 }
 
 .subText > .serviceName, .subText > .servicePrice {
-    padding : 0;
-    height: 20px;
+  height: 20px;
+  padding : 0;
 }
+
 .serviceName {
-    float: left;
+  float: left;
 }
 
 .servicePrice {
-    float: right;
+  float: right;
 }
 
 .even .serviceName, .even .servicePrice {
-	background-color: @evenRowColor;
-    color: @evenTextColor;
+  color: @evenTextColor;
+  background-color: @evenRowColor;
 }
 
 .odd .serviceName, .odd .servicePrice {
-	background-color: @oddRowColor;
-    color: @oddTextColor;
+  color: @oddTextColor;
+  background-color: @oddRowColor;
 }
