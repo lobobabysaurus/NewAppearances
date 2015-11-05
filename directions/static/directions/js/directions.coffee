@@ -1,4 +1,4 @@
-###
+###*
 # Location app related Javascript
 #
 # @module Location
@@ -20,14 +20,14 @@ $ ->
     printWindow.print()
     printWindow.close()
 
-###
+###*
 # Class for dealing with Location data
 #
 # @constructor
 # @class Location
 ###
 class Location
-  ###
+  ###*
   # Latitute and Longitude directions of New Appearances
   #
   # @property salonLatLng
@@ -35,7 +35,7 @@ class Location
   ###
   salonLatLng = new google.maps.LatLng(39.946707, -75.302254)
 
-  ###
+  ###*
   # Street Address directions of New Appearances
   #
   # @property salonAddress
@@ -43,7 +43,7 @@ class Location
   ###
   salonAddress = '530 Burmont Road, Drexel Hill, PA 19026'
 
-  ###
+  ###*
   # Direction service to set on map generation and to be used
   # for finding directions
   #
@@ -52,7 +52,7 @@ class Location
   ###
   directionService = new google.maps.DirectionsService()
 
-  ###
+  ###*
   # Renders the directions to the salon after form submission
   #
   # @property directionsToSalon
@@ -60,7 +60,7 @@ class Location
   ###
   directionsToSalon = new google.maps.DirectionsRenderer()
 
-  ###
+  ###*
   # Create a Google Map for the page
   # @method initializeMaps
   ###
@@ -78,7 +78,7 @@ class Location
     directionsToSalon.setMap(map)
     directionsToSalon.setPanel(document.getElementById('directionsResult'))
 
-  ###
+  ###*
   # Find the route between the entered directions and the salon and
   # display it on the page
   #
@@ -91,7 +91,7 @@ class Location
       destination: salonAddress,
       travelMode: google.maps.TravelMode.DRIVING
 
-    directionService.route(request, (response, status) ->
+    directionService.route request, (response, status) ->
       if status == google.maps.DirectionsStatus.OK
         $('.directionsResult').show()
         directionsToSalon.setDirections(response)
@@ -101,9 +101,8 @@ class Location
         $('.directionsError').text('Error finding a route to the salon')
         $('.directionsResult').hide()
         $('.printDirections').hide()
-    )
 
-  ###
+  ###*
   # Parse the directions form for address data and cast it
   # to a formatted string
   #
@@ -124,7 +123,7 @@ class Location
     )
     return address
 
-  ###
+  ###*
   # Iterates through all fields in the form and populates them with
   # a value stored in Cookies if it exists
   #
@@ -132,6 +131,5 @@ class Location
   ###
   initializeForm: ->
     formFields = ['street', 'city', 'state', 'zip']
-    $.each(formFields, (index, field) ->
+    $.each formFields, (index, field) ->
       $("input[name='#{field}']").val($.cookie(field))
-    )
