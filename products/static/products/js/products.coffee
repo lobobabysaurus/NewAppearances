@@ -38,7 +38,7 @@ class Product
         width: 'auto'
       # Open the dialog on image click
       $(@).click ->
-        $(dialogID).dialog(open)
+        $(dialogID).dialog('open')
 
   ###*
   # Set the image size to be a fourth of the screen and to maintain the
