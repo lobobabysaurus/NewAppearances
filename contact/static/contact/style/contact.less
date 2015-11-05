@@ -7,24 +7,24 @@ h5 {
   text-align: center;
 }
 
-.contactForm > input, .contactForm > textarea {
-  float: left;
-  width: 55%;
-  margin-bottom: 5px;
-}
-
-.contactForm > label {
-  float: left;
-  width: 25%;
-  margin-right: 5px;
-  clear: left;
-  text-align: right;
-}
-
-.contactForm > small {
-  float: left;
-  margin-left: 25.5%;
-  clear: both;
+.contactForm {
+  & > input, & > textarea {
+    float: left;
+    width: 55%;
+    margin-bottom: 5px;
+  }
+  & > label {
+    float: left;
+    width: 25%;
+    margin-right: 5px;
+    clear: left;
+    text-align: right;
+  }
+  & > small {
+    float: left;
+    margin-left: 25.5%;
+    clear: both;
+  }
 }
 
 .errorFormField {
@@ -32,7 +32,6 @@ h5 {
 }
 
 .submitButton {
-  width: 25%;
-  margin-left: 37.5%;
+  margin-left: 26%;
   clear: both;
 }

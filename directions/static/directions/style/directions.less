@@ -27,11 +27,10 @@ p, label, input, select {
 
 .directionsForm {
   height: 50%;
-}
-
-.directionsForm > input {
-  width: 45%;
-  margin-left: 33%;
+  & > input {
+    width: 45%;
+    margin-left: 33%;
+  }
 }
 
 .directionsFormHolder {
@@ -53,17 +52,19 @@ p, label, input, select {
   text-align: center;
 }
 
-.formRow > label {
-  float: left;
-  width: 30%;
-  clear: left;
-  text-align: right;
-}
+.formRow {
+  & > label {
+    float: left;
+    width: 30%;
+    clear: left;
+    text-align: right;
+  }
 
-.formRow > input, .formRow > select {
-  float: left;
-  width: 50%;
-  margin-bottom: 5px;
+  & > input, & > select {
+    float: left;
+    width: 50%;
+    margin-bottom: 5px;
+  }
 }
 
 .printDirections {

@@ -32,12 +32,25 @@
 @footerBorderColor: @white;
 @footerTextColor: @gold;
 
-.buttonColorDisplay {
-  background: -webkit-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
-  background: -moz-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
-  background: -o-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
-  background: -ms-linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
-  background: linear-gradient(top, @buttonGradientTopColor, @buttonGradientBottomColor);
+.borderRadius(@radius) {
+  -webkit-border-radius: @radius;
+  -khtml-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.boxShadow(@size, @color) {
+  -webkit-box-shadow: 0 @size 0 @color;
+  -moz-box-shadow: 0 @size 0 @color;
+  box-shadow: 0 @size 0 @color;
+}
+
+.buttonColorDisplay(@topColor, @bottomColor) {
+  background: -webkit-linear-gradient(top, @topColor, @bottomColor);
+  background: -moz-linear-gradient(top, @topColor, @bottomColor);
+  background: -o-linear-gradient(top, @topColor, @bottomColor);
+  background: -ms-linear-gradient(top, @topColor, @bottomColor);
+  background: linear-gradient(top, @topColor, @bottomColor);
 }
 
 body {
@@ -90,94 +103,67 @@ ul, li {
    border: 0;
 }
 
-/*
- *   NavBar container:
- */
+// NavBar container:
 .navBar {
   padding: 2px 2px 0 2px;
   margin: auto auto;
   background-color: @navBarBackgroundColor;
+  // Parent list:
+  ul {
+    position: relative;
+    display: inline-table;
+    list-style: none;
+    /*
+     * Parent list items:
+     * 100%/6(items) = 16.66%
+     */
+    li {
+      float: left;
+      width: 16.66%;
+      // Each list item has a corresponding button
+      a {
+        display: block;
+        color: @buttonTextColor;
+      }
+      // Change button color on mouse hover.
+      &:hover a {
+        color: @buttonTextHoverColor;
+      }
+      /*
+       *   Simple drop down magic:
+       *   Nested ul items are hidden by default, however,
+       *   if a list item that is hovered on has a nested ul element,
+       *   display is changed to block and will reveal the nested list's items!
+       */
+      &:hover > ul {
+        z-index: 1000;
+        display: block;
+      }
+    }
+    // Nested List
+    ul {
+      position: absolute;
+      top: 100%;
+      display: none;
+      width: 135%;
+      padding: 0;
+      // Nested list items:
+      li {
+        position: relative;
+        float: none;
+        width: 100%;
+      }
+      // Nested list items' corresponding buttons:
+      a {
+        width: 100%;
+        // Change color on hover.
+        &:hover {
+          color: @buttonDropdownHoverColor;
+        }
+      }
+    }
+  }
 }
-
-/*
- *   Parent list:
- */
-.navBar ul {
-  position: relative;
-  display: inline-table;
-  list-style: none;
-}
-
-/*
- * Parent list items:
- * 100%/6(items) = 16.66%
- */
-.navBar ul li {
-  float: left;
-  width: 16.66%;
-}
-
-/*
- *  Each list item has a corresponding button
-  */
-.navBar ul li a {
-  display: block;
-  color: @buttonTextColor;
-}
-
-/*
- *   Change button color on mouse hover.
- */
-.navBar ul li:hover a {
-  color: @buttonTextHoverColor;
-}
-
-/*
- * First nested list:
- *  display set to none so nested list (drop down items) is hidden by default.
- */
-.navBar ul ul {
-  position: absolute;
-  top: 100%;
-  display: none;
-  width: 135%;
-  padding: 0;
-}
-
-/*
- *   Nested list items:
- */
-.navBar ul ul li {
-  position: relative;
-  float: none;
-  width: 100%;
-}
-
-/*
- *  Nested list items' corresponding buttons:
- */
-.navBar ul ul li a {
-  width: 100%;
-}
-
-/*
- *  Change color on hover.
- */
-.navBar ul ul li a:hover {
-  color: @buttonDropdownHoverColor;
-}
-
-/*
- *   Simple drop down magic:
- *   Nested ul items are hidden by default, however,
- *   if a list item that is hovered on has a nested ul element,
- *   display is changed to block and will reveal the nested list's items!
- */
-.navBar ul li:hover > ul {
-  z-index: 1000;
-  display: block;
-}
-
 
 /*
  *  style element to look like button
@@ -194,18 +180,13 @@ ul, li {
   text-decoration: none;
 
   /* Fancy CSS3 Styles */
-  .buttonColorDisplay;
+  .buttonColorDisplay(@buttonGradientTopColor, @buttonGradientBottomColor);
   border: 1px solid @buttonBorderColor;
-  -webkit-border-radius: 15px;
-  -khtml-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 2px 0 @buttonBorderColor;
-  -moz-box-shadow: 0 2px 0 @buttonBorderColor;
-  box-shadow: 0 2px 0 @buttonBorderColor;
+  .borderRadius(15px);
+  .boxShadow(2px, @buttonBorderColor);
 }
 .buttonLink:hover {
-  .buttonColorDisplay;
+  .buttonColorDisplay(@buttonGradientTopColor, @buttonGradientBottomColor);
   border-color: ButtonHighlight;
 }
 /*****************************************
@@ -256,7 +237,7 @@ ul, li {
   text-align: center;
   background-color: @footerBackgroundColor;
   border: 1px solid @footerBorderColor;
-  border-radius: 5px;
+  .borderRadius(5px);
 }
 
 .facebookContainer {
