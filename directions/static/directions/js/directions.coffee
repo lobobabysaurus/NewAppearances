@@ -5,7 +5,7 @@
 ###
 
 $ ->
-  $('#printDirections').hide()
+  $('.printDirections').hide()
   local = new Location()
   local.initializeForm()
   google.maps.event.addDomListener(window, 'load', local.initializeMaps)

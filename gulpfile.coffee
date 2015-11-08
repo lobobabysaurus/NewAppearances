@@ -50,7 +50,7 @@ gulp.task 'lint-less', ->
     .pipe(recess.reporter())
 
 # Compile Less to CSS
-gulp.task 'less', ->
+gulp.task 'less-to-css', ->
   return gulp.src(lessDir)
     .pipe(less())
     .pipe(gulp.dest('.'))
@@ -68,7 +68,7 @@ gulp.task 'coffee-build', ->
 
 # Build css
 gulp.task 'less-build', ->
-  runSequence('clean-css', 'lint-less', 'less', 'minify-css')
+  runSequence('clean-css', 'lint-less', 'less-to-css', 'minify-css')
 
 # Watch Files For Changes
 gulp.task 'watch', ->
