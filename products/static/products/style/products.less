@@ -2,26 +2,24 @@
  * Basic formatting for the Products application
  */
 .brands {
-    position: relative;
-    font-size: 0;
-    padding: 0;
-    margin: 0;
-}
-
-.brands > img {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  & > img {
     position: absolute;
+  }
 }
 
 .productLink {
-    float: left;
-    width: 300px;
+  float: left;
+  width: 300px;
 }
 
 .productPrice {
-    float: left;
-    width: 150px;
-}
-
-.productPrice> p {
+  float: left;
+  width: 150px;
+  & > p {
     color: black;
+  }
 }

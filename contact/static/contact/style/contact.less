@@ -3,36 +3,35 @@
  */
 
 h5 {
-    text-align: center;
-    color: red;
+  color: red;
+  text-align: center;
 }
 
-.contactForm > input, .contactForm > textarea {
+.contactForm {
+  & > input, & > textarea {
     float: left;
     width: 55%;
     margin-bottom: 5px;
-}
-
-.contactForm > label {
+  }
+  & > label {
     float: left;
     width: 25%;
-    text-align: right;
-    clear: left;
     margin-right: 5px;
-}
-
-.contactForm > small {
-    margin-left: 25.5%;
+    clear: left;
+    text-align: right;
+  }
+  & > small {
     float: left;
+    margin-left: 25.5%;
     clear: both;
+  }
 }
 
 .errorFormField {
-    color: red;
+  color: red;
 }
 
-#submitButton {
-    margin-left: 37.5%;
-    width: 25%;
-    clear: both;
+.submitButton {
+  margin-left: 26%;
+  clear: both;
 }

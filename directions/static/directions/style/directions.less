@@ -7,74 +7,78 @@
 /*
  * Override base font sizes to be height relative instead of width
  */
+@directionsTableTextColor : #ffe9f0;
+@directionsTableColumnColor : darkorchid;
+
 h2 {
-    padding-top: 0px;
-    margin-top: 0px;
-    font-size: 3.5vh;
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 3.5vh;
 }
 
 p, label, input, select {
-    font-size: 2.5vh;
+  font-size: 2.5vh;
 }
 
-.adp-substep{
-    background-color: darkorchid;
-    color: #ffe9f0;
+.adp-substep {
+  color: @directionsTableTextColor;
+  background-color: @directionsTableColumnColor;
+}
+
+.directionsForm {
+  height: 50%;
+  & > input {
+    width: 45%;
+    margin-left: 33%;
+  }
 }
 
 .directionsFormHolder {
-    width: 45%;
-    height: 50%;
-    float: right;
+  float: right;
+  width: 45%;
+  height: 50%;
 }
 
-.formRow > label {
+.directionsError {
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+  text-align: center;
+}
+
+.directionsResult {
+  display: block;
+  float:left;
+  width: 55%;
+  text-align: center;
+}
+
+.formRow {
+  & > label {
     float: left;
     width: 30%;
     clear: left;
     text-align: right;
-}
+  }
 
-.formRow > input, .formRow > select {
+  & > input, & > select {
     float: left;
     width: 50%;
     margin-bottom: 5px;
+  }
 }
 
-#directionsResult {
-    display: block;
-    float:left;
-    text-align: center;
-    width: 55%;
+.printDirections {
+  display: block;
+  float:right;
+  width: 35%;
+  margin-top: 2%;
+  margin-right: 5%;
+  font-size: 2.5vh;
+  text-align: center;
 }
 
-#directionsError {
-    color: rgb(255, 0, 0);
-    text-align: center;
-    font-weight: bold;
-}
-
-#directionsForm{
-    height: 50%;
-}
-
-#directionsForm > input{
-    margin-left: 33%;
-    width: 45%;
-}
-
-#printDirections {
-    margin-top: 2%;
-    margin-right: 5%;
-    display: block;
-    float:right;
-    text-align: center;
-    width: 35%;
-    font-size: 2.5vh;
-}
-
-#storeMap {
-    width: 55%;
-    height: 60%;
-    float: left;
+.storeMap {
+  float: left;
+  width: 55%;
+  height: 60%;
 }
