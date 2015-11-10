@@ -4,7 +4,7 @@
 
 @white: white;
 @black: black;
-@lightPink: #ff1ae7;
+@lightPink: #f27ce6;
 @gold: gold;
 @red: red;
 @tan: #faffa5;
@@ -184,20 +184,15 @@ ul, li {
   border: 1px solid @buttonBorderColor;
   .borderRadius(15px);
   .boxShadow(2px, @buttonBorderColor);
-}
-.buttonLink:hover {
-  .buttonColorDisplay(@buttonGradientTopColor, @buttonGradientBottomColor);
-  border-color: ButtonHighlight;
+
+  &:hover {
+    .buttonColorDisplay(@buttonGradientTopColor, @buttonGradientBottomColor);
+    border-color: ButtonHighlight;  
+  }
 }
 /*****************************************
              End of NavBar
 *****************************************/
-
-.addressStatic {
-  float: left;
-  width: 33%;
-  text-align: center;
-}
 
 .content, .header, .navBar {
   border: 1px solid @sectionBorderColor;
@@ -211,22 +206,15 @@ ul, li {
 
 .header {
   background-color: @headerBackgroundColor;
-}
-
-.header > h1 {
-  padding-top: 4px;
-  padding-bottom: 12px;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: @headerTextColor;
-  vertical-align: middle;
-  -webkit-text-stroke: 1px @headerTextOutlineColor;
-
-}
-
-.number {
-  margin-top: 4px;
-  font-size: 2vw;
+  &  > h1 {
+    padding-top: 4px;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: @headerTextColor;
+    vertical-align: middle;
+    -webkit-text-stroke: 1px @headerTextOutlineColor;
+  }
 }
 
 .footer {
@@ -238,20 +226,27 @@ ul, li {
   background-color: @footerBackgroundColor;
   border: 1px solid @footerBorderColor;
   .borderRadius(5px);
-}
 
-.facebookContainer {
-  float: left;
-  width: 33%;
-}
-
-.facebookLink{
-  height: 40px;
-  margin-top: 5px;
-}
-
-.footer  p {
-  margin-top: 0;
-  font-size: 14px;
-  color: @footerTextColor;
+  & p {
+    margin-top: 0;
+    font-size: 14px;
+    color: @footerTextColor;
+  }
+  & .addressStatic {
+    float: left;
+    width: 33%;
+    text-align: center;
+  }
+  & .facebookContainer {
+    float: left;
+    width: 33%;
+  }
+  & .facebookLink {
+    height: 40px;
+    margin-top: 5px;
+  }
+  & .number {
+    margin-top: 4px;
+    font-size: 2vw;
+  }
 }
