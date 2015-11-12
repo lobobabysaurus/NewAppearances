@@ -9,7 +9,7 @@
 {% block body %}
     <h2>Click an Image to See Services</h2>
     {% for category in categories %}
-        <a href="/services/{{category.category_name }}">
+        <a class='categoryLink' href="/services/{{category.category_name }}">
             <img id="{{category.category_name}}"
                  src="{{category.category_image.url}}"
                  alt="{{category.category_name}}" />
