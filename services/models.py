@@ -24,13 +24,13 @@ class Service(models.Model):
     HAIRCUTS = 1
     COLORS = 2
     STRAIGHTENING = 3
-    PERMS = 4
+    SPECIAL = 4
     SKINCARE = 5
     category_choices = (
         (HAIRCUTS, 'Haircuts'),
         (COLORS, 'Colors'),
         (STRAIGHTENING, 'Straightening'),
-        (PERMS, 'Perms'),
+        (SPECIAL, 'Special'),
         (SKINCARE, 'Skincare'),
     )
     category = models.IntegerField(choices=category_choices,

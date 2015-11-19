@@ -10,7 +10,7 @@
     <h2>{{ category }}</h2>
     {% if category == "Colors" %}
         <!--Colors special Note-->
-        <h3>All Blowout With Color Add $10</h3>
+        <h3>All Blowout With Color Add $12</h3>
     {% endif %}
     <div class="servicesContainer">
         <!--Print service name and corresponding price in a row and change class every other row for styling-->
@@ -19,7 +19,7 @@
                 <div class="even">
             {% else %}
                 <div class="odd">
-            {% endif %}   
+            {% endif %}
                     <p class="serviceName">{{ service.service_name }}</p>
                     <p class="servicePrice">{{ service.price_str }}</p>
                     {% for note in service.sub_services.all %}
@@ -28,7 +28,7 @@
                             <small class="servicePrice"></small>
                         </div>
                     {% endfor %}
-               </div>      
+               </div>
        {% endfor %}
     </div>
     {% if category == "Haircuts" %}

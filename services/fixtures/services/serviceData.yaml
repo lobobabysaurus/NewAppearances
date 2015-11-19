@@ -20,7 +20,7 @@
 - fields: {category: 1, maximum_cost: 25, minimum_cost: null, order: 5, service_name: Men's}
   model: services.service
   pk: 6
-- fields: {category: 1, maximum_cost: 30, minimum_cost: null, order: 10, service_name: Girls
+- fields: {category: 1, maximum_cost: 32, minimum_cost: null, order: 10, service_name: Girls
       13-18}
   model: services.service
   pk: 7
@@ -36,31 +36,31 @@
       12 & Under}
   model: services.service
   pk: 10
-- fields: {category: 1, maximum_cost: 10, minimum_cost: null, order: 30, service_name: Buzz}
+- fields: {category: 1, maximum_cost: 15, minimum_cost: null, order: 30, service_name: Buzz}
   model: services.service
   pk: 11
-- fields: {category: 1, maximum_cost: 8, minimum_cost: null, order: 35, service_name: Bang
+- fields: {category: 1, maximum_cost: 10, minimum_cost: null, order: 35, service_name: Bang
       Trim}
   model: services.service
   pk: 12
-- fields: {category: 1, maximum_cost: 20, minimum_cost: null, order: 40, service_name: Blowouts}
+- fields: {category: 1, maximum_cost: 23, minimum_cost: null, order: 40, service_name: Blowouts}
   model: services.service
   pk: 13
 - fields: {category: 1, maximum_cost: 25, minimum_cost: null, order: 45, service_name: Sets}
   model: services.service
   pk: 14
-- fields: {category: 2, maximum_cost: null, minimum_cost: 45, order: 5, service_name: Single
+- fields: {category: 2, maximum_cost: null, minimum_cost: 50, order: 5, service_name: Single
       Process}
   model: services.service
   pk: 16
-- fields: {category: 2, maximum_cost: 45, minimum_cost: null, order: 10, service_name: Glazing}
+- fields: {category: 2, maximum_cost: 50, minimum_cost: null, order: 10, service_name: Glazing}
   model: services.service
   pk: 17
-- fields: {category: 2, maximum_cost: null, minimum_cost: 70, order: 15, service_name: Double
+- fields: {category: 2, maximum_cost: null, minimum_cost: 80, order: 15, service_name: Double
       Process}
   model: services.service
   pk: 18
-- fields: {category: 2, maximum_cost: null, minimum_cost: 90, order: 20, service_name: Foil
+- fields: {category: 2, maximum_cost: null, minimum_cost: 95, order: 20, service_name: Foil
       Highlights}
   model: services.service
   pk: 19
@@ -76,26 +76,25 @@
       Color Camo}
   model: services.service
   pk: 22
-- fields: {category: 3, maximum_cost: null, minimum_cost: 70, order: 0, service_name: Straightening}
+- fields: {category: 3, maximum_cost: null, minimum_cost: 90, order: 0, service_name: Chemical}
   model: services.service
   pk: 23
-- fields: {category: 3, maximum_cost: 300, minimum_cost: null, order: 5, service_name: Chi
+- fields: {category: 3, maximum_cost: 310, minimum_cost: null, order: 5, service_name: Chi
       Thermal}
   model: services.service
   pk: 24
-- fields: {category: 3, maximum_cost: 250, minimum_cost: null, order: 10, service_name: Chi
+- fields: {category: 3, maximum_cost: 260, minimum_cost: null, order: 10, service_name: Chi
       Touch Up}
   model: services.service
   pk: 25
-- fields: {category: 3, maximum_cost: 225, minimum_cost: null, order: 15, service_name: Keratin
-      Smoothing}
+- fields: {category: 3, maximum_cost: 275, minimum_cost: null, order: 15, service_name: Chocolate
+      Keratin}
   model: services.service
   pk: 26
-- fields: {category: 3, maximum_cost: 275, minimum_cost: null, order: 20, service_name: Brazilian
-      Blow Out}
+- fields: {category: 3, maximum_cost: 275, minimum_cost: null, order: 20, service_name: Agave}
   model: services.service
   pk: 27
-- fields: {category: 3, maximum_cost: 70, minimum_cost: null, order: 25, service_name: Keratin
+- fields: {category: 3, maximum_cost: 75, minimum_cost: null, order: 25, service_name: Keratin
       Color Seal}
   model: services.service
   pk: 28
@@ -106,11 +105,11 @@
       Perms}
   model: services.service
   pk: 30
-- fields: {category: 4, maximum_cost: null, minimum_cost: 50, order: 10, service_name: Formal
+- fields: {category: 4, maximum_cost: null, minimum_cost: 55, order: 10, service_name: Formal
       Styling}
   model: services.service
   pk: 31
-- fields: {category: 5, maximum_cost: 60, minimum_cost: 55, order: 0, service_name: Facial}
+- fields: {category: 5, maximum_cost: 60, minimum_cost: null, order: 0, service_name: Facial}
   model: services.service
   pk: 32
 - fields: {category: 5, maximum_cost: 70, minimum_cost: null, order: 5, service_name: Vitamin
@@ -133,20 +132,20 @@
       Wax}
   model: services.service
   pk: 38
-- fields: {category: 5, maximum_cost: 10, minimum_cost: 8, order: 40, service_name: Chin
+- fields: {category: 5, maximum_cost: 12, minimum_cost: 10, order: 40, service_name: Chin
       Wax}
   model: services.service
   pk: 39
-- fields: {category: 5, maximum_cost: 35, minimum_cost: null, order: 45, service_name: Leg
+- fields: {category: 5, maximum_cost: 40, minimum_cost: null, order: 45, service_name: Leg
       Wax}
   model: services.service
   pk: 40
-- fields: {category: 5, maximum_cost: 55, minimum_cost: null, order: 50, service_name: Full
+- fields: {category: 5, maximum_cost: 60, minimum_cost: null, order: 50, service_name: Full
       Leg}
   model: services.service
   pk: 41
-- fields: {category: 5, maximum_cost: 50, minimum_cost: null, order: 55, service_name: Arm
-      Wax}
+- fields: {category: 5, maximum_cost: 50, minimum_cost: null, order: 55, service_name: Full
+      Arm}
   model: services.service
   pk: 42
 - fields: {category: 5, maximum_cost: 30, minimum_cost: 25, order: 60, service_name: Bikini
@@ -169,6 +168,18 @@
       Chest Wax}
   model: services.service
   pk: 47
+- fields: {category: 4, maximum_cost: 35, minimum_cost: null, order: 15, service_name: Full
+      Body Spray Tan}
+  model: services.service
+  pk: 48
+- fields: {category: 4, maximum_cost: 10, minimum_cost: null, order: 20, service_name: Face
+      & Neck Spray Tan}
+  model: services.service
+  pk: 49
+- fields: {category: 5, maximum_cost: 35, minimum_cost: null, order: 52, service_name: Arm
+      Wax}
+  model: services.service
+  pk: 50
 - fields: {price: null, service: 35, text: (With Eyelashes Add $10)}
   model: services.subservice
   pk: 1
