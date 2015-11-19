@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-yuidoc --syntaxtype coffee -e .coffee --server 9966 ..
+../node_modules/.bin/yuidoc --syntaxtype coffee -e .coffee --server 9966 ..
