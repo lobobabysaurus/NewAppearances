@@ -2,11 +2,14 @@
  * Style data for the services application
  */
 
+@white: white;
+@purple: #bd3aaf;
+@evenRowColor: @white;
+@oddTextColor: @white;
+@oddRowColor: @purple;
+@evenTextColor: @purple;
+
 @headerColor: #46ceff;
-@evenRowColor: white;
-@oddTextColor: white;
-@oddRowColor: #ff1ae7;
-@evenTextColor: #ff1ae7;
 
 .serviceHeader > a {
   display: inline-block;
@@ -25,7 +28,8 @@
 .serviceName, .servicePrice {
   width: 50%;
   height: 30px;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin: 0;
   text-align: center;
 }

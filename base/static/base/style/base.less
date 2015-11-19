@@ -4,7 +4,7 @@
 
 @white: white;
 @black: black;
-@lightPink: #f27ce6;
+@lightPink: #f7a3ef;
 @gold: gold;
 @red: red;
 @tan: #faffa5;
@@ -16,7 +16,7 @@
 @headerTextOutlineColor: @lightPink;
 @headerBackgroundColor: @black;
 
-@navBarBackgroundColor: @gold;
+@navBarBackgroundColor: @tan;
 @buttonGradientTopColor: @lightPink;
 @buttonGradientBottomColor: @white;
 @buttonBorderColor: @black;
@@ -30,7 +30,7 @@
 
 @footerBackgroundColor: #222222;
 @footerBorderColor: @white;
-@footerTextColor: @gold;
+@footerTextColor: @tan;
 
 .borderRadius(@radius) {
   -webkit-border-radius: @radius;
@@ -187,7 +187,7 @@ ul, li {
 
   &:hover {
     .buttonColorDisplay(@buttonGradientTopColor, @buttonGradientBottomColor);
-    border-color: ButtonHighlight;  
+    border-color: ButtonHighlight;
   }
 }
 /*****************************************
@@ -227,25 +227,25 @@ ul, li {
   border: 1px solid @footerBorderColor;
   .borderRadius(5px);
 
-  & p {
+  p {
     margin-top: 0;
     font-size: 14px;
     color: @footerTextColor;
   }
-  & .addressStatic {
+  .addressStatic {
     float: left;
     width: 33%;
     text-align: center;
   }
-  & .facebookContainer {
+  .facebookContainer {
     float: left;
     width: 33%;
   }
-  & .facebookLink {
+  .facebookLink {
     height: 40px;
     margin-top: 5px;
   }
-  & .number {
+  .number {
     margin-top: 4px;
     font-size: 2vw;
   }
