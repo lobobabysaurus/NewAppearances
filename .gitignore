@@ -5,5 +5,4 @@ tools/api
 *~
 node_modules/
 */static/*/style/*.css
-*/static/*/js/*.js
-*/static/*/js/*.js.map
+*/static/*/scripts/*.js

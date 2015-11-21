@@ -27,6 +27,7 @@ $ ->
 # @class Location
 ###
 class Location
+  
   ###*
   # Latitute and Longitude directions of New Appearances
   #

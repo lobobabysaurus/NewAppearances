@@ -5,12 +5,10 @@
 # @module Base
 ###
 
-# Container for module-wide variables
 baseObj = {}
 
 $ ->
   baseObj.base = new Base()
-  # Set content section height
   baseObj.base.setContentHeight()
 
 $(window).resize ->
@@ -18,10 +16,12 @@ $(window).resize ->
 
 ###*
 # Class representing the base functionality
+#
 # @class Base
 # @constructor Initializes the original text size
 ###
 class Base
+
   ###*
   # Get the height of all relatively constant size divs that are top level
   # to the body.  Find the difference of the window size and this values and
