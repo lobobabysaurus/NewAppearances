@@ -8,7 +8,7 @@
     order: 3}
   model: services.servicecategory
   pk: 3
-- fields: {category_image: services/updo.jpg, category_name: Perms, order: 5}
+- fields: {category_image: services/updo.jpg, category_name: Special, order: 5}
   model: services.servicecategory
   pk: 4
 - fields: {category_image: services/skincare.jpg, category_name: Skincare, order: 4}
